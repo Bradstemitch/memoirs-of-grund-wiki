@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import RoleplayLayout from './RoleplayLayout';
-import CreaturesRouting from '../Creature/CreaturesRouting';
-import MagicItem from '../MagicItems/MagicItem';
-import NationsRouting from '../Nations/NationsRouting';
-import CharacterPage from '../Characters/CharacterPage';
-import CharacterRouting from '../Characters/CharacterRouting';
-import MagicItemsRouting from '../MagicItems/MagicItemsRouting';
+import CreaturesRouting from '../Categories/Creature/CreaturesRouting';
+import MagicItem from '../Categories/MagicItems/MagicItem';
+import NationsRouting from '../Categories/Nations/NationsRouting';
+import CharacterPage from '../Categories/Characters/CharacterPage';
+import CharacterRouting from '../Categories/Characters/CharacterRouting';
+import MagicItemsRouting from '../Categories/MagicItems/MagicItemsRouting';
+import RumoursRouting from '../Categories/Rumours/RumoursRouting';
+import TimelineRouting from '../Categories/Timeline/TimelineRouting';
+import ReligionsRouting from '../Categories/Religions/ReligionsRouting';
+import ArmouryRouting from '../Categories/Armoury/ArmouryRouting';
 
 function RoleplayRoutes() {
     const [roleplaySystem, setRoleplaySystem] = useState<string>('DnD5e')
@@ -29,20 +33,33 @@ function RoleplayRoutes() {
                 } />
 
                 <Route path='armoury/*' element={
-                    <div></div>
-                }/>
+                    <ArmouryRouting roleplaySystem={roleplaySystem}/>
+                } />
 
                 <Route path='magicItems/*' element={
                     <MagicItemsRouting roleplaySystem={roleplaySystem} />
-                }/>
+                } />
 
                 <Route path='characters/*' element={
                     <CharacterRouting />
-                }/>
+                } />
 
                 <Route path='nations/*' element={
                     <NationsRouting />
-                }/>
+                } />
+
+                <Route path='rumours/*' element={
+                    <RumoursRouting />
+                } />
+
+                <Route path='timeline/*' element={
+                    <TimelineRouting />
+                } />
+
+                <Route path='religions/*' element={
+                    <ReligionsRouting />
+                } />
+
             </Route>
         </Routes>
     );

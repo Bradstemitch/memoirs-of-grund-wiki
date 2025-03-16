@@ -29,6 +29,8 @@ import LinkReligions from './ListLinks/LinkReligions';
 import LinkMap from './ListLinks/LinkMap';
 import LinkNations from './ListLinks/LinkNations';
 import LinkCharacters from './ListLinks/LinkCharacters';
+import LinkTimeline from './ListLinks/LinkTimeline';
+import LinkRumours from './ListLinks/LinkRumours';
 
 interface LayoutProps {
     setRoleplaySystem: Function
@@ -183,6 +185,8 @@ function RoleplayLayout(props: LayoutProps) {
                         <LinkReligions open={open} />
                         <LinkNations open={open} />
                         <LinkCharacters open={open} />
+                        <LinkRumours open={open} />
+                        <LinkTimeline open={open} />
                     </List>
                         <Divider />
                     <List>

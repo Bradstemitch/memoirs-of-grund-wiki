@@ -6,7 +6,7 @@ interface DnD5eMagicItemBlockProps {
 }
 
 function DnD5eMagicItemBlock(props: DnD5eMagicItemBlockProps) {
-    const item = require(`../../../data/magicItems/DnD5e/fvtt-${props.fileName}.json`)
+    const item = require(`../../../../data/magicItems/DnD5e/fvtt-${props.fileName}.json`)
     return (
         <div>
             <div>

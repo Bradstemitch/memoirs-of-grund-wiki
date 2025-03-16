@@ -1,10 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { CharacterList } from '../../data/CharacterList';
-import CharacterPage from './CharacterPage';
+import ArmouryItem from './ArmouryItem';
+import { ArmouryList } from '../../../data/ArmouryList';
 
-function CharacterRouting(props: any) {
+const types = ['Wondrous Item']
+const Rarity = ['Rare']
+
+function ArmouryRouting(props: any) {
     return (
         <Routes>
             <Route path='/' element={
@@ -15,35 +17,41 @@ function CharacterRouting(props: any) {
 
                 <Route index element={
                     <div>
-                        <h2>Characters</h2>
-                        {CharacterList.map(character => {
+                        <h2>Armoury</h2>
+                        {/* {types.map(type => (
+                            <>
+                                <div>{type}s</div> */}
+                        {ArmouryList.map(item => {
                             return (
                                 // <li key={creature.fileName + '-creaturePage-li'}>
                                 <Link
-                                    key={character.fileName + '-creaturePage-Link'}
-                                    to={`/characters/${character.fileName}`}
+                                    key={item.fileName + '-armouryPage-Link'}
+                                    to={`/armoury/${item.fileName}`}
                                 >
                                     <button>
-                                        {character.name.fore} {character.name.sur}
+                                        {item.name}
                                     </button>
                                 </Link>
                                 // </li>
                             )
                         })}
+                        <br />
+                        {/* </>
+                        ))} */}
                     </div>
                 } />
 
-                {CharacterList.map(creature => {
+                {ArmouryList.map(item => {
                     return (
                         <Route
-                            key={creature.fileName + '-creaturePage-Route'}
-                            path={creature.fileName}
+                            key={item.fileName + '-nationsPage-Route'}
+                            path={item.fileName}
                             element={
-                                <CharacterPage
-                                    key={creature.fileName + '-creaturePage-CreatureBox'}
+                                <ArmouryItem
+                                    key={item.fileName + '-nationsPage-CreatureBox'}
                                     width={'100%'} height={'auto'}
                                     roleplaySystem={props.roleplaySystem}
-                                    creature={creature}
+                                    item={item}
                                 />}
                         />
                     )
@@ -53,4 +61,4 @@ function CharacterRouting(props: any) {
     );
 }
 
-export default CharacterRouting;
+export default ArmouryRouting;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { magicWeapon } from '../../data/MagicItem';
+import { magicWeapon } from '../../../data/MagicItem';
 import DnD5eMagicItemBlock from './DnD5e/DnD5eMagicItemBlock';
 import DnD5eMagicItemVariantsBlock from './DnD5e/DnD5eMagicItemVariantsBlock';
 
@@ -10,7 +10,7 @@ interface MagicItemProps {
     item: any,
 }
 
-function MagicItem(props: MagicItemProps) {
+function ArmouryItem(props: MagicItemProps) {
     return (
         <div style={{
             'width': props.width,
@@ -31,4 +31,4 @@ function MagicItem(props: MagicItemProps) {
     );
 }
 
-export default MagicItem;
+export default ArmouryItem;

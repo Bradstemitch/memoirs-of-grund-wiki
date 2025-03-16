@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { CreatureList } from '../../data/CreatureList';
+import { CreatureList } from '../../../data/CreatureList';
 import CreatureBox from './CreatureBox';
 
 function CreaturesRouting(props: any) {

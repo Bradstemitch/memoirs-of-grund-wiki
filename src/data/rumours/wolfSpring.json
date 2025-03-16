@@ -1,0 +1,11 @@
+{
+    "name": "The Wolf Spring",
+    "story": [
+        "<p>For decades, hunters travelling the Ringed Mountains have told of strange sightings on one of the slopes. Some tell of a giant wolf that walks on two legs, the king of wolves whos breath can uproot trees and houses.</p>",
+        "<p>The myth claims the creature watches over a beautiful spring, hidden along the slopes. Those who visit the spring and leave are hunted, those who stay the night are never heard from again.</p>"
+    ],
+    "truth": [
+        "<p>The spring hides the Prometheus Initiative outpost run by the Alchemist. Anyone who spends the night is kidnapped and used for experimentation.</p>",
+        "<p>The 'wolf king' is an escaped failed experiment, it hunts down members of Trinity and tries to scare away passing hunters.</p>"
+    ]
+}

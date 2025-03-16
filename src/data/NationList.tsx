@@ -54,8 +54,8 @@ export const NationList = [
     'tags': ['Messar']
   },
   {
-    'name': 'Accerra',
-    'fileName': 'Accerra',
+    'name': 'Assere',
+    'fileName': 'assere',
     'type': 'City State',
     'tags': ['Arcadia']
   },

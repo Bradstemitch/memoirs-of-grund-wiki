@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { NationList } from '../../data/NationList';
+import { NationList } from '../../../data/NationList';
+import NationBox from './NationBox';
 
 const nationTypes = ['Empire', 'Kingdom', 'Tribal Rulers', 'City State']
 
@@ -41,19 +42,19 @@ function NationsRouting(props: any) {
                     </div>
                 } />
 
-                {/* {CreatureList.map(creature => (
+                {NationList.map(creature => (
                     <Route
                         key={creature.fileName + '-nationsPage-Route'}
                         path={creature.fileName}
                         element={
-                            <CreatureBox
+                            <NationBox
                                 key={creature.fileName + '-nationsPage-CreatureBox'}
                                 width={'100%'} height={'auto'}
                                 roleplaySystem={props.roleplaySystem}
                                 creature={creature}
                             />}
                     />
-                ))} */}
+                ))}
             </Route>
         </Routes>
     );

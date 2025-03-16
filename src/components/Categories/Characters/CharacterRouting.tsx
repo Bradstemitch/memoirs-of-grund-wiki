@@ -1,12 +1,10 @@
 import React from 'react';
+import logo from './logo.svg';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { MagicItemList } from '../../data/MagicItem';
-import MagicItem from './MagicItem';
+import { CharacterList } from '../../../data/CharacterList';
+import CharacterPage from './CharacterPage';
 
-const types = ['Wondrous Item']
-const Rarity = ['Rare']
-
-function MagicItemsRouting(props: any) {
+function CharacterRouting(props: any) {
     return (
         <Routes>
             <Route path='/' element={
@@ -17,41 +15,35 @@ function MagicItemsRouting(props: any) {
 
                 <Route index element={
                     <div>
-                        <h2>Magic Items</h2>
-                        {/* {types.map(type => (
-                            <>
-                                <div>{type}s</div> */}
-                        {MagicItemList.map(item => {
+                        <h2>Characters</h2>
+                        {CharacterList.map(character => {
                             return (
                                 // <li key={creature.fileName + '-creaturePage-li'}>
                                 <Link
-                                    key={item.fileName + '-creaturePage-Link'}
-                                    to={`/magicItems/${item.fileName}`}
+                                    key={character.fileName + '-creaturePage-Link'}
+                                    to={`/characters/${character.fileName}`}
                                 >
                                     <button>
-                                        {item.name}
+                                        {character.name.fore} {character.name.sur}
                                     </button>
                                 </Link>
                                 // </li>
                             )
                         })}
-                        <br />
-                        {/* </>
-                        ))} */}
                     </div>
                 } />
 
-                {MagicItemList.map(item => {
+                {CharacterList.map(creature => {
                     return (
                         <Route
-                            key={item.fileName + '-nationsPage-Route'}
-                            path={item.fileName}
+                            key={creature.fileName + '-creaturePage-Route'}
+                            path={creature.fileName}
                             element={
-                                <MagicItem
-                                    key={item.fileName + '-nationsPage-CreatureBox'}
+                                <CharacterPage
+                                    key={creature.fileName + '-creaturePage-CreatureBox'}
                                     width={'100%'} height={'auto'}
                                     roleplaySystem={props.roleplaySystem}
-                                    item={item}
+                                    creature={creature}
                                 />}
                         />
                     )
@@ -61,4 +53,4 @@ function MagicItemsRouting(props: any) {
     );
 }
 
-export default MagicItemsRouting;
+export default CharacterRouting;
