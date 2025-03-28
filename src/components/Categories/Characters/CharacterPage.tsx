@@ -1,12 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Link, Outlet, Route, Routes } from 'react-router-dom';
 
 function CharacterPage(props: any) {
     let character
     let error = false
     try {
-        character = require(`../../data/characters/${props.creature.fileName}`);
+        character = require(`../../../data/characters/${props.creature.fileName}`);
     } catch (e) {
         error = true
     }

@@ -10,7 +10,7 @@ function TimelineBox(props: RumourBoxProps) {
     let rumour
     let error = false
     try {
-        rumour = require(`../../data/rumours/${props.rumour.fileName}.json`);
+        rumour = require(`../../../data/timeline/${props.rumour.fileName}.json`);
     } catch (e) {
         error = true
     }
@@ -20,14 +20,6 @@ function TimelineBox(props: RumourBoxProps) {
             {!error ?
                 <>
                     {rumour.story.map((paragraph: any) => {
-                        return (
-                            <p>
-                                {paragraph}
-                            </p>
-                        )
-                    })}
-                    <h3>Truth</h3>
-                    {rumour.truth.map((paragraph: any) => {
                         return (
                             <p>
                                 {paragraph}

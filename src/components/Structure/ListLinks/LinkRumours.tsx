@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Forum } from '@mui/icons-material';
+import ForumIcon from '@mui/icons-material/Forum';
 
 function LinkRumours(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkRumours(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Forum />
+                        <ForumIcon />
                     </ListItemIcon>
                     <ListItemText primary='Rumours' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

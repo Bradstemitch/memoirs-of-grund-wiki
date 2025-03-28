@@ -15,22 +15,17 @@ export const dragonStone = {
 }
 export const MagicItemList = [
     {
-        'name': "Morrigan's Band",
-        'fileName': 'MorrigansBand',
-        'type': 'Kingdom',
+        'name': "Final Rest",
+        'fileName': 'finalRest',
+        'baseItem': [
+            'longsword','shortsword'
+        ],
         'variants': [
             {
-                'name': '1 Feather',
-                'fileName': '1feather'
-            },
-            {
-                'name': '2 Feather',
-                'fileName': '2feather'
-            },
-            {
-                'name': '3 Feather',
-                'fileName': '3feather'
+                'name': '',
+                'fileName': ''
             }
         ]
-    }
+    },
+    
 ]

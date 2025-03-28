@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Person } from '@mui/icons-material';
+import PersonIcon from '@mui/icons-material/Person';
 
 function LinkCharacters(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkCharacters(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Person />
+                        <PersonIcon />
                     </ListItemIcon>
                     <ListItemText primary='Characters' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

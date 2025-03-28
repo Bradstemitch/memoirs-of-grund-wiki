@@ -1,0 +1,147 @@
+{
+  "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/final-rest.webp",
+  "name": "Final Rest",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>This <em>+3 @UUID[Compendium.pf2e.equipment-srd.Item.oVrVzML63VFvVfKk]{Vitalizing (Greater)} greater striking silver longsword</em> is made from the purest silver. The blade is carefully etched to depict a vast and sprawling necropolis, a place where the dead are laid to rest. Whenever you critically hit an undead creature with <em>final rest</em>, the undead creature takes @Damage[3d6[persistent,spirit]] damage, with a @Check[fortitude|dc:36].</p>\n<p><strong>Critical Success</strong> No effect.</p>\n<p><strong>Success</strong> The creature takes half the persistent spirit damage.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} and takes the full persistent spirit damage.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned} and takes double the persistent spirit damage.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"action-glyph\">2</span> command, envision</p>\n<p><strong>Frequency</strong> once per day</p>\n<p><strong>Effect</strong> You hold the sword aloft, making it cast @UUID[Compendium.pf2e.spells-srd.Item.a3aQxCpoj1q1NQxC]{Sunburst} (@Check[reflex|dc:38]).</p>"
+    },
+    "rules": [],
+    "slug": "final-rest",
+    "_migration": {
+      "version": 0.935,
+      "lastMigration": null,
+      "previous": null
+    },
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "magical",
+        "versatile-p"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Book of the Dead",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 18
+    },
+    "quantity": 1,
+    "baseItem": "longsword",
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 24000
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null,
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": "silver",
+      "grade": "standard"
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "",
+        "img": "",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "sword",
+    "bonus": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": ""
+    },
+    "runes": {
+      "potency": 3,
+      "striking": 2,
+      "property": [
+        "greaterDisrupting"
+      ]
+    },
+    "specific": {
+      "material": {
+        "grade": "standard",
+        "type": "silver"
+      },
+      "runes": {
+        "potency": 3,
+        "property": [
+          "greaterDisrupting"
+        ],
+        "striking": 2
+      }
+    },
+    "subitems": [],
+    "property1": {
+      "value": "",
+      "dice": 0,
+      "die": "",
+      "damageType": "",
+      "critDice": 0,
+      "critDie": "",
+      "critDamage": "",
+      "critDamageType": ""
+    }
+  },
+  "type": "weapon",
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "pf2e",
+    "systemVersion": "6.10.2",
+    "createdTime": 1742951993665,
+    "modifiedTime": 1742951993665,
+    "lastModifiedBy": "zGBP0faGe9s57rxO"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "exportSource": {
+      "world": "compendium-project-path",
+      "system": "pf2e",
+      "coreVersion": "12.331",
+      "systemVersion": "6.10.2"
+    }
+  }
+}

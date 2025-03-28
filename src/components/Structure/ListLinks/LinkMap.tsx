@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Explore } from '@mui/icons-material';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 
 function LinkMap(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkMap(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Explore />
+                        <TravelExploreIcon />
                     </ListItemIcon>
                     <ListItemText primary='Map' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

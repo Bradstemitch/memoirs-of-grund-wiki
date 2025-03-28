@@ -1,0 +1,121 @@
+{
+  "img": "systems/pf2e/icons/equipment/worn-items/apex-items/belt-of-giant-strength.webp",
+  "name": "Belt of Giant Strength",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>This thick leather belt is decorated with a buckle carved from glittering quartz in the shape of a fist. You gain a +3 item bonus to Athletics checks and a +2 circumstance bonus to Athletics checks to lift a heavy object, Escape, and Force Open.</p>\n<p>When you invest the belt, you either increase your Strength modifier by 1 or increase it to +4, whichever would give you a higher score.</p>\n<hr />\n<p><strong>Activate</strong> <span class=\"action-glyph\">R</span> Interact</p>\n<p><strong>Trigger</strong> You are targeted by a thrown rock attack, or a rock would fall on you</p>\n<hr />\n<p><strong>Effect</strong> Attempt an Athletics check to grab the triggering rock. Use the Athletics DC of the creature throwing the rock, the DC of the hazard or other effect, or DC 35 if no other DC is applicable. You must have a free hand to catch the rock, but you can Release anything you're holding in a hand as part of this reaction.</p>\n<p><strong>Success</strong> You safely catch the rock, take no damage, and are now holding the rock.</p>\n<p><strong>Failure</strong> You take half damage.</p>\n<p><strong>Critical Failure</strong> You take full damage.</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "athletics",
+        "type": "item",
+        "value": 3
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Belt of Giant Strength (lift heavy objects, Escape, Force Open)",
+        "predicate": [
+          {
+            "or": [
+              "action:lift-heavy-object",
+              "action:escape",
+              "action:force-open"
+            ]
+          }
+        ],
+        "selector": "athletics",
+        "type": "circumstance",
+        "value": 2
+      }
+    ],
+    "slug": "belt-of-giant-strength",
+    "_migration": {
+      "version": 0.935,
+      "lastMigration": null,
+      "previous": null
+    },
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "apex",
+        "invested"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Core Rulebook",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 17
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 15000
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "",
+        "img": "",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "wornbelt"
+    },
+    "subitems": [],
+    "apex": {
+      "attribute": "str"
+    }
+  },
+  "type": "equipment",
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "pf2e",
+    "systemVersion": "6.10.2",
+    "createdTime": 1743012241411,
+    "modifiedTime": 1743012241411,
+    "lastModifiedBy": "zGBP0faGe9s57rxO"
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "exportSource": {
+      "world": "compendium-project-path",
+      "system": "pf2e",
+      "coreVersion": "12.331",
+      "systemVersion": "6.10.2"
+    }
+  }
+}

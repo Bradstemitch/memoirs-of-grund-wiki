@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Map } from '@mui/icons-material';
+import FlagIcon from '@mui/icons-material/Flag';
 
 function LinkNations(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkNations(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Map />
+                        <FlagIcon />
                     </ListItemIcon>
                     <ListItemText primary='Nations' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

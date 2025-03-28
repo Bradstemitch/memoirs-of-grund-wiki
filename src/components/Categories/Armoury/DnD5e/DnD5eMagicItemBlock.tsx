@@ -5,19 +5,26 @@ interface DnD5eMagicItemBlockProps {
     fileName: string
 }
 
-function DnD5eMagicItemBlock(props: DnD5eMagicItemBlockProps) {
-    const item = require(`../../../../data/magicItems/DnD5e/fvtt-${props.fileName}.json`)
+function DnD5eMagicItemBlock(props: any) {
+    let item
+    let error = false
+    try {
+        item = require(`../../../../data/armoury/DnD5e/fvtt-${props.fileName}.json`);
+    } catch (e) {
+        error = true
+    }
     return (
         <div>
-            <div>
-                <h2>{props.name}</h2>
-                <div dangerouslySetInnerHTML={{__html: item.system.description.value}} />
-            </div>
-            <br/>
-            {/* <em>{props.item.description}</em> */}
+            {!error ?
+                <>
+                    {item.type}
+                </>
+                : <>File Not Found</>
+            }
         </div>
         
     );
 }
 
 export default DnD5eMagicItemBlock;
+

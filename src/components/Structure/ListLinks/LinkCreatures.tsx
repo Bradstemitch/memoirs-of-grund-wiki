@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Pets } from '@mui/icons-material';
+import PetsIcon from '@mui/icons-material/Pets';
 
 function LinkCreatures(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkCreatures(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Pets />
+                        <PetsIcon />
                     </ListItemIcon>
                     <ListItemText primary='Creatures' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

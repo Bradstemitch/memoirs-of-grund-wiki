@@ -1,5 +1,4 @@
 import React from 'react';
-import DnD5eAttributeTable from './DnD5eAttributeTable';
 import DnD5eArmourList from './DnD5eArmourList';
 import DnD5eSkillList from './DnD5eSkillList';
 import DnD5eWeaponList from './DnD5eWeaponList';

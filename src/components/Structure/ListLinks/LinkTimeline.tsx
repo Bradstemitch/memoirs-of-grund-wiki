@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Timeline } from '@mui/icons-material';
+import TimelineIcon from '@mui/icons-material/Timeline';
 
 function LinkTimeline(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkTimeline(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Timeline />
+                        <TimelineIcon />
                     </ListItemIcon>
                     <ListItemText primary='Timeline' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

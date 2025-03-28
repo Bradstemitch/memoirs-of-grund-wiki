@@ -14,7 +14,7 @@ function CreatureBox(props: CreatureBoxProps) {
     let creature
     let error = false
     try {
-        creature = require(`../../data/creatures/${props.roleplaySystem}/fvtt-${props.creature.fileName}.json`);
+        creature = require(`../../../data/creatures/${props.roleplaySystem}/fvtt-${props.creature.fileName}.json`);
     } catch (e) {
         error = true
     }

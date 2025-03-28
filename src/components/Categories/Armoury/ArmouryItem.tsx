@@ -1,7 +1,11 @@
 import React from 'react';
-import { magicWeapon } from '../../../data/MagicItem';
+import { MagicItemList, magicWeapon } from '../../../data/MagicItem';
 import DnD5eMagicItemBlock from './DnD5e/DnD5eMagicItemBlock';
 import DnD5eMagicItemVariantsBlock from './DnD5e/DnD5eMagicItemVariantsBlock';
+import Path2eItemVariants from './Path2e/Path2eItemVariants';
+import Path2eItemBlock from './Path2e/Path2eItemBlock';
+import { Link } from 'react-router-dom';
+import { ArmouryList, ArmouryListMagic } from '../../../data/ArmouryList';
 
 interface MagicItemProps {
     width: string,
@@ -16,19 +20,47 @@ function ArmouryItem(props: MagicItemProps) {
             'width': props.width,
             'height': props.width,
         }}>
-
             <div>
-                <h2>{props.item.name}</h2>
                 {props.roleplaySystem === 'DnD5e' ?
                     (props.item.variants.length > 1 ?
-                        <DnD5eMagicItemVariantsBlock item={props.item}/>
+                        <DnD5eMagicItemVariantsBlock item={props.item} />
                         : <DnD5eMagicItemBlock name={props.item.name} fileName={props.item.fileName} />)
                     : null
                 }
+                {props.roleplaySystem === 'Path2e' ?
+                    (props.item.variants.length > 1 ?
+                        <Path2eItemVariants item={props.item} />
+                        : <Path2eItemBlock name={props.item.name} fileName={props.item.fileName} magicItem={props.item.tags.some((e: any) => e === 'Magic')} />)
+                    : null
+                }
             </div>
-        </div>
+            {RelatedMagicItems(props.item, props.roleplaySystem)}
 
+        </div>
     );
+}
+
+function RelatedMagicItems(item: any, roleplaySystem: string) {
+    return (
+        <>
+            <br />
+            <div>
+                Magic {item.type[roleplaySystem]}
+            </div>
+            {
+                ArmouryListMagic.filter(i => i.baseItem!.some(e => e === item.fileName)).map(item => {
+                    return (
+                        <Link
+                            key={item.fileName + '-magicItemPage-Link'}
+                            to={`/magicItems/${item.fileName}`}
+                        >
+                            {item.name}
+                        </Link>
+                    )
+                })
+            }
+        </>
+    )
 }
 
 export default ArmouryItem;

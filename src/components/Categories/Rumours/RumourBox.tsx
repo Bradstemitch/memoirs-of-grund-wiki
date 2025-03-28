@@ -10,7 +10,7 @@ function RumourBox(props: RumourBoxProps) {
     let rumour
     let error = false
     try {
-        rumour = require(`../../data/rumours/${props.rumour.fileName}.json`);
+        rumour = require(`../../../data/rumours/${props.rumour.fileName}.json`);
     } catch (e) {
         error = true
     }

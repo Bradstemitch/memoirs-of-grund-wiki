@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { MagicItemList } from '../../../data/MagicItem';
 import MagicItem from './MagicItem';
+import { ArmouryListMagic } from '../../../data/ArmouryList';
+import ArmouryItem from '../Armoury/ArmouryItem';
+import { magicItemType } from '../../../data/CategoryList';
 
 const types = ['Wondrous Item']
 const Rarity = ['Rare']
@@ -18,36 +20,29 @@ function MagicItemsRouting(props: any) {
                 <Route index element={
                     <div>
                         <h2>Magic Items</h2>
-                        {/* {types.map(type => (
+                        {magicItemType[props.roleplaySystem].map((type: string) =>
                             <>
-                                <div>{type}s</div> */}
-                        {MagicItemList.map(item => {
-                            return (
-                                // <li key={creature.fileName + '-creaturePage-li'}>
-                                <Link
-                                    key={item.fileName + '-creaturePage-Link'}
-                                    to={`/magicItems/${item.fileName}`}
-                                >
-                                    <button>
-                                        {item.name}
-                                    </button>
-                                </Link>
-                                // </li>
-                            )
-                        })}
+                                <div>{type}</div>
+                                {ArmouryListMagic.filter((i: any) => i.type[props.roleplaySystem] === type).map(item =>
+                                    <Link key={item.fileName + '-creaturePage-Link'} to={`/magicItems/${item.fileName}`}>
+                                        <button>
+                                            {item.name}
+                                        </button>
+                                    </Link>
+                                )}
+                            </>
+                        )}
                         <br />
-                        {/* </>
-                        ))} */}
                     </div>
                 } />
 
-                {MagicItemList.map(item => {
+                {ArmouryListMagic.map(item => {
                     return (
                         <Route
                             key={item.fileName + '-nationsPage-Route'}
                             path={item.fileName}
                             element={
-                                <MagicItem
+                                <ArmouryItem
                                     key={item.fileName + '-nationsPage-CreatureBox'}
                                     width={'100%'} height={'auto'}
                                     roleplaySystem={props.roleplaySystem}

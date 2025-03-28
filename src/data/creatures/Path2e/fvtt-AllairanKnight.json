@@ -98,19 +98,19 @@
   "system": {
     "attributes": {
       "hp": {
-        "value": 95,
+        "value": 135,
         "temp": 0,
-        "max": 95,
+        "max": 135,
         "details": ""
       },
       "speed": {
-        "value": 20,
+        "value": 25,
         "otherSpeeds": [],
         "details": ""
       },
       "ac": {
-        "value": 24,
-        "details": "(26 with shield raised)"
+        "value": 30,
+        "details": "(32 with shield raised)"
       },
       "allSaves": {
         "value": ""
@@ -132,10 +132,10 @@
     "details": {
       "languages": {
         "value": [],
-        "details": "allairan"
+        "details": "Allairan"
       },
       "level": {
-        "value": 6
+        "value": 8
       },
       "blurb": "",
       "publicNotes": "",
@@ -150,62 +150,65 @@
     },
     "resources": {},
     "_migration": {
-      "version": 0.932,
+      "version": 0.935,
       "previous": {
         "schema": 0.844,
         "foundry": "12.331",
-        "system": "6.2.2"
+        "system": "6.10.2"
       }
     },
     "abilities": {
       "str": {
-        "mod": 5
+        "mod": 6
       },
       "dex": {
-        "mod": 2
+        "mod": 4
       },
       "con": {
-        "mod": 2
+        "mod": 4
       },
       "int": {
         "mod": 0
       },
       "wis": {
-        "mod": 4
+        "mod": 3
       },
       "cha": {
-        "mod": 4
+        "mod": 3
       }
     },
     "perception": {
       "details": "",
-      "mod": 14,
+      "mod": 16,
       "senses": [],
       "vision": true
     },
     "saves": {
       "fortitude": {
-        "value": 14,
+        "value": 16,
         "saveDetail": ""
       },
       "reflex": {
-        "value": 11,
+        "value": 16,
         "saveDetail": ""
       },
       "will": {
-        "value": 17,
+        "value": 13,
         "saveDetail": ""
       }
     },
     "skills": {
       "athletics": {
-        "base": 15
+        "base": 18,
+        "special": []
       },
       "diplomacy": {
-        "base": 11
+        "base": 12,
+        "special": []
       },
       "intimidation": {
-        "base": 13
+        "base": 16,
+        "special": []
       }
     },
     "traits": {
@@ -223,121 +226,6 @@
   "img": "modules/memoirs-of-grund/assets/tokens/HumanoidAllairanKnight.png",
   "items": [
     {
-      "img": "systems/pf2e/icons/equipment/armor/halfplate.webp",
-      "name": "Half Plate",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This provides some of the protection of full plate with greater flexibility and speed. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
-        },
-        "rules": [],
-        "slug": "half-plate",
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.844,
-            "foundry": "12.331",
-            "system": "6.2.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "Pathfinder Core Rulebook",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 1
-        },
-        "quantity": 1,
-        "baseItem": "half-plate",
-        "bulk": {
-          "value": 3
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "gp": 18
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": true,
-          "handsHeld": 0
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "category": "heavy",
-        "group": "plate",
-        "acBonus": 5,
-        "strength": 3,
-        "dexCap": 5,
-        "checkPenalty": -3,
-        "speedPenalty": -10,
-        "runes": {
-          "potency": 0,
-          "resilient": 0,
-          "property": []
-        },
-        "subitems": [],
-        "dex": {
-          "value": 1
-        }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 200000,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "_id": "UAk4PQt3afME8izD"
-    },
-    {
       "img": "systems/pf2e/icons/equipment/shields/steel-shield.webp",
       "name": "Steel Shield",
       "system": {
@@ -348,12 +236,12 @@
         "rules": [],
         "slug": "steel-shield",
         "_migration": {
-          "version": 0.932,
+          "version": 0.935,
           "lastMigration": null,
           "previous": {
             "schema": 0.844,
             "foundry": "12.331",
-            "system": "6.2.2"
+            "system": "6.10.2"
           }
         },
         "traits": {
@@ -442,368 +330,12 @@
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
       },
       "_id": "etAcJeGeujcQF6FN"
-    },
-    {
-      "img": "systems/pf2e/icons/equipment/weapons/greatpick.webp",
-      "name": "Greatpick",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>This pick has a longer handle and broader head than a regular pick. It is too heavy to wield in one hand.</p>"
-        },
-        "rules": [],
-        "slug": "greatpick",
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.844,
-            "foundry": "12.331",
-            "system": "6.2.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [
-            "fatal-d12"
-          ],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "Pathfinder Core Rulebook",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "greatpick",
-        "bulk": {
-          "value": 2
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "gp": 2
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-two-hands"
-        },
-        "category": "martial",
-        "group": "pick",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "dice": 1,
-          "die": "d10",
-          "damageType": "piercing",
-          "persistent": null
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "runes": {
-          "potency": 0,
-          "striking": 0,
-          "property": []
-        },
-        "specific": null,
-        "subitems": [],
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
-        }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Item.3Zv5hSXXtlaDatUv"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 400000,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.3Zv5hSXXtlaDatUv",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "_id": "HeuPSFbUF0hKOcWN"
-    },
-    {
-      "name": "Greatpick",
-      "type": "melee",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": ""
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "fatal-d12"
-          ],
-          "otherTags": []
-        },
-        "damageRolls": {
-          "OIKHFvVBrQNqX2VT": {
-            "damage": "1d10+11",
-            "damageType": "piercing",
-            "category": null
-          }
-        },
-        "bonus": {
-          "value": 17
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "_migration": {
-          "version": 0.932,
-          "previous": {
-            "schema": null,
-            "foundry": "12.331",
-            "system": "6.2.2"
-          }
-        }
-      },
-      "flags": {
-        "pf2e": {
-          "linkedWeapon": "HeuPSFbUF0hKOcWN"
-        },
-        "core": {
-          "sourceId": "Actor.VCeFuTbc5PcfJRju.Item.elWpey2dLB6NC0Wd"
-        }
-      },
-      "_id": "elWpey2dLB6NC0Wd",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 62500,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": "Actor.VCeFuTbc5PcfJRju.Item.elWpey2dLB6NC0Wd",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      }
-    },
-    {
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Attack of Opportunity",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p><strong>Trigger</strong> A creature within your reach uses a manipulate action or a move action, makes a ranged attack, or leaves a square during a move action it's using.</p>\n<hr />\n<p>You lash out at a foe that leaves an opening. Make a melee Strike against the triggering creature. If your attack is a critical hit and the trigger was a manipulate action, you disrupt that action. This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</p>"
-        },
-        "rules": [],
-        "slug": "attack-of-opportunity",
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.844,
-            "foundry": "12.331",
-            "system": "6.2.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "Pathfinder Core Rulebook",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "actionType": {
-          "value": "reaction"
-        },
-        "category": null,
-        "actions": {
-          "value": null
-        },
-        "deathNote": false,
-        "requirements": {
-          "value": ""
-        },
-        "trigger": {
-          "value": ""
-        }
-      },
-      "type": "action",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.actionspf2e.Item.KAVf7AmRnbCAHrkT"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.actionspf2e.Item.KAVf7AmRnbCAHrkT",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "_id": "ZwtJiSmY26okCMHb"
-    },
-    {
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Shield Block",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ShieldBlock]</p>"
-        },
-        "rules": [],
-        "slug": "shield-block",
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.844,
-            "foundry": "12.331",
-            "system": "6.2.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "Pathfinder Bestiary",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "actionType": {
-          "value": "reaction"
-        },
-        "category": "defensive",
-        "actions": {
-          "value": null
-        },
-        "deathNote": false,
-        "requirements": {
-          "value": ""
-        },
-        "trigger": {
-          "value": ""
-        },
-        "weapon": {
-          "value": ""
-        }
-      },
-      "type": "action",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.m4HQ2o5aPxjXf2kY"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.m4HQ2o5aPxjXf2kY",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "_id": "O20h32AWTb6vCu5v"
     },
     {
       "img": "systems/pf2e/icons/actions/Passive.webp",
@@ -844,14 +376,13 @@
             ]
           }
         ],
-        "slug": "",
+        "slug": null,
         "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
+          "version": 0.935,
           "previous": {
-            "schema": 0.844,
+            "schema": null,
             "foundry": "12.331",
-            "system": "6.2.2"
+            "system": "6.10.2"
           }
         },
         "traits": {
@@ -860,8 +391,7 @@
             "aura",
             "emotion",
             "mental"
-          ],
-          "rarity": "common"
+          ]
         },
         "publication": {
           "title": "",
@@ -874,18 +404,9 @@
         },
         "category": "defensive",
         "actions": {
-          "value": ""
+          "value": 1
         },
-        "deathNote": false,
-        "requirements": {
-          "value": ""
-        },
-        "trigger": {
-          "value": ""
-        },
-        "weapon": {
-          "value": ""
-        }
+        "deathNote": false
       },
       "type": "action",
       "effects": [],
@@ -904,7 +425,7 @@
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
@@ -933,20 +454,18 @@
             "type": "save"
           }
         ],
-        "slug": "",
+        "slug": null,
         "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
+          "version": 0.935,
           "previous": {
-            "schema": 0.844,
+            "schema": null,
             "foundry": "12.331",
-            "system": "6.2.2"
+            "system": "6.10.2"
           }
         },
         "traits": {
           "otherTags": [],
-          "value": [],
-          "rarity": "common"
+          "value": []
         },
         "publication": {
           "title": "",
@@ -959,15 +478,9 @@
         },
         "category": "defensive",
         "actions": {
-          "value": ""
+          "value": 1
         },
-        "deathNote": false,
-        "requirements": {
-          "value": ""
-        },
-        "trigger": {
-          "value": ""
-        }
+        "deathNote": false
       },
       "type": "action",
       "effects": [],
@@ -986,7 +499,7 @@
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
@@ -1011,12 +524,12 @@
         "rules": [],
         "slug": "longsword",
         "_migration": {
-          "version": 0.932,
+          "version": 0.935,
           "lastMigration": null,
           "previous": {
             "schema": 0.844,
             "foundry": "12.331",
-            "system": "6.2.2"
+            "system": "6.10.2"
           }
         },
         "traits": {
@@ -1128,80 +641,7 @@
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      }
-    },
-    {
-      "name": "Longsword",
-      "type": "melee",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": ""
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "magical",
-            "versatile-p"
-          ],
-          "otherTags": []
-        },
-        "damageRolls": {
-          "EuPgdyLiHBy4qfoo": {
-            "damage": "1d8+11",
-            "damageType": "slashing",
-            "category": null
-          }
-        },
-        "bonus": {
-          "value": 17
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "_migration": {
-          "version": 0.932,
-          "previous": {
-            "schema": null,
-            "foundry": "12.331",
-            "system": "6.2.2"
-          }
-        }
-      },
-      "flags": {
-        "pf2e": {
-          "linkedWeapon": "XQGON2wwBb3p3cwX"
-        },
-        "core": {
-          "sourceId": "Actor.VCeFuTbc5PcfJRju.Item.M2grEfStLLrkEe2v"
-        }
-      },
-      "_id": "M2grEfStLLrkEe2v",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": "Actor.VCeFuTbc5PcfJRju.Item.M2grEfStLLrkEe2v",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
@@ -1218,12 +658,12 @@
         "rules": [],
         "slug": "dagger",
         "_migration": {
-          "version": 0.932,
+          "version": 0.935,
           "lastMigration": null,
           "previous": {
             "schema": 0.844,
             "foundry": "12.331",
-            "system": "6.2.2"
+            "system": "6.10.2"
           }
         },
         "traits": {
@@ -1344,7 +784,7 @@
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
@@ -1352,109 +792,147 @@
       "_id": "N4edRBjdblDSqwiv"
     },
     {
-      "name": "Dagger",
-      "type": "melee",
+      "img": "systems/pf2e/icons/equipment/armor/halfplate.webp",
+      "name": "Half Plate",
       "system": {
         "description": {
           "gm": "",
-          "value": ""
+          "value": "<p>Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This provides some of the protection of full plate with greater flexibility and speed. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
         },
         "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "versatile-s"
-          ],
-          "otherTags": []
-        },
-        "damageRolls": {
-          "bSuuxajUxkxgxEh7": {
-            "damage": "1d4+11",
-            "damageType": "piercing",
-            "category": null
+        "slug": "half-plate",
+        "_migration": {
+          "version": 0.935,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.844,
+            "foundry": "12.331",
+            "system": "6.10.2"
           }
         },
-        "bonus": {
-          "value": 17
-        },
-        "attackEffects": {
-          "value": []
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
         },
         "publication": {
-          "title": "",
+          "title": "Pathfinder Core Rulebook",
           "authors": "",
           "license": "OGL",
           "remaster": false
         },
-        "_migration": {
-          "version": 0.932,
-          "previous": {
-            "schema": null,
-            "foundry": "12.331",
-            "system": "6.2.2"
-          }
-        }
-      },
-      "flags": {
-        "pf2e": {
-          "linkedWeapon": "N4edRBjdblDSqwiv"
+        "level": {
+          "value": 1
         },
-        "core": {
-          "sourceId": "Actor.VCeFuTbc5PcfJRju.Item.jTW8I5akb5foOurV"
+        "quantity": 1,
+        "baseItem": "half-plate",
+        "bulk": {
+          "value": 3
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 18
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0,
+          "inSlot": true
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "heavy",
+        "group": "plate",
+        "acBonus": 5,
+        "strength": 3,
+        "dexCap": 5,
+        "checkPenalty": -3,
+        "speedPenalty": -10,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": [],
+        "dex": {
+          "value": 1
         }
       },
-      "_id": "jTW8I5akb5foOurV",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB"
+        }
+      },
       "effects": [],
       "folder": null,
-      "sort": 50000,
+      "sort": 200000,
       "ownership": {
         "default": 0,
         "zGBP0faGe9s57rxO": 3
       },
       "_stats": {
-        "compendiumSource": "Actor.VCeFuTbc5PcfJRju.Item.jTW8I5akb5foOurV",
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.pRoikbRo5HFW6YUB",
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
-      }
+      },
+      "_id": "HgKrUtIHInzP2ckg"
     },
     {
-      "name": "Dagger",
+      "_id": "DNnQQeJUEA5LBIEv",
+      "name": "Longsword",
       "type": "melee",
       "system": {
-        "description": {
-          "gm": "",
-          "value": ""
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "agile",
-            "thrown-10",
-            "versatile-s"
-          ],
-          "otherTags": []
+        "slug": "longsword",
+        "bonus": {
+          "value": 20
         },
         "damageRolls": {
-          "f7TACppgctKTMvIC": {
-            "damage": "1d4+11",
-            "damageType": "piercing",
+          "p6rA3sjLhtHleSkJ": {
+            "damage": "2d10+11",
+            "damageType": "slashing",
             "category": null
           }
         },
-        "bonus": {
-          "value": 17
+        "traits": {
+          "value": [
+            "magical",
+            "versatile-p"
+          ],
+          "otherTags": []
         },
-        "attackEffects": {
-          "value": []
+        "rules": [],
+        "description": {
+          "value": "",
+          "gm": ""
         },
         "publication": {
           "title": "",
@@ -1463,37 +941,36 @@
           "remaster": false
         },
         "_migration": {
-          "version": 0.932,
+          "version": 0.935,
           "previous": {
             "schema": null,
             "foundry": "12.331",
-            "system": "6.2.2"
+            "system": "6.10.2"
           }
+        },
+        "attackEffects": {
+          "value": []
         }
       },
       "flags": {
         "pf2e": {
-          "linkedWeapon": "N4edRBjdblDSqwiv"
-        },
-        "core": {
-          "sourceId": "Actor.VCeFuTbc5PcfJRju.Item.Ku1tAfVcMzOUBext"
+          "linkedWeapon": "XQGON2wwBb3p3cwX"
         }
       },
-      "_id": "Ku1tAfVcMzOUBext",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "effects": [],
       "folder": null,
-      "sort": 75000,
+      "sort": 0,
       "ownership": {
         "default": 0,
         "zGBP0faGe9s57rxO": 3
       },
       "_stats": {
-        "compendiumSource": "Actor.VCeFuTbc5PcfJRju.Item.Ku1tAfVcMzOUBext",
+        "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
@@ -1510,23 +987,21 @@
         "rules": [],
         "slug": "raise-a-shield",
         "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
+          "version": 0.935,
           "previous": {
-            "schema": 0.844,
+            "schema": null,
             "foundry": "12.331",
-            "system": "6.2.2"
+            "system": "6.10.2"
           }
         },
         "traits": {
           "otherTags": [],
           "value": [
             "general"
-          ],
-          "rarity": "common"
+          ]
         },
         "publication": {
-          "title": "Pathfinder Core Rulebook",
+          "title": "",
           "authors": "",
           "license": "OGL",
           "remaster": false
@@ -1538,16 +1013,7 @@
         "actions": {
           "value": 1
         },
-        "deathNote": false,
-        "requirements": {
-          "value": ""
-        },
-        "trigger": {
-          "value": ""
-        },
-        "weapon": {
-          "value": ""
-        }
+        "deathNote": false
       },
       "type": "action",
       "flags": {
@@ -1568,12 +1034,174 @@
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
       },
-      "_id": "Eyv5Km1279lHynji"
+      "_id": "0Lz9e6qx35UvydcZ"
+    },
+    {
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.W7SbTykXrNwxDzJc",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Reactive Strike",
+      "sort": 1000000,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ReactiveStrike]</p>",
+          "gm": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Monster Core",
+          "authors": ""
+        },
+        "rules": [],
+        "slug": "reactive-strike",
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.935,
+          "previous": null
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "flags": {},
+      "_id": "2tkJqRmoru4jH4Vk"
+    },
+    {
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.m4HQ2o5aPxjXf2kY",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shield Block",
+      "sort": 1100000,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>The knight can Shield Block for an adjacent ally, preventing that ally from taking damage instead of themself.</p><hr /><p>@Localize[PF2E.NPC.Abilities.Glossary.ShieldBlock]</p>",
+          "gm": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Monster Core",
+          "authors": ""
+        },
+        "rules": [],
+        "slug": "shield-block",
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.935,
+          "previous": null
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "flags": {},
+      "_id": "MvnQ4Kq4iGnz5NLJ"
+    },
+    {
+      "name": "Warfare Lore",
+      "type": "lore",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": ""
+        },
+        "rules": [],
+        "slug": null,
+        "_migration": {
+          "version": 0.935,
+          "lastMigration": null,
+          "previous": {
+            "schema": null,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
+        },
+        "traits": {
+          "otherTags": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "mod": {
+          "value": 16
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "effects": [],
+      "_id": "lOTN5GbTzjVEkjk3",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
     }
   ],
   "folder": "TAaMD5pr9E1OEKp7",
@@ -1583,15 +1211,15 @@
       "world": "compendium-project-path",
       "system": "pf2e",
       "coreVersion": "12.331",
-      "systemVersion": "6.2.2"
+      "systemVersion": "6.10.2"
     }
   },
   "_stats": {
     "coreVersion": "12.331",
     "systemId": "pf2e",
-    "systemVersion": "6.2.2",
-    "createdTime": 1724090156858,
-    "modifiedTime": 1724090156858,
+    "systemVersion": "6.10.2",
+    "createdTime": 1743101208249,
+    "modifiedTime": 1743101208249,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

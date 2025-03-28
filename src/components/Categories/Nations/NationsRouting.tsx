@@ -25,7 +25,7 @@ function NationsRouting(props: any) {
                                         return (
                                             // <li key={creature.fileName + '-creaturePage-li'}>
                                             <Link
-                                                key={nation.fileName + '-creaturePage-Link'}
+                                                key={nation.fileName + '-nationsPage-Link'}
                                                 to={`/nations/${nation.fileName}`}
                                             >
                                                 <button>
@@ -42,16 +42,16 @@ function NationsRouting(props: any) {
                     </div>
                 } />
 
-                {NationList.map(creature => (
+                {NationList.map(nation => (
                     <Route
-                        key={creature.fileName + '-nationsPage-Route'}
-                        path={creature.fileName}
+                        key={nation.fileName + '-nationsPage-Route'}
+                        path={nation.fileName}
                         element={
                             <NationBox
-                                key={creature.fileName + '-nationsPage-CreatureBox'}
+                                key={nation.fileName + '-nationsPage-NationBox'}
                                 width={'100%'} height={'auto'}
                                 roleplaySystem={props.roleplaySystem}
-                                creature={creature}
+                                nation={nation}
                             />}
                     />
                 ))}

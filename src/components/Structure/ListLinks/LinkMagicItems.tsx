@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { AutoFixHigh } from '@mui/icons-material';
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 
 function LinkMagicItems(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkMagicItems(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <AutoFixHigh />
+                        <AutoFixHighIcon />
                     </ListItemIcon>
                     <ListItemText primary='Magic Items' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

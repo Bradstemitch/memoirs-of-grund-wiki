@@ -2,27 +2,32 @@
   "prototypeToken": {
     "displayName": 20,
     "displayBars": 20,
-    "name": "Bandit",
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Robber",
     "actorLink": false,
     "appendNumber": false,
     "prependAdjective": false,
-    "width": 1,
-    "height": 1,
     "texture": {
-      "src": "systems/pf2e/icons/default-icons/npc.svg",
-      "anchorX": 0.5,
-      "anchorY": 0.5,
+      "src": "modules/memoirs-of-grund/assets/tokens/HumanoidHumanMilitia.png",
+      "scaleX": 2,
+      "scaleY": 2,
       "offsetX": 0,
       "offsetY": 0,
-      "fit": "contain",
-      "scaleX": 1,
-      "scaleY": 1,
       "rotation": 0,
       "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
       "alphaThreshold": 0.75
     },
-    "hexagonalShape": 0,
-    "lockRotation": false,
+    "lockRotation": true,
     "rotation": 0,
     "alpha": 1,
     "disposition": -1,
@@ -30,15 +35,12 @@
       "attribute": "attributes.hp"
     },
     "bar2": {
-      "attribute": null
+      "attribute": "attributes.shield.hp"
     },
     "light": {
-      "negative": false,
-      "priority": 0,
       "alpha": 0.5,
       "angle": 360,
       "bright": 0,
-      "color": null,
       "coloration": 1,
       "dim": 0,
       "attenuation": 0.5,
@@ -55,20 +57,25 @@
       "darkness": {
         "min": 0,
         "max": 1
-      }
+      },
+      "color": null,
+      "negative": false,
+      "priority": 0
     },
     "sight": {
       "enabled": false,
       "range": 0,
       "angle": 360,
       "visionMode": "basic",
-      "color": null,
       "attenuation": 0.1,
       "brightness": 0,
       "saturation": 0,
-      "contrast": 0
+      "contrast": 0,
+      "color": null
     },
     "detectionModes": [],
+    "randomImg": false,
+    "hexagonalShape": 0,
     "occludable": {
       "radius": 0
     },
@@ -78,55 +85,156 @@
         "ring": null,
         "background": null
       },
-      "effects": 1,
+      "effects": 0,
       "subject": {
         "scale": 1,
         "texture": null
       }
+    }
+  },
+  "name": "Robber",
+  "type": "npc",
+  "effects": [],
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 20,
+        "temp": 0,
+        "max": 20,
+        "details": ""
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 16,
+        "details": "(18 with shield raised)"
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "resistances": []
     },
-    "flags": {
-      "pf2e": {
-        "linkToActorSize": true,
-        "autoscale": true
+    "initiative": {
+      "statistic": "perception"
+    },
+    "details": {
+      "languages": {
+        "value": [],
+        "details": "aeaxon"
+      },
+      "level": {
+        "value": 1
+      },
+      "blurb": "",
+      "publicNotes": "",
+      "privateNotes": "",
+      "publication": {
+        "title": "",
+        "authors": "",
+        "license": "OGL",
+        "remaster": false
+      },
+      "creatureType": ""
+    },
+    "resources": {},
+    "_migration": {
+      "version": 0.935,
+      "previous": {
+        "schema": 0.932,
+        "foundry": "12.331",
+        "system": "6.10.2"
       }
     },
-    "randomImg": false
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "perception": {
+      "details": "",
+      "mod": 7,
+      "senses": [],
+      "vision": true
+    },
+    "saves": {
+      "fortitude": {
+        "value": 7,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 7,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 4,
+        "saveDetail": ""
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 7,
+        "special": []
+      }
+    },
+    "traits": {
+      "value": [
+        "human",
+        "humanoid",
+        "lawful"
+      ],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      }
+    }
   },
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "img": "modules/memoirs-of-grund/assets/tokens/HumanoidHumanMilitia.png",
   "items": [
     {
-      "_id": "2ikDRlDLZ1sdN1Or",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Item.LGgvev6AV0So8tP9"
-        }
-      },
-      "img": "icons/weapons/axes/axe-broad-black.webp",
-      "name": "Hatchet",
-      "sort": 100000,
+      "img": "systems/pf2e/icons/equipment/shields/wooden-shield.webp",
+      "name": "Wooden Shield",
       "system": {
         "description": {
           "gm": "",
-          "value": "<p>This small axe can be used in close combat or thrown.</p>"
+          "value": "<p>Though they come in a variety of shapes and sizes, the protection offered by wooden shields comes from the stoutness of their materials. While wooden shields are less expensive than steel shields, they break more easily.</p>\n<table class=\"pf2-table\">\n<thead>\n<tr>\n<th>Hardness</th>\n<th>HP</th>\n<th>BT</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>3</td>\n<td>12</td>\n<td>6</td>\n</tr>\n</tbody>\n</table>"
         },
         "rules": [],
-        "slug": "hatchet",
+        "slug": "wooden-shield",
         "_migration": {
-          "version": 0.932,
+          "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.932,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "agile",
-            "sweep",
-            "thrown-10"
-          ],
-          "rarity": "common"
+          "value": [],
+          "rarity": "common",
+          "integrated": null
         },
         "publication": {
-          "title": "",
+          "title": "Pathfinder Core Rulebook",
           "authors": "",
           "license": "OGL",
           "remaster": false
@@ -135,9 +243,120 @@
           "value": 0
         },
         "quantity": 1,
-        "baseItem": "hatchet",
+        "baseItem": "wooden-shield",
         "bulk": {
-          "value": 0.1
+          "value": 1
+        },
+        "hp": {
+          "value": 12,
+          "max": 12
+        },
+        "hardness": 3,
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "acBonus": 2,
+        "runes": {
+          "reinforcing": 0,
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "specific": null,
+        "speedPenalty": 0,
+        "subitems": [],
+        "dex": {
+          "value": 0
+        }
+      },
+      "type": "shield",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Item.ezVp13Uw8cWW08Da"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ezVp13Uw8cWW08Da",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_id": "3Zzg5tCKVqz7lLBR"
+    },
+    {
+      "img": "systems/pf2e/icons/equipment/armor/hide.webp",
+      "name": "Hide Armor",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>A mix of furs, sturdy hide, and sometimes molded boiled leather, this armor provides protection due to its layers of leather, though its bulkiness slows the wearer down and decreases mobility.</p>"
+        },
+        "rules": [],
+        "slug": "hide-armor",
+        "_migration": {
+          "version": 0.935,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.932,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "hide-armor",
+        "bulk": {
+          "value": 2
         },
         "hp": {
           "value": 0,
@@ -146,11 +365,124 @@
         "hardness": 0,
         "price": {
           "value": {
-            "sp": 4
+            "gp": 2
           }
         },
         "equipped": {
           "carryType": "worn",
+          "invested": null,
+          "inSlot": true,
+          "handsHeld": 0
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "medium",
+        "group": "leather",
+        "acBonus": 3,
+        "strength": 2,
+        "dexCap": 5,
+        "checkPenalty": -2,
+        "speedPenalty": -5,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": [],
+        "dex": {
+          "value": 2
+        }
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Item.AnwzlOs0njF9Jqnr"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AnwzlOs0njF9Jqnr",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_id": "aqEb2podPCDvyVYK"
+    },
+    {
+      "img": "icons/weapons/axes/axe-battle-black.webp",
+      "name": "Battle Axe",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.</p>"
+        },
+        "rules": [],
+        "slug": "battle-axe",
+        "_migration": {
+          "version": 0.935,
+          "lastMigration": null,
+          "previous": null
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "sweep"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Player Core",
+          "authors": "",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "battle-axe",
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "held",
           "invested": null,
           "handsHeld": 1
         },
@@ -183,7 +515,7 @@
         },
         "damage": {
           "dice": 1,
-          "die": "d6",
+          "die": "d8",
           "damageType": "slashing",
           "persistent": null
         },
@@ -195,7 +527,7 @@
         },
         "range": null,
         "reload": {
-          "value": "-"
+          "value": ""
         },
         "runes": {
           "potency": 0,
@@ -217,584 +549,117 @@
       },
       "type": "weapon",
       "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.LGgvev6AV0So8tP9",
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.War0uyLBx1jA0Ge7",
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
       },
       "effects": [],
       "folder": null,
+      "sort": 0,
       "ownership": {
-        "default": 0
-      }
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "flags": {},
+      "_id": "sk2WpUD8U3IdAyXx"
     },
     {
-      "_id": "2JOmjVrX6zMi3jhW",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Item.UCH4myuFnokGv0vF"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/sling.webp",
-      "name": "Sling",
-      "sort": 200000,
+      "_id": "LdqvViivCiwBSPCb",
+      "name": "Battle Axe",
+      "type": "melee",
       "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>Little more than a leather cup attached to a pair of straps, a sling can be used to fling smooth stones or sling bullets at a range.</p>"
-        },
-        "rules": [],
-        "slug": "sling",
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": null
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [
-            "propulsive"
-          ],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "sling",
-        "bulk": {
-          "value": 0.1
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {}
-        },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 1
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "category": "simple",
-        "group": "sling",
+        "slug": "battle-axe",
         "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "dice": 1,
-          "die": "d6",
-          "damageType": "bludgeoning",
-          "persistent": null
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": 50,
-        "reload": {
-          "value": "1"
-        },
-        "runes": {
-          "potency": 0,
-          "striking": 0,
-          "property": []
-        },
-        "specific": null,
-        "subitems": [],
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
-        }
-      },
-      "type": "weapon",
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.UCH4myuFnokGv0vF",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      }
-    },
-    {
-      "_id": "IXm05NQf7mWBHpuu",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN"
-        }
-      },
-      "img": "icons/equipment/chest/breastplate-layered-leather-studded-brown.webp",
-      "name": "Studded Leather Armor",
-      "sort": 300000,
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>This leather armor is reinforced with metal studs and sometimes small metal plates, providing most of the flexibility of leather armor with more robust protection.</p>"
-        },
-        "rules": [],
-        "slug": "studded-leather-armor",
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": null
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "studded-leather-armor",
-        "bulk": {
-          "value": 1
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "gp": 3
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": true
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "category": "light",
-        "group": "leather",
-        "acBonus": 2,
-        "strength": 1,
-        "dexCap": 3,
-        "checkPenalty": -1,
-        "speedPenalty": 0,
-        "runes": {
-          "potency": 0,
-          "resilient": 0,
-          "property": []
-        },
-        "subitems": []
-      },
-      "type": "armor",
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      }
-    },
-    {
-      "_id": "qJnEVm26X5Flc05Y",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Item.MKSeXwUm56c15MZa"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/sling-bullets.webp",
-      "name": "Sling Bullets",
-      "sort": 400000,
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>These are small metal balls, typically either iron or lead, designed to be used as ammunition in slings.</p>"
-        },
-        "rules": [],
-        "slug": "sling-bullets",
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": null
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 10,
-        "baseItem": null,
-        "bulk": {
-          "value": 0.1
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "cp": 1
-          },
-          "per": 10
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 1
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "category": "ammo",
-        "uses": {
-          "value": 1,
-          "max": 1,
-          "autoDestroy": true
-        },
-        "damage": null,
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "stackGroup": "slingBullets",
-        "spell": null
-      },
-      "type": "consumable",
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.MKSeXwUm56c15MZa",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      }
-    },
-    {
-      "_id": "nFYahNWZUkU0gnJ9",
-      "flags": {
-        "pf2e": {
-          "linkedWeapon": "2ikDRlDLZ1sdN1Or"
-        }
-      },
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Hatchet",
-      "sort": 500000,
-      "system": {
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 9
+          "value": 7
         },
         "damageRolls": {
-          "kkov790b8uhfc6xv2sdw18": {
-            "damage": "1d6+5",
+          "P86lJx54p4Rma8xe": {
+            "damage": "1d8+4",
             "damageType": "slashing",
             "category": null
           }
         },
-        "description": {
-          "value": "",
-          "gm": ""
-        },
-        "publication": {
-          "license": "OGL",
-          "remaster": false,
-          "title": "",
-          "authors": ""
-        },
-        "rules": [],
-        "slug": null,
         "traits": {
           "value": [
-            "agile",
             "sweep"
           ],
           "otherTags": []
         },
-        "_migration": {
-          "version": 0.932,
-          "previous": null
-        }
-      },
-      "type": "melee",
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      }
-    },
-    {
-      "_id": "muJs58oNvKAXYuXV",
-      "flags": {
-        "pf2e": {
-          "linkedWeapon": "2ikDRlDLZ1sdN1Or"
-        }
-      },
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Hatchet",
-      "sort": 600000,
-      "system": {
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 9
-        },
-        "damageRolls": {
-          "4bviwcy0rv7rmzk8bacmu": {
-            "damage": "1d6+5",
-            "damageType": "slashing",
-            "category": null
-          }
-        },
+        "rules": [],
         "description": {
           "value": "",
           "gm": ""
         },
         "publication": {
-          "license": "OGL",
-          "remaster": false,
           "title": "",
-          "authors": ""
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "agile",
-            "sweep",
-            "thrown-10"
-          ],
-          "otherTags": []
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
         },
         "_migration": {
-          "version": 0.932,
-          "previous": null
+          "version": 0.935,
+          "previous": {
+            "schema": null,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
+        },
+        "attackEffects": {
+          "value": []
         }
       },
-      "type": "melee",
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      }
-    },
-    {
-      "_id": "WFByucZQz0Q9slLk",
       "flags": {
         "pf2e": {
-          "linkedWeapon": "2JOmjVrX6zMi3jhW"
+          "linkedWeapon": "sk2WpUD8U3IdAyXx"
         }
       },
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Sling",
-      "sort": 700000,
-      "system": {
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 9
-        },
-        "damageRolls": {
-          "mlgzwacs5fzwkmfhll2l": {
-            "damage": "1d6+3",
-            "damageType": "bludgeoning",
-            "category": null
-          }
-        },
-        "description": {
-          "value": "",
-          "gm": ""
-        },
-        "publication": {
-          "license": "OGL",
-          "remaster": false,
-          "title": "",
-          "authors": ""
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "propulsive",
-            "range-increment-50",
-            "reload-1"
-          ],
-          "otherTags": []
-        },
-        "_migration": {
-          "version": 0.932,
-          "previous": null
-        }
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
       },
-      "type": "melee",
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       }
     },
     {
-      "_id": "IEibCXh97z4dVqH9",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Bandit's Ambush",
-      "sort": 800000,
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Raise a Shield",
       "system": {
         "description": {
           "gm": "",
-          "value": "<p>When the bandit rolls initiative using Deception or Stealth, they can attempt to @UUID[Compendium.pf2e.actionspf2e.Item.2u915NdUyQan6uKF]{Demoralize} one creature as a free action.</p>"
+          "value": "<p><strong>Requirements</strong> You are wielding a shield</p>\n<hr />\n<p>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr]{Effect: Raise a Shield}</p>"
         },
         "rules": [],
-        "slug": null,
+        "slug": "raise-a-shield",
         "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": null
+          "version": 0.935,
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
-          "value": [],
-          "rarity": "common"
+          "value": [
+            "general"
+          ]
         },
         "publication": {
           "title": "",
@@ -803,350 +668,171 @@
           "remaster": false
         },
         "actionType": {
-          "value": "passive"
+          "value": "action"
         },
         "category": "defensive",
         "actions": {
-          "value": null
+          "value": 1
         },
         "deathNote": false
       },
       "type": "action",
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {}
-    },
-    {
-      "_id": "VKwW4ylsv5KU7Nhr",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Dread Striker",
-      "sort": 900000,
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened} creatures are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} to the bandit.</p>"
-        },
-        "rules": [
-          {
-            "key": "EphemeralEffect",
-            "predicate": [
-              "target:condition:frightened"
-            ],
-            "selectors": [
-              "strike-attack-roll",
-              "spell-attack-roll",
-              "strike-damage",
-              "attack-spell-damage"
-            ],
-            "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg"
-          }
-        ],
-        "slug": null,
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": null
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "actionType": {
-          "value": "passive"
-        },
-        "category": "offensive",
-        "actions": {
-          "value": null
-        },
-        "deathNote": false
-      },
-      "type": "action",
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {}
-    },
-    {
-      "_id": "y9nL7kklEoVqLV06",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Favored Terrain",
-      "sort": 1000000,
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>The bandit ignores the effects of non-magical difficult terrain in forests.</p>"
-        },
-        "rules": [],
-        "slug": null,
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": null
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "actionType": {
-          "value": "passive"
-        },
-        "category": "offensive",
-        "actions": {
-          "value": null
-        },
-        "deathNote": false
-      },
-      "type": "action",
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.2.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {}
-    },
-    {
-      "_id": "51OPbUesBItU8rTj",
-      "img": "systems/pf2e/icons/default-icons/lore.svg",
-      "name": "Forest Lore",
-      "sort": 1100000,
-      "system": {
-        "description": {
-          "gm": "",
-          "value": ""
-        },
-        "rules": [],
-        "slug": null,
-        "_migration": {
-          "version": 0.932,
-          "lastMigration": null,
-          "previous": null
-        },
-        "traits": {
-          "otherTags": []
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "mod": {
-          "value": 4
-        },
-        "proficient": {
-          "value": 0
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.actionspf2e.Item.xjGwis0uaC2305pm"
         }
       },
-      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "pplkKAcnhxXf00LL": 3,
+        "zGBP0faGe9s57rxO": 3
+      },
       "_stats": {
-        "compendiumSource": null,
+        "compendiumSource": "Compendium.pf2e.actionspf2e.Item.xjGwis0uaC2305pm",
         "duplicateSource": null,
         "coreVersion": "12.331",
         "systemId": "pf2e",
-        "systemVersion": "6.2.2",
+        "systemVersion": "6.10.2",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
       },
+      "_id": "NShyS88rEAzW6ndU"
+    },
+    {
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.W7SbTykXrNwxDzJc",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Reactive Strike",
+      "sort": 1000000,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ReactiveStrike]</p>",
+          "gm": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Monster Core",
+          "authors": ""
+        },
+        "rules": [],
+        "slug": "reactive-strike",
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.935,
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
+        }
+      },
+      "type": "action",
       "effects": [],
       "folder": null,
       "ownership": {
-        "default": 0
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
       },
-      "flags": {}
+      "flags": {},
+      "_id": "YgBHEoP40zALn4OI"
+    },
+    {
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.m4HQ2o5aPxjXf2kY",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shield Block",
+      "sort": 1100000,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>The knight can Shield Block for an adjacent ally, preventing that ally from taking damage instead of themself.</p><hr /><p>@Localize[PF2E.NPC.Abilities.Glossary.ShieldBlock]</p>",
+          "gm": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Monster Core",
+          "authors": ""
+        },
+        "rules": [],
+        "slug": "shield-block",
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.935,
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "flags": {},
+      "_id": "E3SUoUhWVVJUvbdz"
     }
   ],
-  "name": "Bandit",
-  "system": {
-    "attributes": {
-      "hp": {
-        "value": 30,
-        "temp": 0,
-        "max": 30,
-        "details": ""
-      },
-      "speed": {
-        "value": 25,
-        "otherSpeeds": [],
-        "details": ""
-      },
-      "ac": {
-        "value": 19,
-        "details": ""
-      },
-      "allSaves": {
-        "value": ""
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "details": {
-      "languages": {
-        "value": [
-          "common"
-        ],
-        "details": ""
-      },
-      "level": {
-        "value": 2
-      },
-      "blurb": "",
-      "publicNotes": "<p>By setting ambushes and traps in concealing countryside, such as forests and mountains, bandits waylay travelers and plunder their valuables before disappearing back to their wilderness hideouts. Many bandits seek only to steal and release their victims alive, though a few prefer to leave no witnesses.</p>\n<hr />\n<p>Some criminals are the desperate who have no option but to break the law to survive, while others choose a life of crime for thrills, forming gangs or underworld guilds that specialize in certain illegal ventures.</p>",
-      "privateNotes": "",
-      "publication": {
-        "title": "Pathfinder Gamemastery Guide",
-        "authors": "",
-        "license": "OGL",
-        "remaster": false
-      }
-    },
-    "resources": {},
-    "_migration": {
-      "version": 0.932,
-      "previous": null
-    },
-    "abilities": {
-      "str": {
-        "mod": 3
-      },
-      "dex": {
-        "mod": 3
-      },
-      "con": {
-        "mod": 1
-      },
-      "int": {
-        "mod": 0
-      },
-      "wis": {
-        "mod": 2
-      },
-      "cha": {
-        "mod": 1
-      }
-    },
-    "perception": {
-      "details": "",
-      "mod": 6,
-      "senses": [],
-      "vision": true
-    },
-    "saves": {
-      "fortitude": {
-        "value": 7,
-        "saveDetail": ""
-      },
-      "reflex": {
-        "value": 9,
-        "saveDetail": ""
-      },
-      "will": {
-        "value": 6,
-        "saveDetail": ""
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 6
-      },
-      "deception": {
-        "base": 5
-      },
-      "intimidation": {
-        "base": 6
-      },
-      "stealth": {
-        "base": 8
-      },
-      "survival": {
-        "base": 6
-      },
-      "thievery": {
-        "base": 8
-      }
-    },
-    "traits": {
-      "value": [
-        "evil",
-        "human",
-        "humanoid"
-      ],
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      }
-    }
-  },
-  "type": "npc",
-  "_stats": {
-    "coreVersion": "12.331",
-    "systemId": "pf2e",
-    "systemVersion": "6.2.2",
-    "createdTime": 1724078754308,
-    "modifiedTime": 1724078754308,
-    "lastModifiedBy": "zGBP0faGe9s57rxO"
-  },
+  "folder": "zAFG5KglUBGUFPzz",
   "flags": {
-    "core": {
-      "sourceId": "Compendium.pf2e.npc-gallery.Actor.KPUDfkVpemug2gKj"
-    },
+    "core": {},
     "exportSource": {
       "world": "compendium-project-path",
       "system": "pf2e",
       "coreVersion": "12.331",
-      "systemVersion": "6.2.2"
+      "systemVersion": "6.10.2"
     }
   },
-  "effects": [],
-  "folder": null
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "pf2e",
+    "systemVersion": "6.10.2",
+    "createdTime": 1743109350261,
+    "modifiedTime": 1743109350261,
+    "lastModifiedBy": "zGBP0faGe9s57rxO"
+  }
 }

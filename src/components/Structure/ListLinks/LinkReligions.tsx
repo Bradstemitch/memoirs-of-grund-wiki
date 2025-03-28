@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Church } from '@mui/icons-material';
+import ChurchIcon from '@mui/icons-material/Church';
 
 function LinkReligions(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkReligions(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Church />
+                        <ChurchIcon />
                     </ListItemIcon>
                     <ListItemText primary='Religions' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

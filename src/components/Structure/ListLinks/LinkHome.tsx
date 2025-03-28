@@ -5,7 +5,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Home } from '@mui/icons-material';
+import HomeIcon from '@mui/icons-material/Home';
 
 function LinkHome(props: any) {
     return (
@@ -25,7 +25,7 @@ function LinkHome(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <Home />
+                        <HomeIcon />
                     </ListItemIcon>
                     <ListItemText primary={"Home"} sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>

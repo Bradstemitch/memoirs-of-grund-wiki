@@ -4,24 +4,24 @@ interface CreatureBoxProps {
     width: string,
     height: string,
     roleplaySystem: string,
-    creature: { name: string, fileName: string, tags: string[] }
+    nation: { name: string, fileName: string, tags: string[] }
 }
 
 function NationBox(props: CreatureBoxProps) {
-    let creature
+    let nation
     let error = false
     try {
-        creature = require(`../../data/nations/${props.creature.fileName}.json`);
+        nation = require(`../../../data/nations/${props.nation.fileName}.json`);
     } catch (e) {
         error = true
     }
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
-            <h2>{props.creature.name}</h2>
+            <h2>{props.nation.name}</h2>
             {!error ?
                 <>
                     <>
-                        {creature.summary}
+                        {nation.summary}
                     </>
                     <div>
                         <h3>
@@ -55,7 +55,7 @@ function NationBox(props: CreatureBoxProps) {
                     </div>
                     <div>
                         <h3>
-                            Notable {creature.demonym}s
+                            Notable {nation.demonym}s
                         </h3>
                     </div>
                     <div>
@@ -72,7 +72,7 @@ function NationBox(props: CreatureBoxProps) {
                 : <>File Not Found</>
             }
             <br />
-            Tags: {props.creature.tags}
+            Tags: {props.nation.tags}
         </div>
     );
 }

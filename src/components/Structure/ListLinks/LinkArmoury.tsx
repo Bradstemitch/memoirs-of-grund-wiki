@@ -4,7 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { HomeRepairService } from '@mui/icons-material';
+import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 
 function LinkArmoury(props: any) {
     return (
@@ -24,7 +24,7 @@ function LinkArmoury(props: any) {
                             justifyContent: 'center',
                         }}
                     >
-                        <HomeRepairService />
+                        <HomeRepairServiceIcon />
                     </ListItemIcon>
                     <ListItemText primary='Armoury' sx={{ opacity: props.open ? 1 : 0 }} />
                 </ListItemButton>
