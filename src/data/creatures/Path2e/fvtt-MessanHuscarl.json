@@ -665,7 +665,7 @@
         },
         "damageRolls": {
           "DPaevlANXG8flUss": {
-            "damage": "2d10+7",
+            "damage": "2d8+9",
             "damageType": "slashing",
             "category": null
           }
@@ -974,7 +974,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -1109,8 +1113,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743107063874,
-    "modifiedTime": 1743107063874,
+    "createdTime": 1743280510976,
+    "modifiedTime": 1743280510976,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

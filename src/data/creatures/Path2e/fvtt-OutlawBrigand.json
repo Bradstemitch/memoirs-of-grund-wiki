@@ -109,7 +109,7 @@
         "details": ""
       },
       "ac": {
-        "value": 18,
+        "value": 17,
         "details": "(20 with shield raised)"
       },
       "allSaves": {
@@ -184,7 +184,7 @@
         "saveDetail": ""
       },
       "will": {
-        "value": 11,
+        "value": 5,
         "saveDetail": ""
       }
     },
@@ -444,7 +444,7 @@
         },
         "damageRolls": {
           "hNLyOXLcRrYd1jFJ": {
-            "damage": "1d10+6",
+            "damage": "1d8+6",
             "damageType": "slashing",
             "category": null
           }
@@ -695,7 +695,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -830,8 +834,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743109091227,
-    "modifiedTime": 1743109091227,
+    "createdTime": 1743278903820,
+    "modifiedTime": 1743278903820,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

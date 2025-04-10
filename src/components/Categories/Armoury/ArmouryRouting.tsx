@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import ArmouryItem from './ArmouryItem';
 import { ArmouryList } from '../../../data/ArmouryList';
-import { itemType } from '../../../data/CategoryList';
+import { itemTypes } from '../../../data/CategoryList';
 
 const Rarity = ['Rare']
 
@@ -17,7 +17,7 @@ function ArmouryRouting(props: any) {
                 <Route index element={
                     <div>
                         <h2>Armoury</h2>
-                        {itemType[props.roleplaySystem].map((type: string) => ArmouryLink(type, props.roleplaySystem))}
+                        {itemTypes[props.roleplaySystem].map((type: string) => ArmouryLink(type, props.roleplaySystem))}
                     </div>
                 } />
 

@@ -2,16 +2,18 @@ export const Fey = [
     {
         'name': 'Black Shuck',
         'fileName': 'FeyBlackShuck',
-        'tags': ['']
+        'tags': ['Fey']
     },
     {
         'name': 'Cú Sídhe',
         'fileName': 'FeyCúSídhe',
-        'tags': ['']
+        'tags': ['Fey']
     },
     {
         'name': 'Dryad',
         'fileName': 'FeyDryad',
-        'tags': ['']
+        'tags': ['Fey']
     }
 ]
+
+export const FeyDnD5eCategories: any = []

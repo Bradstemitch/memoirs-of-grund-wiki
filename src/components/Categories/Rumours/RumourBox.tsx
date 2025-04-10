@@ -21,17 +21,13 @@ function RumourBox(props: RumourBoxProps) {
                 <>
                     {rumour.story.map((paragraph: any) => {
                         return (
-                            <p>
-                                {paragraph}
-                            </p>
+                            <div dangerouslySetInnerHTML={{ __html: paragraph }} />
                         )
                     })}
                     <h3>Truth</h3>
                     {rumour.truth.map((paragraph: any) => {
                         return (
-                            <p>
-                                {paragraph}
-                            </p>
+                            <div dangerouslySetInnerHTML={{ __html: paragraph }} />
                         )
                     })}
                 </>

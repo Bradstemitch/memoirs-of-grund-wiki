@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { NationList } from '../../../data/NationList';
+import { NationList } from '../../../data/nations/NationList';
 import NationBox from './NationBox';
+import { nationTypes } from '../../../data/CategoryList';
 
-const nationTypes = ['Empire', 'Kingdom', 'Tribal Rulers', 'City State']
 
 function NationsRouting(props: any) {
     return (
@@ -17,28 +17,31 @@ function NationsRouting(props: any) {
                 <Route index element={
                     <div>
                         <h2>Nations</h2>
-                        {nationTypes.map(nationType => {
-                            return (
-                                <>
-                                    <div>{nationType}</div>
-                                    {NationList.filter(nation => nation.type === nationType).map(nation => {
-                                        return (
-                                            // <li key={creature.fileName + '-creaturePage-li'}>
-                                            <Link
-                                                key={nation.fileName + '-nationsPage-Link'}
-                                                to={`/nations/${nation.fileName}`}
-                                            >
-                                                <button>
-                                                    {nation.name}
-                                                </button>
-                                            </Link>
-                                            // </li>
-                                        )
-                                    })}
-                                    <br />
-                                </>
-                            )
-                        })}
+                        {nationTypes
+                            .map((nationType: any) => {
+                                return (
+                                    <>
+                                        <div>{nationType.plural}</div>
+                                        <span>
+                                            {NationList
+                                                .filter(nation => nation.type === nationType.type)
+                                                .map(nation =>
+                                                    <Link
+                                                        key={nation.fileName + '-nationsPage-Link'}
+                                                        to={`/nations/${nation.fileName}`}
+                                                        style={{
+                                                            'paddingLeft': '10px',
+                                                            'paddingRight': '10px',
+                                                        }}
+                                                    >
+                                                        {NationBlock(nation)}
+                                                    </Link>
+                                                )}
+                                        </span>
+                                        <br />
+                                    </>
+                                )
+                            })}
                     </div>
                 } />
 
@@ -58,6 +61,37 @@ function NationsRouting(props: any) {
             </Route>
         </Routes>
     );
+}
+
+function NationBlock(nation: any) {
+    let emblem
+    let error = false
+    try {
+        emblem = require(`../../../images/${nation.fileName}.png`);
+    } catch (e) {
+        emblem = require(`../../../images/zzz.png`);
+        error = true
+    }
+    return (
+        <div style={{
+            'width': '120px',
+            'display': 'inline-block',
+            'verticalAlign': 'top',
+            'textAlign': 'center',
+        }}>
+            <img src={emblem}
+                style={{
+                    'width': '100px',
+                    'height': 'auto',
+                    'display': 'inline-block'
+                }}
+            >
+            </img>
+            <p>
+                {nation.name}
+            </p>
+        </div>
+    )
 }
 
 export default NationsRouting;

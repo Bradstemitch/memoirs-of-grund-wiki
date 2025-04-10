@@ -132,7 +132,7 @@
     "details": {
       "languages": {
         "value": [],
-        "details": "Allairan"
+        "details": "allairan"
       },
       "level": {
         "value": 8
@@ -179,7 +179,7 @@
     },
     "perception": {
       "details": "",
-      "mod": 16,
+      "mod": 13,
       "senses": [],
       "vision": true
     },
@@ -189,7 +189,7 @@
         "saveDetail": ""
       },
       "reflex": {
-        "value": 16,
+        "value": 13,
         "saveDetail": ""
       },
       "will": {
@@ -203,12 +203,12 @@
         "special": []
       },
       "diplomacy": {
-        "base": 12,
-        "special": []
+        "special": [],
+        "base": 12
       },
       "intimidation": {
-        "base": 16,
-        "special": []
+        "special": [],
+        "base": 16
       }
     },
     "traits": {
@@ -805,7 +805,7 @@
           "version": 0.935,
           "lastMigration": null,
           "previous": {
-            "schema": 0.844,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -917,7 +917,7 @@
         },
         "damageRolls": {
           "p6rA3sjLhtHleSkJ": {
-            "damage": "2d10+11",
+            "damage": "2d8+13",
             "damageType": "slashing",
             "category": null
           }
@@ -943,7 +943,7 @@
         "_migration": {
           "version": 0.935,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -989,7 +989,7 @@
         "_migration": {
           "version": 0.935,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -1081,7 +1081,11 @@
         },
         "_migration": {
           "version": 0.935,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         }
       },
       "type": "action",
@@ -1134,7 +1138,11 @@
         },
         "_migration": {
           "version": 0.935,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         }
       },
       "type": "action",
@@ -1161,7 +1169,7 @@
           "version": 0.935,
           "lastMigration": null,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -1218,8 +1226,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743101208249,
-    "modifiedTime": 1743101208249,
+    "createdTime": 1743278507676,
+    "modifiedTime": 1743278507676,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

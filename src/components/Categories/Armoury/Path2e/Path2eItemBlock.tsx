@@ -72,7 +72,7 @@ function AdventuringGearBlock(system: any) {
                 <strong> Group </strong> {system.group};
             </div>
             <hr />
-            {cleanFoundryVariables(system.description.value)}
+            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(system.description.value) }} />
         </>
     )
 }
@@ -93,7 +93,7 @@ function AlchemicalItemBlock(system: any) {
                 <strong> Group </strong> {system.group};
             </div>
             <hr />
-            {cleanFoundryVariables(system.description.value)}
+            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(system.description.value) }} />
         </>
     )
 }
@@ -114,7 +114,7 @@ function ArmourBlock(system: any) {
                 <strong> Group </strong> {system.group};
             </div>
             <hr />
-            {cleanFoundryVariables(system.description.value)}
+            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(system.description.value) }} />
         </>
     )
 }
@@ -135,7 +135,7 @@ function HeldItemBlock(system: any) {
                 <strong> Group </strong> {system.group};
             </div>
             <hr />
-            {cleanFoundryVariables(system.description.value)}
+            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(system.description.value) }} />
         </>
     )
 }
@@ -156,7 +156,7 @@ function RuneBlock(system: any) {
                 <strong> Group </strong> {system.group};
             </div>
             <hr />
-            {cleanFoundryVariables(system.description.value)}
+            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(system.description.value) }} />
         </>
     )
 }
@@ -177,7 +177,7 @@ function ShieldBlock(system: any) {
                 <strong> Group </strong> {system.group};
             </div>
             <hr />
-            {cleanFoundryVariables(system.description.value)}
+            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(system.description.value) }} />
         </>
     )
 }

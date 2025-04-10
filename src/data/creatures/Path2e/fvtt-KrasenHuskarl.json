@@ -130,7 +130,7 @@
     "details": {
       "languages": {
         "value": [],
-        "details": "Norse"
+        "details": "norse"
       },
       "level": {
         "value": 6
@@ -177,7 +177,7 @@
     },
     "perception": {
       "details": "",
-      "mod": 14,
+      "mod": 11,
       "senses": [],
       "vision": true
     },
@@ -583,7 +583,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -719,7 +723,7 @@
         },
         "damageRolls": {
           "DPaevlANXG8flUss": {
-            "damage": "2d10+7",
+            "damage": "2d8+9",
             "damageType": "slashing",
             "category": null
           }
@@ -744,7 +748,7 @@
         "_migration": {
           "version": 0.935,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -790,7 +794,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -946,7 +954,7 @@
         "_migration": {
           "version": 0.935,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -992,7 +1000,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -1091,8 +1103,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743104943696,
-    "modifiedTime": 1743104943696,
+    "createdTime": 1743280337467,
+    "modifiedTime": 1743280337467,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

@@ -3,7 +3,7 @@ import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import MagicItem from './MagicItem';
 import { ArmouryListMagic } from '../../../data/ArmouryList';
 import ArmouryItem from '../Armoury/ArmouryItem';
-import { magicItemType } from '../../../data/CategoryList';
+import { magicItemTypes } from '../../../data/CategoryList';
 
 const types = ['Wondrous Item']
 const Rarity = ['Rare']
@@ -20,7 +20,7 @@ function MagicItemsRouting(props: any) {
                 <Route index element={
                     <div>
                         <h2>Magic Items</h2>
-                        {magicItemType[props.roleplaySystem].map((type: string) =>
+                        {magicItemTypes[props.roleplaySystem].map((type: string) =>
                             <>
                                 <div>{type}</div>
                                 {ArmouryListMagic.filter((i: any) => i.type[props.roleplaySystem] === type).map(item =>

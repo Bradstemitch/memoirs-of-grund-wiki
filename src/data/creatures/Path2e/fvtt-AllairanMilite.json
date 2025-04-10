@@ -179,7 +179,7 @@
     },
     "perception": {
       "details": "",
-      "mod": 14,
+      "mod": 11,
       "senses": [],
       "vision": true
     },
@@ -189,7 +189,7 @@
         "saveDetail": ""
       },
       "reflex": {
-        "value": 14,
+        "value": 11,
         "saveDetail": ""
       },
       "will": {
@@ -230,7 +230,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -356,76 +360,6 @@
       "_id": "r7MKdrHShDLa8AvV"
     },
     {
-      "_id": "mvWaFLO20lTcS5jk",
-      "name": "Longsword",
-      "type": "melee",
-      "system": {
-        "slug": "longsword",
-        "bonus": {
-          "value": 17
-        },
-        "damageRolls": {
-          "a17ufQU0D4ZQAiWv": {
-            "damage": "2d10+7",
-            "damageType": "slashing",
-            "category": null
-          }
-        },
-        "traits": {
-          "value": [
-            "magical",
-            "versatile-p"
-          ],
-          "otherTags": []
-        },
-        "rules": [],
-        "description": {
-          "value": "",
-          "gm": ""
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "_migration": {
-          "version": 0.935,
-          "previous": {
-            "schema": null,
-            "foundry": "12.331",
-            "system": "6.10.2"
-          }
-        },
-        "attackEffects": {
-          "value": []
-        }
-      },
-      "flags": {
-        "pf2e": {
-          "linkedWeapon": "r7MKdrHShDLa8AvV"
-        }
-      },
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.10.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      }
-    },
-    {
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Courage",
       "sort": 900000,
@@ -455,7 +389,11 @@
         },
         "_migration": {
           "version": 0.935,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "deathNote": false
       },
@@ -519,7 +457,11 @@
         },
         "_migration": {
           "version": 0.935,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         }
       },
       "type": "action",
@@ -572,7 +514,11 @@
         },
         "_migration": {
           "version": 0.935,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         }
       },
       "type": "action",
@@ -598,7 +544,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -695,7 +645,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -799,7 +753,7 @@
         "_migration": {
           "version": 0.935,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -850,6 +804,76 @@
         "lastModifiedBy": null
       },
       "_id": "9aR6OVpNpVDTAl9P"
+    },
+    {
+      "_id": "5CqiFaBQtlbjGo39",
+      "name": "Longsword",
+      "type": "melee",
+      "system": {
+        "slug": "longsword",
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "XvvESK9Yb3Zl8R0u": {
+            "damage": "2d8+9",
+            "damageType": "slashing",
+            "category": null
+          }
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "versatile-p"
+          ],
+          "otherTags": []
+        },
+        "rules": [],
+        "description": {
+          "value": "",
+          "gm": ""
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "_migration": {
+          "version": 0.935,
+          "previous": {
+            "schema": null,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "r7MKdrHShDLa8AvV"
+        }
+      },
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
     }
   ],
   "folder": "TAaMD5pr9E1OEKp7",
@@ -866,8 +890,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743100714223,
-    "modifiedTime": 1743100714223,
+    "createdTime": 1743278491050,
+    "modifiedTime": 1743278491050,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

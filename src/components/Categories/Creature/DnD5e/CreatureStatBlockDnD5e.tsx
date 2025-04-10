@@ -31,7 +31,7 @@ function CreatureStatBlockDnD5e(props: any) {
                             : creature.system.details.cr < 29 ? 8
                                 : 9
 
-    function cleanFoundryVariables(s: string) {
+    function cleanFoundryVariablesName(s: string) {
         s = s.replace('[[lookup @name lowercase]]', creature.name)
         return s;
     }
@@ -89,7 +89,7 @@ function CreatureStatBlockDnD5e(props: any) {
                     <div key={item.name + '-creatureStatBlockDnD5e-' + creature.name + '-div'}>
                         <span key={item.name + '-creatureStatBlockDnD5e-' + creature.name + '-span'}>
                             <strong key={item.name + '-creatureStatBlockDnD5e-' + creature.name + '-strong'}>{item.name}. </strong>
-                            {cleanFoundryVariables(item.system.description.value.slice(3, item.system.description.value.length - 4))}
+                            {cleanFoundryVariablesName(item.system.description.value.slice(3, item.system.description.value.length - 4))}
                         </span>
                     </div>
                 )

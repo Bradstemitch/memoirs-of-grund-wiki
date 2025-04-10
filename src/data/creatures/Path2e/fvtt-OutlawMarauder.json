@@ -109,7 +109,7 @@
         "details": ""
       },
       "ac": {
-        "value": 21,
+        "value": 20,
         "details": "(23 with shield raised)"
       },
       "allSaves": {
@@ -448,7 +448,11 @@
         "_migration": {
           "version": 0.935,
           "lastMigration": null,
-          "previous": null
+          "previous": {
+            "schema": 0.935,
+            "foundry": "12.331",
+            "system": "6.10.2"
+          }
         },
         "traits": {
           "otherTags": [],
@@ -579,7 +583,7 @@
         },
         "damageRolls": {
           "FzATl4bOm4RWSFDP": {
-            "damage": "2d10+7",
+            "damage": "2d8+9",
             "damageType": "slashing",
             "category": null
           }
@@ -604,7 +608,7 @@
         "_migration": {
           "version": 0.935,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -831,8 +835,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743109487053,
-    "modifiedTime": 1743109487053,
+    "createdTime": 1743278969829,
+    "modifiedTime": 1743278969829,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

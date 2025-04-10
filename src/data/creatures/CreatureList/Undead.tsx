@@ -2,6 +2,8 @@ export const Undead = [
     {
         'name': 'Skeleton Guard',
         'fileName': 'UndeadSkeletonGuard',
-        'tags': []
+        'tags': ['Undead']
     },
 ]
+
+export const UndeadDnD5eCategories: any = []

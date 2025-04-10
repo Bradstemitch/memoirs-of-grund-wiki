@@ -172,7 +172,7 @@
     },
     "perception": {
       "details": "",
-      "mod": 8,
+      "mod": 5,
       "senses": [],
       "vision": true
     },
@@ -351,118 +351,6 @@
       "_id": "uA2WSGhizGzRwEXO"
     },
     {
-      "img": "systems/pf2e/icons/equipment/shields/wooden-shield.webp",
-      "name": "Wooden Shield",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": "<p>Though they come in a variety of shapes and sizes, the protection offered by wooden shields comes from the stoutness of their materials. While wooden shields are less expensive than steel shields, they break more easily.</p>\n<table class=\"pf2-table\">\n<thead>\n<tr>\n<th>Hardness</th>\n<th>HP</th>\n<th>BT</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>3</td>\n<td>12</td>\n<td>6</td>\n</tr>\n</tbody>\n</table>"
-        },
-        "rules": [],
-        "slug": "wooden-shield",
-        "_migration": {
-          "version": 0.935,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.932,
-            "foundry": "12.331",
-            "system": "6.10.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common",
-          "integrated": null
-        },
-        "publication": {
-          "title": "Pathfinder Core Rulebook",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "wooden-shield",
-        "bulk": {
-          "value": 1
-        },
-        "hp": {
-          "value": 12,
-          "max": 12
-        },
-        "hardness": 3,
-        "price": {
-          "value": {
-            "gp": 1
-          }
-        },
-        "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "acBonus": 2,
-        "runes": {
-          "reinforcing": 0,
-          "potency": 0,
-          "resilient": 0,
-          "property": []
-        },
-        "specific": null,
-        "speedPenalty": 0,
-        "subitems": [],
-        "dex": {
-          "value": 0
-        }
-      },
-      "type": "shield",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Item.ezVp13Uw8cWW08Da"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ezVp13Uw8cWW08Da",
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.10.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      },
-      "_id": "3Zzg5tCKVqz7lLBR"
-    },
-    {
       "img": "systems/pf2e/icons/equipment/armor/hide.webp",
       "name": "Hide Armor",
       "system": {
@@ -593,7 +481,7 @@
         },
         "damageRolls": {
           "uToaJQF7T2OpdyfL": {
-            "damage": "1d6+6",
+            "damage": "1d6+5",
             "damageType": "piercing",
             "category": null
           }
@@ -613,7 +501,7 @@
         "_migration": {
           "version": 0.935,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "12.331",
             "system": "6.10.2"
           }
@@ -880,6 +768,103 @@
       },
       "flags": {},
       "_id": "cBuDJ0KVN8H2zZwH"
+    },
+    {
+      "img": "icons/equipment/shield/wardoor-wooden-boss-brown.webp",
+      "name": "Tower Shield",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>These massive shields can be used to provide cover to nearly the entire body. Due to their size, they are typically made of wood reinforced with metal. AC increases to +4 if you are using the @UUID[Compendium.pf2e.actionspf2e.Item.ust1jJSCZQUhBZIz]{Take Cover} action.</p>\n<table class=\"pf2e\">\n<thead>\n<tr>\n<th>Hardness</th>\n<th>HP</th>\n<th>BT</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>5</td>\n<td>20</td>\n<td>10</td>\n</tr>\n</tbody>\n</table>"
+        },
+        "rules": [],
+        "slug": "tower-shield",
+        "_migration": {
+          "version": 0.935,
+          "lastMigration": null,
+          "previous": null
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common",
+          "integrated": null
+        },
+        "publication": {
+          "title": "Pathfinder Player Core",
+          "authors": "",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "tower-shield",
+        "bulk": {
+          "value": 4
+        },
+        "hp": {
+          "value": 20,
+          "max": 20
+        },
+        "hardness": 5,
+        "price": {
+          "value": {
+            "gp": 10
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "handsHeld": 1
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "acBonus": 2,
+        "runes": {
+          "reinforcing": 0
+        },
+        "specific": null,
+        "speedPenalty": -5,
+        "subitems": []
+      },
+      "type": "shield",
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ltundBNFAnP7bgPr",
+        "duplicateSource": null,
+        "coreVersion": "12.331",
+        "systemId": "pf2e",
+        "systemVersion": "6.10.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "zGBP0faGe9s57rxO": 3
+      },
+      "flags": {},
+      "_id": "7IkA403mRjgTZSLf"
     }
   ],
   "folder": "e4vgHMYHXYS1DADG",
@@ -896,8 +881,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743110903269,
-    "modifiedTime": 1743110903269,
+    "createdTime": 1743280036445,
+    "modifiedTime": 1743280036445,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

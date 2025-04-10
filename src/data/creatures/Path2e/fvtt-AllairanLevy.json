@@ -98,9 +98,9 @@
   "system": {
     "attributes": {
       "hp": {
-        "value": 30,
+        "value": 20,
         "temp": 0,
-        "max": 30,
+        "max": 20,
         "details": ""
       },
       "speed": {
@@ -171,7 +171,7 @@
     },
     "perception": {
       "details": "",
-      "mod": 8,
+      "mod": 4,
       "senses": [],
       "vision": true
     },
@@ -398,75 +398,6 @@
         }
       },
       "_id": "EDswzxu2ftt71doj",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "zGBP0faGe9s57rxO": 3
-      },
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "coreVersion": "12.331",
-        "systemId": "pf2e",
-        "systemVersion": "6.10.2",
-        "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null
-      }
-    },
-    {
-      "name": "Spear",
-      "type": "melee",
-      "system": {
-        "description": {
-          "gm": "",
-          "value": ""
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "thrown-20"
-          ],
-          "otherTags": []
-        },
-        "damageRolls": {
-          "cRAWHI0IcrgN0bCp": {
-            "damage": "1d6+3",
-            "damageType": "piercing",
-            "category": null
-          }
-        },
-        "bonus": {
-          "value": 9
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "_migration": {
-          "version": 0.935,
-          "previous": {
-            "schema": null,
-            "foundry": "12.331",
-            "system": "6.10.2"
-          }
-        }
-      },
-      "flags": {
-        "pf2e": {
-          "linkedWeapon": "uA2WSGhizGzRwEXO"
-        }
-      },
-      "_id": "BB4u6j4mSPrGbCwO",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "effects": [],
       "folder": null,
@@ -965,8 +896,8 @@
     "coreVersion": "12.331",
     "systemId": "pf2e",
     "systemVersion": "6.10.2",
-    "createdTime": 1743103128148,
-    "modifiedTime": 1743103128148,
+    "createdTime": 1743278058285,
+    "modifiedTime": 1743278058285,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   }
 }

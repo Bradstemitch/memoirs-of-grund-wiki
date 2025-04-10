@@ -2,81 +2,88 @@ export const Monsters = [
     {
         'name': 'Basilisk',
         'fileName': 'MonsterBasilisk',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Chimera',
         'fileName': 'MonsterChimera',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Cockatrice',
         'fileName': 'MonsterCockatrice',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Crocotta',
         'fileName': 'MonsterCrocotta',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Gorgon',
         'fileName': 'MonsterGorgon',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Gryphon',
         'fileName': 'MonsterGryphon',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Hippogryph',
         'fileName': 'MonsterHippogryph',
-        'tags': []
+        'tags': ['Monster']
+    },
+    {
+        'name': 'Kyndrilos',
+        'fileName': 'MonsterKyndrilos',
+        'tags': ['Monster']
     },
     {
         'name': 'Lahmia',
         'fileName': 'MonsterLahmia',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Landshark',
         'fileName': 'MonsterLandshark',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Manticore',
         'fileName': 'MonsterManticore',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Merrow',
         'fileName': 'MonsterMerrow',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Pegasus',
         'fileName': 'MonsterPegasus',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Peryton',
         'fileName': 'MonsterPeryton',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Roc',
         'fileName': 'MonsterRoc',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Sphinx',
         'fileName': 'MonsterSphinx',
-        'tags': []
+        'tags': ['Monster']
     },
     {
         'name': 'Wendigo',
         'fileName': 'MonsterWendigo',
-        'tags': []
+        'tags': ['Monster']
     }
 ]
+
+export const MonsterDnD5eCategories: any = []

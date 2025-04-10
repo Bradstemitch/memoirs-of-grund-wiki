@@ -185,7 +185,7 @@ function CreatureStatBlockPath2e(props: any) {
                             <strong>
                                 {`${item.name} `}
                             </strong>
-                            {cleanFoundryVariables(item.system.description.value)}
+                            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(item.system.description.value) }} />
                         </div>
                     )
                 })}
@@ -210,7 +210,7 @@ function CreatureStatBlockPath2e(props: any) {
                             <strong>
                                 {`${item.name} `}
                             </strong>
-                            {cleanFoundryVariables(item.system.description.value)}
+                            <div dangerouslySetInnerHTML={{ __html: cleanFoundryVariables(item.system.description.value) }} />
                         </div>
                     )
                 })}
