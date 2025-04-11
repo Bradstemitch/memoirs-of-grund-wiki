@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/memoirs-of-grund-wiki/static/css/main.17028a0b.css",
-    "main.js": "/memoirs-of-grund-wiki/static/js/main.26baf16e.js",
+    "main.js": "/memoirs-of-grund-wiki/static/js/main.ed2c384f.js",
     "static/media/messarEmblem.png": "/memoirs-of-grund-wiki/static/media/messarEmblem.2b372ab0480602143c20.png",
     "static/media/mycenaeanLeague.png": "/memoirs-of-grund-wiki/static/media/mycenaeanLeague.fcfd929cf63b1d57c411.png",
     "static/media/gol.png": "/memoirs-of-grund-wiki/static/media/gol.f37bfab8859bad9a7a4a.png",
@@ -12,6 +12,7 @@
     "static/media/sylvan.png": "/memoirs-of-grund-wiki/static/media/sylvan.e7a405f8e69cfdc451ec.png",
     "static/media/akitsudo.png": "/memoirs-of-grund-wiki/static/media/akitsudo.2684e37f6f06d2f92547.png",
     "static/media/goblinEmpireSralb.png": "/memoirs-of-grund-wiki/static/media/goblinEmpireSralb.8b19c52d98eb3018aa02.png",
+    "static/media/messarNeaxe.png": "/memoirs-of-grund-wiki/static/media/messarNeaxe.0028b884529dee3d44dd.png",
     "static/media/messarWeaxe.png": "/memoirs-of-grund-wiki/static/media/messarWeaxe.fe64dd1092161747e855.png",
     "static/media/goblinEmpireErd.png": "/memoirs-of-grund-wiki/static/media/goblinEmpireErd.c804834e3ec42a96f62a.png",
     "static/media/goblinEmpireJaax.png": "/memoirs-of-grund-wiki/static/media/goblinEmpireJaax.dd4f2428f45cbde65cfc.png",
@@ -29,10 +30,10 @@
     "static/media/messarBrecca.png": "/memoirs-of-grund-wiki/static/media/messarBrecca.f2ef34014731e561b437.png",
     "index.html": "/memoirs-of-grund-wiki/index.html",
     "main.17028a0b.css.map": "/memoirs-of-grund-wiki/static/css/main.17028a0b.css.map",
-    "main.26baf16e.js.map": "/memoirs-of-grund-wiki/static/js/main.26baf16e.js.map"
+    "main.ed2c384f.js.map": "/memoirs-of-grund-wiki/static/js/main.ed2c384f.js.map"
   },
   "entrypoints": [
     "static/css/main.17028a0b.css",
-    "static/js/main.26baf16e.js"
+    "static/js/main.ed2c384f.js"
   ]
 }
