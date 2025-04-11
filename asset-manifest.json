@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/memoirs-of-grund-wiki/static/css/main.17028a0b.css",
-    "main.js": "/memoirs-of-grund-wiki/static/js/main.300163ca.js",
-    "static/media/messar.png": "/memoirs-of-grund-wiki/static/media/messar.2b372ab0480602143c20.png",
+    "main.js": "/memoirs-of-grund-wiki/static/js/main.26baf16e.js",
+    "static/media/messarEmblem.png": "/memoirs-of-grund-wiki/static/media/messarEmblem.2b372ab0480602143c20.png",
     "static/media/mycenaeanLeague.png": "/memoirs-of-grund-wiki/static/media/mycenaeanLeague.fcfd929cf63b1d57c411.png",
     "static/media/gol.png": "/memoirs-of-grund-wiki/static/media/gol.f37bfab8859bad9a7a4a.png",
     "static/media/krasaheim.png": "/memoirs-of-grund-wiki/static/media/krasaheim.26fa7373496cf606b80e.png",
@@ -17,7 +17,7 @@
     "static/media/goblinEmpireJaax.png": "/memoirs-of-grund-wiki/static/media/goblinEmpireJaax.dd4f2428f45cbde65cfc.png",
     "static/media/goblinEmpire.png": "/memoirs-of-grund-wiki/static/media/goblinEmpire.f0ce92e7b62aa044d523.png",
     "static/media/messarTrife.png": "/memoirs-of-grund-wiki/static/media/messarTrife.3d11ec44cf4d615b3387.png",
-    "static/media/fomorians.png": "/memoirs-of-grund-wiki/static/media/fomorians.fee7c9cbe27d03e67291.png",
+    "static/media/fomoire.png": "/memoirs-of-grund-wiki/static/media/fomoire.fee7c9cbe27d03e67291.png",
     "static/media/goblinEmpireKlir.png": "/memoirs-of-grund-wiki/static/media/goblinEmpireKlir.f9fc5494fafd35de2d10.png",
     "static/media/zzz.png": "/memoirs-of-grund-wiki/static/media/zzz.4dd0efb2058acb762c2c.png",
     "static/media/brytth.png": "/memoirs-of-grund-wiki/static/media/brytth.f07ae1a04fb025145ff5.png",
@@ -29,10 +29,10 @@
     "static/media/messarBrecca.png": "/memoirs-of-grund-wiki/static/media/messarBrecca.f2ef34014731e561b437.png",
     "index.html": "/memoirs-of-grund-wiki/index.html",
     "main.17028a0b.css.map": "/memoirs-of-grund-wiki/static/css/main.17028a0b.css.map",
-    "main.300163ca.js.map": "/memoirs-of-grund-wiki/static/js/main.300163ca.js.map"
+    "main.26baf16e.js.map": "/memoirs-of-grund-wiki/static/js/main.26baf16e.js.map"
   },
   "entrypoints": [
     "static/css/main.17028a0b.css",
-    "static/js/main.300163ca.js"
+    "static/js/main.26baf16e.js"
   ]
 }
