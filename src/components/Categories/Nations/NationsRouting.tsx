@@ -24,7 +24,7 @@ function NationsRouting(props: any) {
                                         <div>{nationType.plural}</div>
                                         <span>
                                             {NationList
-                                                .filter(nation => nation.type === nationType.type)
+                                                .filter(nation => nation.info.basic.status[0] === nationType.type)
                                                 .map(nation =>
                                                     <Link
                                                         key={nation.fileName + '-nationsPage-Link'}
@@ -65,12 +65,10 @@ function NationsRouting(props: any) {
 
 function NationBlock(nation: any) {
     let emblem
-    let error = false
     try {
-        emblem = require(`../../../images/${nation.fileName}.png`);
+        emblem = require('/src/images/' + nation.emblem);
     } catch (e) {
         emblem = require(`../../../images/zzz.png`);
-        error = true
     }
     return (
         <div style={{

@@ -1,73 +1,37 @@
-import { ArcadianRepublicList } from "./nationList/ArcadianRepublic";
-import { FomóiriClansList } from "./nationList/FomóiriClans";
-import { GoblinEmpireList } from "./nationList/GoblinEmpire";
-import { KrasaheimList } from "./nationList/Krasaheim";
-import { MessanHeptarchyList } from "./nationList/MessanHeptarchy";
+import { AcreList } from "./nationList/acre/Acre";
+import { AkitsudoList } from "./nationList/akitsudo/Akitsudo";
+import { AllaireList } from "./nationList/allaire/Allaire";
+import { ArcadiaList } from "./nationList/arcadia/Arcadia";
+import { BrytthList } from "./nationList/brytth/Brytth";
+import { CaletheanList } from "./nationList/caleth/Caleth";
+import { CarnaList } from "./nationList/carna/Carna";
+import { FomoireList } from "./nationList/fomoire/Fomoire";
+import { GoblinEmpireList } from "./nationList/goblin/GoblinEmpire";
+import { GolList } from "./nationList/Gol/Gol";
+import { KrasaheimList } from "./nationList/krasaheim/Krasaheim";
+import { MessarList } from "./nationList/messar/Messar";
+import { MycenaeList } from "./nationList/mycenae/Mycenae";
+import { SylvanList } from "./nationList/sylvan/Sylvan";
 
 export const NationList = [
-  {
-    'name': 'Acre',
-    'fileName': 'acre',
-    'type': 'Kingdom',
-    'tags': ['Acre']
-  },
-  {
-    'name': 'Akitsudo',
-    'fileName': 'akitsudo',
-    'type': 'Kingdom',
-    'tags': ['Akitsudo']
-  },
-  {
-    'name': 'Allairan Empire',
-    'fileName': 'allaire',
-    'type': 'Empire',
-    'tags': ['Allaire']
-  },
-  ...ArcadianRepublicList,
-  {
-    'name': 'Kingdom of Brytth',
-    'fileName': 'brytth',
-    'type': 'Kingdom',
-    'tags': ['Brytth']
-  },
-  {
-    'name': 'Calethean Empire',
-    'fileName': 'caleth',
-    'type': 'Empire',
-    'tags': ['Caleth']
-  },
-  {
-    'name': 'Senātus Populusque Cārnānus',
-    'fileName': 'carna',
-    'type': 'Kingdom',
-    'tags': ['Carna']
-  },
-  ...FomóiriClansList,
+  ...AcreList,
+  ...AkitsudoList,
+  ...AllaireList,
+  ...ArcadiaList,
+  ...BrytthList,
+  ...CaletheanList,
+  ...CarnaList,
+  ...FomoireList,
   ...GoblinEmpireList,
-  {
-    'name': 'Gol',
-    'fileName': 'gol',
-    'type': 'Tribal',
-    'tags': ['Gol']
-  },
+  ...GolList,
   ...KrasaheimList,
-  ...MessanHeptarchyList,
-  {
-    'name': 'Mycenaean League',
-    'fileName': 'mycenaeanLeague',
-    'type': 'Empire',
-    'tags': ['Mycenae']
-  },
-  {
-    'name': 'Nagra',
-    'fileName': 'nagra',
-    'type': 'Empire',
-    'tags': ['Nagra']
-  },
-  {
-    'name': 'Sylvan Realms',
-    'fileName': 'sylvan',
-    'type': 'Tribal',
-    'tags': ['Sylvan']
-  }
+  ...MessarList,
+  ...MycenaeList,
+  // {
+  //   'name': 'Nagra',
+  //   'fileName': 'nagra',
+  //   'type': 'Empire',
+  //   'tags': ['Nagra']
+  // },
+  ...SylvanList,
 ]
