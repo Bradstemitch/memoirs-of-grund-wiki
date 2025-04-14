@@ -1,3 +1,5 @@
+import Emblem from "../../../../images/arcadiaAssere.png"
+
 export const ArcadiaAssereList = [
   {
     'name': 'Assere',
@@ -5,67 +7,77 @@ export const ArcadiaAssereList = [
     'tags': [
       'Arcadia'
     ],
-    "emblem": "arcadiaAssere.png",
+    "emblem": Emblem,
     "pronunciation": "ASS - erra",
-    "info":{
-      "basic":{
-        "area":[
+    "info": {
+      "basic": {
+        "area": [
 
         ],
-        "population":[
+        "population": [
 
         ],
-        "founded":[
+        "founded": [
           "Unknown"
         ],
-        "government":[
+        "government": [
           "House Republic"
         ],
-        "ruler":[
+        "ruler": [
 
         ],
-        "status":[
+        "status": [
           "City State"
         ],
-        "variations":[
+        "variations": [
 
         ]
       },
-      "government":{
-        "commander":[
+      "government": {
+        "commander": [
 
         ],
-        "headOfGovernment":[
+        "headOfGovernment": [
 
         ],
-        "intelligence":[
+        "intelligence": [
 
         ],
-        "military":[
+        "military": [
 
         ],
-        "headOfState":[
+        "headOfState": [
 
         ]
       },
-      "social":{
-        "capital":[
+      "social": {
+        "capital": [
           "Assere"
         ],
-        "currency":[
+        "currency": [
 
         ],
-        "demonym":[
+        "demonym": [
 
         ],
-        "language":[
+        "language": [
 
         ],
-        "religion":[
-          
+        "religion": [
+
         ]
       }
     },
-    "summary": "Temeria is one of the northern kingdoms, lying south of the Pontar river. Its neighbors are Redania, Kerack, Kaedwen, Aedirn, Mahakam, Lower Sodden, and Cidaris. After the first and second wars, Temeria profited the most out of the defeat of Nilfgaard, expanding its borders as far south as Angren and Riverdell, reaching the Amell mountains. But the Kingdom also received a heavy blow regarding its economy, which forced it to buy goods from their southern neighbor. "
   }
 ]
+
+//Accerra
+//led by a Sorcerer's Senate
+//Capital is made up of guards, nobles and their extended families, many houses have luxurious gardens
+//Fewer than normal shops, as magic is used often
+//Most powerful family resides in the central keep at all times and are always seeking new sporcerers, often taking large numbers of prisoners in raids to test them for magic. Those who are not magically inclined are either trained as guards, sent to farms or offered to the drow as volunteers for their war against the Scourge
+//Each noble house trains a cadre of elite soldiers both as guards and loyal companions on the battlefield
+//Some families will summon demons to grow their power but this is frowned upon and will often result in the families enslavement or destruction if discovered
+//Court intrigue is present but discouraged as most Asserans view it as their duty to spread the gift of magic to all humanity
+//Military service is seen as a great way to improve your lot in life, as a noble sergeant is well paid and well treated
+//Bandits are rare as any reported cases are quickly dealt with 

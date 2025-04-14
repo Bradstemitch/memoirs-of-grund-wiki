@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { CharacterList } from '../../../data/CharacterList';
-import CharacterPage from './CharacterPage';
+import { CharacterList } from '../../../data/characters/CharacterList';
+import CharacterPage from './CharacterPageWiki';
 
 function CharacterRouting(props: any) {
     return (
@@ -33,17 +33,17 @@ function CharacterRouting(props: any) {
                     </div>
                 } />
 
-                {CharacterList.map(creature => {
+                {CharacterList.map(char => {
                     return (
                         <Route
-                            key={creature.fileName + '-creaturePage-Route'}
-                            path={creature.fileName}
+                            key={char.fileName + '-creaturePage-Route'}
+                            path={char.fileName}
                             element={
                                 <CharacterPage
-                                    key={creature.fileName + '-creaturePage-CreatureBox'}
+                                    key={char.fileName + '-creaturePage-CreatureBox'}
                                     width={'100%'} height={'auto'}
                                     roleplaySystem={props.roleplaySystem}
-                                    creature={creature}
+                                    character={char}
                                 />}
                         />
                     )

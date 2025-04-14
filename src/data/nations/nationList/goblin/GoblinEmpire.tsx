@@ -1,3 +1,5 @@
+import Emblem from "../../../../images/goblinEmpire.png"
+
 const GoblinEmpirePettyKingdoms: any = [
   // {
   //   'name': 'Erd Zrol',
@@ -37,7 +39,7 @@ export const GoblinEmpireList = [
     "tags": [
       "Goblin"
     ],
-    "emblem": "goblinEmpire.png",
+    "emblem": Emblem,
     "pronunciation": "ASS - erra",
     "info": {
       "basic": {
@@ -99,10 +101,12 @@ export const GoblinEmpireList = [
         ]
       }
     },
-    "locations": [
-      GoblinEmpirePettyKingdoms
+    "provinces": [
+      {
+        "type": "Zrol",
+        "list": GoblinEmpirePettyKingdoms
+      }
     ],
-    "summary": "Temeria is one of the northern kingdoms, lying south of the Pontar river. Its neighbors are Redania, Kerack, Kaedwen, Aedirn, Mahakam, Lower Sodden, and Cidaris. After the first and second wars, Temeria profited the most out of the defeat of Nilfgaard, expanding its borders as far south as Angren and Riverdell, reaching the Amell mountains. But the Kingdom also received a heavy blow regarding its economy, which forced it to buy goods from their southern neighbor. "
   },
   ...GoblinEmpirePettyKingdoms
 ]

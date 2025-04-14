@@ -1,3 +1,5 @@
+import Emblem from "../../../../images/zzz.png"
+
 export const FomoireHadhogungList = [
     {
         'name': 'Hadhogung',
@@ -6,7 +8,7 @@ export const FomoireHadhogungList = [
         'tags': [
             'Fomoire'
         ],
-        "emblem": "hadhogung.png",
+        "emblem": Emblem,
         "pronunciation": "ASS - erra",
         "info": {
             "basic": {

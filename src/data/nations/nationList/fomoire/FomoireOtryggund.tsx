@@ -1,3 +1,5 @@
+import Emblem from "../../../../images/zzz.png"
+
 export const FomoireOtryggundList = [
     {
         'name': 'Otryggund',
@@ -6,7 +8,7 @@ export const FomoireOtryggundList = [
         'tags': [
             'Fomoire'
         ],
-        "emblem": "otryggund.png",
+        "emblem": Emblem,
         "pronunciation": "ASS - erra",
         "info": {
             "basic": {

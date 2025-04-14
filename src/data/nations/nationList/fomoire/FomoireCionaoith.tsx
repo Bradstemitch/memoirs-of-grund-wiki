@@ -1,3 +1,5 @@
+import Emblem from "../../../../images/zzz.png"
+
 export const FomoireCionaoithList = [
     {
         'name': 'Cionaoith',
@@ -6,7 +8,7 @@ export const FomoireCionaoithList = [
         'tags': [
             'Fomoire'
         ],
-        "emblem": "cionaoith.png",
+        "emblem": Emblem,
         "pronunciation": "ASS - erra",
         "info": {
             "basic": {

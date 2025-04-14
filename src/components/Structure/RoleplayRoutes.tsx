@@ -4,13 +4,14 @@ import RoleplayLayout from './RoleplayLayout';
 import CreaturesRouting from '../Categories/Creature/CreaturesRouting';
 import MagicItem from '../Categories/MagicItems/MagicItem';
 import NationsRouting from '../Categories/Nations/NationsRouting';
-import CharacterPage from '../Categories/Characters/CharacterPage';
+import CharacterPage from '../Categories/Characters/CharacterPageWiki';
 import CharacterRouting from '../Categories/Characters/CharacterRouting';
 import MagicItemsRouting from '../Categories/MagicItems/MagicItemsRouting';
 import RumoursRouting from '../Categories/Rumours/RumoursRouting';
 import TimelineRouting from '../Categories/Timeline/TimelineRouting';
 import ReligionsRouting from '../Categories/Religions/ReligionsRouting';
 import ArmouryRouting from '../Categories/Armoury/ArmouryRouting';
+import OrgRouting from '../Categories/Organisations/OrgRouting';
 
 function RoleplayRoutes() {
     const [roleplaySystem, setRoleplaySystem] = useState<string>('DnD5e')
@@ -33,7 +34,7 @@ function RoleplayRoutes() {
                 } />
 
                 <Route path='armoury/*' element={
-                    <ArmouryRouting roleplaySystem={roleplaySystem}/>
+                    <ArmouryRouting roleplaySystem={roleplaySystem} />
                 } />
 
                 <Route path='magicItems/*' element={
@@ -42,6 +43,10 @@ function RoleplayRoutes() {
 
                 <Route path='characters/*' element={
                     <CharacterRouting />
+                } />
+
+                <Route path='organisations/*' element={
+                    <OrgRouting />
                 } />
 
                 <Route path='nations/*' element={

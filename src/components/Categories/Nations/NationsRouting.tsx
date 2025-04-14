@@ -3,6 +3,7 @@ import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import { NationList } from '../../../data/nations/NationList';
 import NationBox from './NationBox';
 import { nationTypes } from '../../../data/CategoryList';
+import NationButton from './NationsButton';
 
 
 function NationsRouting(props: any) {
@@ -23,8 +24,7 @@ function NationsRouting(props: any) {
                                     <>
                                         <div>{nationType.plural}</div>
                                         <span>
-                                            {NationList
-                                                .filter(nation => nation.info.basic.status[0] === nationType.type)
+                                            {NationList.filter(nation => nation.info.basic.status[0] === nationType.type)
                                                 .map(nation =>
                                                     <Link
                                                         key={nation.fileName + '-nationsPage-Link'}
@@ -34,7 +34,7 @@ function NationsRouting(props: any) {
                                                             'paddingRight': '10px',
                                                         }}
                                                     >
-                                                        {NationBlock(nation)}
+                                                        {NationButton(nation, 100)}
                                                     </Link>
                                                 )}
                                         </span>
@@ -61,35 +61,6 @@ function NationsRouting(props: any) {
             </Route>
         </Routes>
     );
-}
-
-function NationBlock(nation: any) {
-    let emblem
-    try {
-        emblem = require('/src/images/' + nation.emblem);
-    } catch (e) {
-        emblem = require(`../../../images/zzz.png`);
-    }
-    return (
-        <div style={{
-            'width': '120px',
-            'display': 'inline-block',
-            'verticalAlign': 'top',
-            'textAlign': 'center',
-        }}>
-            <img src={emblem}
-                style={{
-                    'width': '100px',
-                    'height': 'auto',
-                    'display': 'inline-block'
-                }}
-            >
-            </img>
-            <p>
-                {nation.name}
-            </p>
-        </div>
-    )
 }
 
 export default NationsRouting;

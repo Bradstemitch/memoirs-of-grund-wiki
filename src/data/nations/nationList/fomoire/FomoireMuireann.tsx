@@ -1,3 +1,5 @@
+import Emblem from "../../../../images/zzz.png"
+
 export const FomoireMuireannList = [
     {
         'name': 'Muireann',
@@ -6,7 +8,7 @@ export const FomoireMuireannList = [
         'tags': [
             'Fomoire'
         ],
-        "emblem": "muireann.png",
+        "emblem": Emblem,
         "pronunciation": "ASS - erra",
         "info": {
             "basic": {
