@@ -1,12 +1,10 @@
 import { ArlyssKnightData } from "../characters/arlyssKnight";
-import { LilithFaireData } from "../characters/lilithFaire";
 import Emblem from "../../images/damoclesKnightCommando.png"
+import { CHARACTERS, ORGANISATIONS } from "../constants";
 
 
-export const KnightCommandoData = {
-    "name": "Knight Commando",
-    "fileName": "knightCommando",
-    "fileLoc": "organisations",
+export const KnightCommando: any = {
+    ...ORGANISATIONS.KNIGHT_COMMANDO,
     "tags": [
         "Damocles",
         "Knight Commando"
@@ -16,9 +14,11 @@ export const KnightCommandoData = {
     "info": {
         "basic": {
             "commander": [
-                ArlyssKnightData
+                CHARACTERS.ARLYSS_KNIGHT
             ],
-            "second": LilithFaireData
+            "second": [
+                CHARACTERS.LILITH_FAIRE
+            ]
         },
     },
     "summary": [

@@ -1,10 +1,7 @@
+import { CHARACTERS } from "../constants";
+
 export const ArlyssKnightData = {
-    "name": {
-        "fore": "Arlyss",
-        "sur": "Knight",
-    },
-    "fileName": "arlyssKnight",
-    "fileLoc": "characters",
+    ...CHARACTERS.ARLYSS_KNIGHT,
     "tags": [
         "Damocles",
         "Knight Commando"

@@ -1,9 +1,13 @@
-import { ShardsOfDamoclesData } from "./bladesOfAneurin";
-import { KnightCommandoData } from "./knightCommando";
-import { PrometheusInitiativeData } from "./prometheusInitiative";
+import { ShardsOfDamocles } from "./bladesOfAneurin";
+import { DamocleseRemnant } from "./damocleseRemnant";
+import { HarlequinsRevelry } from "./harlequinsRevelry";
+import { KnightCommando } from "./knightCommando";
+import { PrometheusInitiative } from "./prometheusInitiative";
 
 export const OrgList = [
-  KnightCommandoData,
-  PrometheusInitiativeData,
-  ShardsOfDamoclesData,
+  KnightCommando,
+  PrometheusInitiative,
+  ShardsOfDamocles,
+  DamocleseRemnant,
+  HarlequinsRevelry,
 ]

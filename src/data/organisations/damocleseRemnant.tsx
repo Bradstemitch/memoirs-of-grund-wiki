@@ -1,18 +1,18 @@
-import Emblem from "../../images/damoclesShardsOfDamocles.png"
+import Emblem from "../../images/zzz.png"
 
-export const ShardsOfDamocles = {
-    "name": "Shards of Damocles",
-    "fileName": "shardsOfDamocles",
+export const DamocleseRemnant = {
+    "name": "Damocles Remnant",
+    "fileName": "damoclesRemnant",
     "fileLoc": "organisations",
     "tags": [
         "Damocles",
-        "Blades Of Aneurin"
+        "Blades Of Damoclese Remnant"
     ],
     "emblem": Emblem,
     "pronunciation": "Bree - th",
     "info": {
         "basic": {
-            "commander": "Aneurin",
+            "commander": "Ezra",
         },
     },
     "summary": [

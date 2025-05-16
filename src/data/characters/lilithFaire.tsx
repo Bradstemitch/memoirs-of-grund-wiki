@@ -1,60 +1,90 @@
-export const LilithFaireData = {
-    "name": {
-        "fore": "Lilith",
-        "sur": "Faire",
-    },
-    "fileName": "lilithFaire",
-    "fileLoc": "characters",
+import { CHARACTERS, NATIONS, ORGANISATIONS, SPECIES } from "../constants";
+
+export const LilithFaire = {
+    ...CHARACTERS.LILITH_FAIRE,
     "tags": [
-        "Damocles",
         "Knight Commando"
     ],
-    "image": "arlyssKnight.png",
-    "pronunciation": "Bree - th",
+    //"image": "",
+    //"pronunciation": "",
     "info": {
+        // "alias":[],
         "basic": {
-            "nationality": "Tuatha Dé Danann",
-            "born": "-35 CE",
-            "status": "Alive"
+            "nationality": [
+                NATIONS.TUATHA_DE_DANANN
+            ],
+            "born": [
+                "-35 CE"
+            ],
+            "status": [
+                "Alive"
+            ]
         },
         "physical": {
-            "species": "Elf (Sylvan)",
-            "gender": "Female",
-            "Height": "1.83 meters",
-            "hair": "orange",
-            "eyes": "green",
-            "skin": "white"
+            "species": [
+                {
+                    "detail": "Sylvan",
+                    "data": SPECIES.ELF
+                },
+            ],
+            "gender": [
+                "Female"
+            ],
+            "height": [
+                "1.83 meters"
+            ],
+            "hair": [
+                "Orange"
+            ],
+            "eyes": [
+                "Green"
+            ],
+            "skin": [
+                "White"
+            ]
         },
         "personal": {
-            "titles": "Tuatha Dé Danann",
-            "professions": "-35 CE",
-            "affiliations": ["Vindictis", "Knight Commando", "Messan Rebellion"],
-            "skills": [
-            ]
+            // "titles": [
+            // ],
+            // "professions": [
+            // ],
+            "affiliations": [
+                {
+                    "detail": "Formerly",
+                    "data": ORGANISATIONS.VINDICTIS_CONFEDERATION
+                },
+                {
+                    "detail": "Formerly",
+                    "data": ORGANISATIONS.KNIGHT_COMMANDO
+                },
+                ORGANISATIONS.MESSAN_REBELION
+
+            ],
+            // "skills": [
+            // ]
         },
         "family": {
             "relatives": [
                 {
-                    "relation": "Mother",
+                    "detail": "Mother",
                     "data": { "name": "Unknown" }
                 },
                 {
-                    "relation": "Father",
+                    "detail": "Father",
                     "data": { "name": "Unknown" }
-                }  
+                }
             ],
             "partner": [
                 {
-                    "relation": "Wife",
-                    "data": "Leta"
+                    "detail": "Wife",
+                    "data": CHARACTERS.LETA
                 },
             ],
-            "children":[
-            ]
+            // "children": [
+            // ]
         }
     },
     "summary": [
         "Infiltration and assassination unit made up of the stealthiest troops in the Remnant. They replace or remove people in positions of power to turn the odds in their favour"
     ]
 }
-

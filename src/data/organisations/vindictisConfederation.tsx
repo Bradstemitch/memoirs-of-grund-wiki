@@ -1,9 +1,8 @@
 import Emblem from "../../images/damoclesShardsOfDamocles.png"
+import { ORGANISATIONS } from "../constants"
 
-export const ShardsOfDamocles = {
-    "name": "Shards of Damocles",
-    "fileName": "shardsOfDamocles",
-    "fileLoc": "organisations",
+export const VindictisConfederation = {
+    ...ORGANISATIONS.VINDICTIS_CONFEDERATION,
     "tags": [
         "Damocles",
         "Blades Of Aneurin"

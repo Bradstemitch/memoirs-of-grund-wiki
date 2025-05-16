@@ -1,6 +1,6 @@
 import Emblem from "../../images/prometheusInitiative.png"
 
-export const PrometheusInitiativeData = {
+export const PrometheusInitiative = {
     "name": "Prometheus Initiative",
     "fileName": "prometheusInitiative",
     "fileLoc": "organisations",

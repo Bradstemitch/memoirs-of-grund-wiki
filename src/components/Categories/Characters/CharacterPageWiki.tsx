@@ -39,14 +39,14 @@ function CharacterPage(props: CreatureBoxProps) {
         setValue(newValue);
     };
 
-    let nation = props.character
+    let character = props.character
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
-            {nation.info &&
-                WikiBar(nation)
+            {character.info &&
+                WikiBar(character)
             }
 
-            <h2>{`${nation.name.fore} ${nation.name.sur}`}</h2>
+            <h2>{`${character.name.fore} ${character.name.sur}`}</h2>
             <TabContext value={value}>
                 <TabList
                     onChange={handleChange}
@@ -62,7 +62,7 @@ function CharacterPage(props: CreatureBoxProps) {
 
                 <TabPanel value={"Overview"}>
 
-                    {nation.summary && nation.summary.map((x: any) =>
+                    {character.summary && character.summary.map((x: any) =>
                         <div dangerouslySetInnerHTML={{ __html: x }} />
                     )}
 
@@ -74,7 +74,7 @@ function CharacterPage(props: CreatureBoxProps) {
                 <TabPanel value={"History"}>
                     <h3> History </h3>
 
-                    {nation.history && nation.history.map((x: any) =>
+                    {character.history && character.history.map((x: any) =>
                         <p>
                             <strong>{x.name + " (" + x.date + ")"}</strong>
                             {x.text.map((x: string) => <p> {x} </p>)}
@@ -110,21 +110,69 @@ function InfoRow(RowType: string, data: any) {
 
             <td style={{ 'padding': '2px', }}>
 
-                {data.map((i: any) => i.name ?
-                    <div>
-                        <Link
-                            key={i.fileName + '-characterPage-Link'}
-                            to={`/${i.fileLoc}/${i.fileName}`}
-                        >
-                            {`${i.name}`}
-                        </Link>
-                    </div>
-                    : i.detail ?
-                        <div>{`${i.data.name} (${i.detail})`}</div>
-                        :
-                        <div> {i} </div>
-                )}
+                {data.map((i: any) => {
+                    const name = i.name ?
+                        i.name
+                        : i.detail ?
+                            i.data.name
+                            : i
+                    const processedName = i.data && i.data.fileLoc === "characters" ?
+                        `${name.byNameBef || ''} ${name.fore || ''} ${name.sur || ''} ${name.byNameAft || ''}`
+                        : name
+                    const fileName = i.fileName ?
+                        i.fileName
+                        : i.data && i.data.fileName ?
+                            i.data.fileName
+                            : null
+                    const fileLoc = i.fileLoc ?
+                        i.fileLoc
+                        : i.data && i.data.fileLoc ?
+                            i.data.fileLoc
+                            : null
+                    return (
+                        <div>
+                            {fileName ?
+                                <Link
+                                    key={fileName + '-characterPage-Link'}
+                                    to={`/${fileLoc}/${fileName}`}
+                                >
+                                    {`${processedName}`}
+                                </Link>
+                                :
+                                <>{processedName}</>
+                            }
+                            {i.detail &&
+                                <> {` (${i.detail})`}</>
+                            }
+                        </div>
+                        // i.name ?
+                        //     <div>
+                        //         <Link
+                        //             key={i.fileName + '-characterPage-Link'}
+                        //             to={`/${i.fileLoc}/${i.fileName}`}
+                        //         >
+                        //             {`${i.name}`}
+                        //         </Link>
+                        //     </div>
 
+                        //     : i.detail ?
+                        //         <div>
+                        //             {i.data.name && i.data.fileName && i.data.fileLoc ?
+                        //                 <Link
+                        //                     key={i.fileName + '-characterPage-Link'}
+                        //                     to={`/${i.data.fileLoc}/${i.data.fileName}`}
+                        //                 >
+                        //                     {`${i.data.name}`}
+                        //                 </Link>
+                        //                 :
+                        //                 <>{`${i.data.name}`}</>
+                        //             }
+                        //             {` (${i.detail})`}
+                        //         </div>
+                        //         :
+                        //         <div> {i} </div>
+                    )
+                })}
             </td>
         </tr>
     )

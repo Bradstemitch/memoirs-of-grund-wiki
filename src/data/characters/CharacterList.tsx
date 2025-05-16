@@ -1,5 +1,5 @@
 import { ArlyssKnightData } from "./arlyssKnight";
-import { LilithFaireData } from "./lilithFaire";
+import { LilithFaire } from "./lilithFaire";
 import { NolaThesotiData } from "./nolaThesoti";
 import { OberonValerianData } from "./oberonValerian";
 
@@ -13,7 +13,7 @@ export const CharacterList = [
   //   'tags': ['Damocles']
   // },
   ArlyssKnightData,
-  LilithFaireData,
+  LilithFaire,
   NolaThesotiData,
   OberonValerianData,
   // {
