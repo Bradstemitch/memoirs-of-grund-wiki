@@ -1,11 +1,11 @@
 import { NolaThesotiData } from "../../../characters/nolaThesoti";
 import { OberonValerianData } from "../../../characters/oberonValerian";
-import { MessactData } from "../../../locations/cities/messarMessact";
+import { MessarMessactData } from "../../../locations/cities/messarMessact";
 import { DraconicPantheonData } from "../../../religions/draconicPantheon";
 import { MessanHeptarchyAtreaData } from "./MessarAtrea";
 import { MessanHeptarchyBabaccaData } from "./MessarBabaca";
 import { MessanHeptarchyBreccaData } from "./MessarBrecca";
-import { MessanHeptarchyEathyeData } from "./MessarEathye";
+import { MessanHeptarchyEthyeData } from "./MessarEthye";
 import { MessanHeptarchyMaarraData } from "./MessarMaarra";
 import { MessanHeptarchyNeaxeData } from "./MessarNeaxe";
 import { MessanHeptarchySeaxeData } from "./MessarSeaxe";
@@ -13,15 +13,27 @@ import { MessanHeptarchySudarData } from "./MessarSudar";
 import { MessanHeptarchyTrifeData } from "./MessarTrife";
 import { MessanHeptarchyWeaxeData } from "./MessarWeaxe";
 import Emblem from "../../../../images/messarEmblem.png"
+import { MessarVillenData } from "../../../locations/cities/messarVillen";
+import { messarVergrisData } from "../../../locations/cities/messarVergris";
+import { MessarSylvasteadData } from "../../../locations/cities/messarSylvastead";
+import { MessarCreichData } from "../../../locations/cities/messarCreich";
+import { MessarStanshawData } from "../../../locations/cities/messarStanshaw";
+import { MessarPoltonData } from "../../../locations/cities/messarPolton";
+import { MessarNorcesterData } from "../../../locations/cities/messarNorcester";
+import { MessarStanportData } from "../../../locations/cities/messarStanport";
+import { MessarAstboroughData } from "../../../locations/cities/messarAstborough";
+import { MessarDaleData } from "../../../locations/cities/messarDale";
+import { MessarDoltonData } from "../../../locations/cities/messarDolton";
+import { MessarBlensterData } from "../../../locations/cities/messarBlenster";
+import { MessarSutportData } from "../../../locations/cities/messarSutport";
+import { MessarWesfordData } from "../../../locations/cities/messarWesford";
 
-export const MessanHeptarchyData = {
+export const MessanHeptarchyName = {
     "name": "Messan Heptarchy",
     "fileName": "messar",
-    "tags": [
-        "Messar"
-    ],
-    "emblem": Emblem,
-    "pronunciation": "May - sar",
+}
+
+export const MessanHeptarchyInfo = {
     "info": {
         "basic": {
             "variations": [
@@ -66,7 +78,7 @@ export const MessanHeptarchyData = {
         },
         "social": {
             "capital": [
-                MessactData
+                MessarMessactData
             ],
             "currency": [
 
@@ -81,8 +93,10 @@ export const MessanHeptarchyData = {
                 DraconicPantheonData
             ]
         }
-    },
+    }
+}
 
+export const MessanHeptarchyNotables = {
     "notables": [
         {
             "type": "High Kings / Queens",
@@ -97,8 +111,10 @@ export const MessanHeptarchyData = {
                 },
             ]
         },
-    ],
+    ]
+}
 
+export const MessanHeptarchyProvinces = {
     "provinces": [
         {
             "type": "Main",
@@ -110,7 +126,7 @@ export const MessanHeptarchyData = {
             "type": "Heptarchs",
             "list": [
                 MessanHeptarchyBreccaData,
-                MessanHeptarchyEathyeData,
+                MessanHeptarchyEthyeData,
                 MessanHeptarchyNeaxeData,
                 MessanHeptarchySeaxeData,
                 MessanHeptarchyTrifeData,
@@ -125,13 +141,44 @@ export const MessanHeptarchyData = {
                 MessanHeptarchySudarData,
             ]
         }
-    ],
+    ]
+}
 
+export const MessanHeptarchyLocations = {
     "locations": [
-        // {
-        //     "type": "Cities",
-        //     "list": Messact Sylvastead (woodcutters and main canal user), Verdigris (former mining town), Creighwich (Mountain Springs), Stanshaw (in moutain surrounded by dense forest), Polton (built next to the lake), Norcester (northern barricade), Stanport (costal town), Astborough (fort town near brytth), Dale (valley city), Dolton (farming community on canal), Blenster, Sutport (large port town), wesford (bridge city across the frontier)
-        // },
+        {
+            "type": "Cities",
+            "list": [
+                MessarMessactData,
+                // Sylvastead(woodcutters and main canal user), 
+                MessarSylvasteadData,
+                // Vergris(former mining town),
+                messarVergrisData,
+                MessarVillenData,
+                // Creich(Mountain Springs),
+                MessarCreichData,
+                // Stanshaw(in moutain surrounded by dense forest), 
+                MessarStanshawData,
+                // Polton(built next to the lake),
+                MessarPoltonData,
+                // Norcester(northern barricade),
+                MessarNorcesterData,
+                // Stanport(costal town), 
+                MessarStanportData,
+                // Astborough(fort town near brytth),
+                MessarAstboroughData,
+                // Dale(valley city),
+                MessarDaleData,
+                // Dolton(farming community on canal),
+                MessarDoltonData,
+                // Blenster, 
+                MessarBlensterData,
+                // Sutport(large port town), 
+                MessarSutportData,
+                // wesford(bridge city across the frontier)
+                MessarWesfordData,
+            ]
+        }
         // {
         //     "type": "Other",
         //     "list": Shadows Refuge, Solitude Portal, 
@@ -142,12 +189,24 @@ export const MessanHeptarchyData = {
         // },
     ],
 }
+export const MessanHeptarchyData = {
+    ...MessanHeptarchyName,
+    "tags": [
+        "Messar"
+    ],
+    "emblem": Emblem,
+    "pronunciation": "May - sar",
+    ...MessanHeptarchyInfo,
+    ...MessanHeptarchyNotables,
+    ...MessanHeptarchyProvinces,
+    ...MessanHeptarchyLocations
+}
 
 export const MessarList = [
     MessanHeptarchyData,
     MessanHeptarchyAtreaData,
     MessanHeptarchyBreccaData,
-    MessanHeptarchyEathyeData,
+    MessanHeptarchyEthyeData,
     MessanHeptarchyNeaxeData,
     MessanHeptarchySeaxeData,
     MessanHeptarchyTrifeData,

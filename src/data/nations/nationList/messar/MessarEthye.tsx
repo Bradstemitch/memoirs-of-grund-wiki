@@ -1,13 +1,14 @@
-import Emblem from "../../../../images/messarEathye.png"
+import Emblem from "../../../../images/messarEthye.png"
+import { MessarVillenData } from "../../../locations/cities/messarVillen"
 
-export const MessanHeptarchyEathyeData = {
-    'name': 'Eathye',
-    'fileName': 'messarEathye',
+export const MessanHeptarchyEthyeData = {
+    'name': 'Ethye',
+    'fileName': 'messarEthye',
     'tags': [
         'Messar'
     ],
     "emblem": Emblem,
-    "pronunciation": "ASS - erra",
+    "pronunciation": "Meh - sarr",
     "info": {
         "basic": {
             "area": [
@@ -20,7 +21,7 @@ export const MessanHeptarchyEathyeData = {
                 "Hereditary Monarchy"
             ],
             "ruler": [
-                "King / Queen of Eathye"
+                "King / Queen of Ethye"
             ],
             "status": [
                 "Petty Kingdom"
@@ -57,4 +58,20 @@ export const MessanHeptarchyEathyeData = {
             ]
         }
     },
+    "locations": [
+                {
+                    "type": "Cities",
+                    "list": [
+                        MessarVillenData,
+                    ]
+                }
+                // {
+                //     "type": "Other",
+                //     "list": Shadows Refuge, Solitude Portal, 
+                // },
+                // {
+                //     "type": "Prometheus Facilities",
+                //     "list": P-262, P-618
+                // },
+            ],
 }

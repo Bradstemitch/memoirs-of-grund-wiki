@@ -107,14 +107,25 @@ function NationBox(props: CreatureBoxProps) {
                                 <div style={{
                                     'paddingTop': '10px'
                                 }}>
-                                    {x.list && x.list.map((x: any) => NationButton(x, 80))}
+                                    {x.list && x.list.map((x: any) =>
+                                        <Link
+                                            key={nation.fileName + '-nationsPage-Link'}
+                                            to={`/nations/${x.fileName}`}
+                                            style={{
+                                                'paddingLeft': '10px',
+                                                'paddingRight': '10px',
+                                            }}
+                                        >
+                                            {NationButton(x, 80)}
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         )}
                         <br />
                     </>}
 
-                    {nation.location && nation.locations.length > 0 && <>
+                    {nation.locations && nation.locations.length > 0 && <>
                         <h3> Locations </h3>
 
                         {nation.locations.map((x: any) => <>
@@ -124,7 +135,10 @@ function NationBox(props: CreatureBoxProps) {
                                 'paddingTop': '10px'
                             }}>
                                 {x.type && x.list.map((x: any) =>
-                                    NationButton(x, 80)
+                                    //NationButton(x, 80)
+                                    <div>
+                                        {x.name} ({x.info.social.population})
+                                    </div>
                                 )}
                             </div>
                         </>)}
@@ -222,68 +236,68 @@ function WikiBar(nation: any) {
             }}>
                 <tbody>
 
-                <tr>
-                    <th colSpan={2}>
-                        <img src={nation.emblem}
-                            style={{
-                                'width': '250px',
-                            }}
+                    <tr>
+                        <th colSpan={2}>
+                            <img src={nation.emblem}
+                                style={{
+                                    'width': '250px',
+                                }}
                             />
-                    </th>
-                </tr>
-                {nation.info.basic.variations.length +
-                    nation.info.basic.government.length +
-                    nation.info.basic.status.length +
-                    nation.info.basic.ruler.length +
-                    nation.info.basic.founded.length +
-                    nation.info.basic.area.length +
-                    nation.info.basic.population.length > 0 && <>
-                        <tr>
-                            <th colSpan={2}> Basic Information </th>
-                        </tr>
-                        {nation.info.basic.variations.length > 0 && InfoRow("Variations", nation.info.basic.variations)}
-                        {nation.info.basic.government.length > 0 && InfoRow("Government", nation.info.basic.government)}
-                        {nation.info.basic.status.length > 0 && InfoRow("Status", nation.info.basic.status)}
-                        {nation.info.basic.ruler.length > 0 && InfoRow("Ruler", nation.info.basic.ruler)}
-                        {nation.info.basic.founded.length > 0 && InfoRow("Founded", nation.info.basic.founded)}
-                        {nation.info.basic.area.length > 0 && InfoRow("Area", nation.info.basic.area)}
-                        {nation.info.basic.population.length > 0 && InfoRow("Population", nation.info.basic.population)}
-                    </>
-                }
+                        </th>
+                    </tr>
+                    {nation.info.basic.variations.length +
+                        nation.info.basic.government.length +
+                        nation.info.basic.status.length +
+                        nation.info.basic.ruler.length +
+                        nation.info.basic.founded.length +
+                        nation.info.basic.area.length +
+                        nation.info.basic.population.length > 0 && <>
+                            <tr>
+                                <th colSpan={2}> Basic Information </th>
+                            </tr>
+                            {nation.info.basic.variations.length > 0 && InfoRow("Variations", nation.info.basic.variations)}
+                            {nation.info.basic.government.length > 0 && InfoRow("Government", nation.info.basic.government)}
+                            {nation.info.basic.status.length > 0 && InfoRow("Status", nation.info.basic.status)}
+                            {nation.info.basic.ruler.length > 0 && InfoRow("Ruler", nation.info.basic.ruler)}
+                            {nation.info.basic.founded.length > 0 && InfoRow("Founded", nation.info.basic.founded)}
+                            {nation.info.basic.area.length > 0 && InfoRow("Area", nation.info.basic.area)}
+                            {nation.info.basic.population.length > 0 && InfoRow("Population", nation.info.basic.population)}
+                        </>
+                    }
 
-                {nation.info.government.headOfState.length +
-                    nation.info.government.headOfGovernment.length +
-                    nation.info.government.commander.length +
-                    nation.info.government.military.length +
-                    nation.info.government.intelligence.length > 0 &&
-                    <>
-                        <tr>
-                            <th colSpan={2}> Government Information </th>
-                        </tr>
-                        {nation.info.government.headOfState.length > 0 && InfoRow("Head of State", nation.info.government.headOfState)}
-                        {nation.info.government.headOfGovernment.length > 0 && InfoRow("Head of Government", nation.info.government.headOfGovernment)}
-                        {nation.info.government.commander.length > 0 && InfoRow("Commander", nation.info.government.commander)}
-                        {nation.info.government.military.length > 0 && InfoRow("Military", nation.info.government.military)}
-                        {nation.info.government.intelligence.length > 0 && InfoRow("Intelligence Service", nation.info.government.intelligence)}
-                    </>
-                }
+                    {nation.info.government.headOfState.length +
+                        nation.info.government.headOfGovernment.length +
+                        nation.info.government.commander.length +
+                        nation.info.government.military.length +
+                        nation.info.government.intelligence.length > 0 &&
+                        <>
+                            <tr>
+                                <th colSpan={2}> Government Information </th>
+                            </tr>
+                            {nation.info.government.headOfState.length > 0 && InfoRow("Head of State", nation.info.government.headOfState)}
+                            {nation.info.government.headOfGovernment.length > 0 && InfoRow("Head of Government", nation.info.government.headOfGovernment)}
+                            {nation.info.government.commander.length > 0 && InfoRow("Commander", nation.info.government.commander)}
+                            {nation.info.government.military.length > 0 && InfoRow("Military", nation.info.government.military)}
+                            {nation.info.government.intelligence.length > 0 && InfoRow("Intelligence Service", nation.info.government.intelligence)}
+                        </>
+                    }
 
-                {nation.info.social.capital.length +
-                    nation.info.social.language.length +
-                    nation.info.social.demonym.length +
-                    nation.info.social.currency.length +
-                    nation.info.social.religion.length > 0 &&
-                    <>
-                        <tr>
-                            <th colSpan={2}> Social Information </th>
-                        </tr>
-                        {nation.info.social.capital.length > 0 && InfoRow("Capital", nation.info.social.capital)}
-                        {nation.info.social.language.length > 0 && InfoRow("Language", nation.info.social.language)}
-                        {nation.info.social.demonym.length > 0 && InfoRow("Demonym", nation.info.social.demonym)}
-                        {nation.info.social.currency.length > 0 && InfoRow("Currency", nation.info.social.currency)}
-                        {nation.info.social.religion.length > 0 && InfoRow("Religion", nation.info.social.religion)}
-                    </>
-                }
+                    {nation.info.social.capital.length +
+                        nation.info.social.language.length +
+                        nation.info.social.demonym.length +
+                        nation.info.social.currency.length +
+                        nation.info.social.religion.length > 0 &&
+                        <>
+                            <tr>
+                                <th colSpan={2}> Social Information </th>
+                            </tr>
+                            {nation.info.social.capital.length > 0 && InfoRow("Capital", nation.info.social.capital)}
+                            {nation.info.social.language.length > 0 && InfoRow("Language", nation.info.social.language)}
+                            {nation.info.social.demonym.length > 0 && InfoRow("Demonym", nation.info.social.demonym)}
+                            {nation.info.social.currency.length > 0 && InfoRow("Currency", nation.info.social.currency)}
+                            {nation.info.social.religion.length > 0 && InfoRow("Religion", nation.info.social.religion)}
+                        </>
+                    }
                 </tbody>
             </table>
         </div>

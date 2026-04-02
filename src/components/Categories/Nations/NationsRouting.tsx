@@ -5,7 +5,6 @@ import NationBox from './NationBox';
 import { nationTypes } from '../../../data/CategoryList';
 import NationButton from './NationsButton';
 
-
 function NationsRouting(props: any) {
     return (
         <Routes>

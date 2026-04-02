@@ -1,5 +1,8 @@
 
 import Emblem from "../../../../images/messarEmblem.png"
+import { NolaThesotiData } from "../../../characters/nolaThesoti"
+import { OberonValerianData } from "../../../characters/oberonValerian"
+import { MessarMessactData } from "../../../locations/cities/messarMessact"
 
 export const MessanHeptarchyAtreaData = {
     'name': 'Principality of Atrea',
@@ -62,19 +65,36 @@ export const MessanHeptarchyAtreaData = {
             ]
         }
     },
+
     "notables": [
         {
             "type": "High Kings / Queens",
             "list": [
                 {
-                    "name": "Oberon Valerian",
+                    "person": OberonValerianData,
                     "date": "982 CE - 983 CE"
                 },
                 {
-                    "name": "Nola Thesoti",
+                    "person": NolaThesotiData,
                     "date": "983 CE - Present"
                 },
             ]
         },
     ],
+    "locations": [
+            {
+                "type": "Cities",
+                "list": [
+                    MessarMessactData,
+                ]
+            }
+            // {
+            //     "type": "Other",
+            //     "list": Shadows Refuge, Solitude Portal, 
+            // },
+            // {
+            //     "type": "Prometheus Facilities",
+            //     "list": P-262, P-618
+            // },
+        ],
 }

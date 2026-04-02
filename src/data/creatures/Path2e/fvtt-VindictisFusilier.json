@@ -10,12 +10,12 @@
     },
     "height": 1,
     "width": 1,
-    "name": "Voltigeur",
+    "name": "Fusilier",
     "actorLink": false,
     "appendNumber": false,
     "prependAdjective": false,
     "texture": {
-      "src": "modules/memoirs-of-grund/assets/tokens/HumanoidVindictisLightInfantry.png",
+      "src": "modules/memoirs-of-grund/assets/tokens/HumanoidVindictisLineInfantry.png",
       "scaleX": 2,
       "scaleY": 2,
       "offsetX": 0,
@@ -98,19 +98,19 @@
     },
     "movementAction": null
   },
-  "name": "Voltigeur",
+  "name": "Fusilier",
   "type": "npc",
   "effects": [],
   "system": {
     "attributes": {
       "hp": {
-        "value": 70,
+        "value": 45,
         "temp": 0,
-        "max": 70,
+        "max": 45,
         "details": ""
       },
       "ac": {
-        "value": 21,
+        "value": 18,
         "details": ""
       },
       "allSaves": {
@@ -132,7 +132,7 @@
         "details": ""
       },
       "level": {
-        "value": 6
+        "value": 4
       },
       "blurb": "",
       "publicNotes": "",
@@ -149,29 +149,29 @@
     "_migration": {
       "version": 0.948,
       "previous": {
-        "schema": 0.844,
+        "schema": 0.935,
         "foundry": "13.350",
         "system": "7.6.4"
       }
     },
     "abilities": {
       "str": {
-        "mod": 3
+        "mod": 2
       },
       "dex": {
         "mod": 5
       },
       "con": {
-        "mod": 3
+        "mod": 2
       },
       "int": {
         "mod": 0
       },
       "wis": {
-        "mod": 2
+        "mod": 3
       },
       "cha": {
-        "mod": 2
+        "mod": 0
       }
     },
     "perception": {
@@ -182,7 +182,7 @@
     },
     "saves": {
       "fortitude": {
-        "value": 14,
+        "value": 11,
         "saveDetail": ""
       },
       "reflex": {
@@ -195,13 +195,11 @@
       }
     },
     "skills": {
-      "acrobatics": {
-        "special": [],
-        "base": 15
-      },
       "athletics": {
-        "base": 13,
-        "special": []
+        "base": 8
+      },
+      "acrobatics": {
+        "base": 12
       }
     },
     "traits": {
@@ -216,7 +214,7 @@
       }
     }
   },
-  "img": "modules/memoirs-of-grund/assets/actors/HumanoidVindictisLightInfantry.png",
+  "img": "modules/memoirs-of-grund/assets/actors/HumanoidVindictisLineInfantry.png",
   "items": [
     {
       "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
@@ -232,7 +230,7 @@
           "version": 0.948,
           "lastMigration": null,
           "previous": {
-            "schema": 0.844,
+            "schema": 0.935,
             "foundry": "13.350",
             "system": "7.6.4"
           }
@@ -400,7 +398,7 @@
         "_migration": {
           "version": 0.948,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "13.350",
             "system": "7.6.4"
           }
@@ -471,7 +469,7 @@
         "_migration": {
           "version": 0.948,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "13.350",
             "system": "7.6.4"
           }
@@ -509,13 +507,13 @@
       "system": {
         "description": {
           "gm": "",
-          "value": "<p>The soldier aims carefully and fires. They make a ranged weapon attack that deals an additional 3d8 precision damage.</p><p>The Strike ignores the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{concealed} condition, lesser @UUID[Compendium.pf2e.other-effects.Item.I9lfZUiCwMiGogVi]{cover}, and standard cover, and reduces greater cover to standard cover.</p>"
+          "value": "<p>The soldier aims carefully and fires. They make a ranged weapon attack that deals an additional 2d6 precision damage.</p>\n<p>The Strike ignores the @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{concealed} condition, lesser @UUID[Compendium.pf2e.other-effects.Item.I9lfZUiCwMiGogVi]{cover}, and standard cover, and reduces greater cover to standard cover.</p>"
         },
         "rules": [
           {
             "category": "precision",
-            "diceNumber": 3,
-            "dieSize": "d8",
+            "diceNumber": 2,
+            "dieSize": "d6",
             "key": "DamageDice",
             "predicate": [
               "woodsong-arrow"
@@ -534,7 +532,7 @@
         "_migration": {
           "version": 0.948,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "13.350",
             "system": "7.6.4"
           }
@@ -599,13 +597,13 @@
         },
         "damageRolls": {
           "z7T92SWfy8spdQag": {
-            "damage": "3d8 + 9",
+            "damage": "2d8 + 9",
             "damageType": "piercing",
             "category": null
           }
         },
         "bonus": {
-          "value": 17
+          "value": 12
         },
         "attackEffects": {
           "value": []
@@ -619,7 +617,7 @@
         "_migration": {
           "version": 0.948,
           "previous": {
-            "schema": null,
+            "schema": 0.935,
             "foundry": "13.350",
             "system": "7.6.4"
           }
@@ -665,7 +663,7 @@
           "version": 0.948,
           "lastMigration": null,
           "previous": {
-            "schema": 0.844,
+            "schema": 0.935,
             "foundry": "13.350",
             "system": "7.6.4"
           }
@@ -703,9 +701,9 @@
           }
         },
         "equipped": {
-          "carryType": "held",
+          "carryType": "worn",
           "invested": null,
-          "handsHeld": 2
+          "handsHeld": 0
         },
         "containerId": null,
         "size": "med",
@@ -797,11 +795,11 @@
     "core": {}
   },
   "_stats": {
-    "compendiumSource": "Compendium.memoirs-of-grund.bestiary-pf2e.Actor.0RyKcUCi16aF9AF1",
+    "compendiumSource": "Compendium.memoirs-of-grund.bestiary-pf2e.Actor.ImTnegawZrsS2qnx",
     "duplicateSource": null,
     "exportSource": {
       "worldId": "compendium-project-path",
-      "uuid": "Actor.ZOb5xuXK6yPI9YE1",
+      "uuid": "Actor.cqMo5Re0h9wk3FNK",
       "coreVersion": "13.350",
       "systemId": "pf2e",
       "systemVersion": "7.6.4"
@@ -809,8 +807,8 @@
     "coreVersion": "13.350",
     "systemId": "pf2e",
     "systemVersion": "7.6.4",
-    "createdTime": 1762527620408,
-    "modifiedTime": 1762527620408,
+    "createdTime": 1762527702520,
+    "modifiedTime": 1762527702520,
     "lastModifiedBy": "zGBP0faGe9s57rxO"
   },
   "ownership": {

@@ -12,6 +12,7 @@ import TimelineRouting from '../Categories/Timeline/TimelineRouting';
 import ReligionsRouting from '../Categories/Religions/ReligionsRouting';
 import ArmouryRouting from '../Categories/Armoury/ArmouryRouting';
 import OrgRouting from '../Categories/Organisations/OrgRouting';
+import FoundryJSON from '../Categories/Foundry/FoundryJSON';
 
 function RoleplayRoutes() {
     const [roleplaySystem, setRoleplaySystem] = useState<string>('DnD5e')
@@ -63,6 +64,10 @@ function RoleplayRoutes() {
 
                 <Route path='religions/*' element={
                     <ReligionsRouting />
+                } />
+
+                <Route path='foundry/*' element={
+                    <FoundryJSON />
                 } />
 
             </Route>
