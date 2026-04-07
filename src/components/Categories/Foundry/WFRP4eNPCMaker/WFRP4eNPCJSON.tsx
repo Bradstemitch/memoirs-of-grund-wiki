@@ -2,9 +2,25 @@ import React from 'react';
 import { WFRP4eNPC } from './Summary/WFRP4eNPC';
 function WFRP4eNPCJSON(props: any) {
     const creature = {
-        // ...DarkHeresyNPC("Blood Pact", "Trooper", "Lasgun", 9, "Troop"),
-        ...WFRP4eNPC("Human", "Select-Fyrd", "", 1, "Silver")
-        
+        // ...WFRP4eNPC("Goblin", "Clanless", "Goblin", "", 3, "Silver"),
+        //----Outlaw
+        // ...WFRP4eNPC("Human", "Outlaw", "Mugger", "", 2, "Brass"),
+        // ...WFRP4eNPC("Human", "Outlaw", "Assassin", "", 1, "Gold"),
+        // ...WFRP4eNPC("Human", "Outlaw", "Robber", "", 1, "Brass"),
+        // ...WFRP4eNPC("Human", "Outlaw", "Brigand", "", 2, "Brass"),
+        // ...WFRP4eNPC("Human", "Outlaw", "Marauder", "", 4, "Brass"),
+        //----Allaire
+        // ...WFRP4eNPC("Human", "Allaire", "Levy", "", 1, "Silver"),
+        // ...WFRP4eNPC("Human", "Allaire", "Pedite", "", 3, "Silver"),
+        // ...WFRP4eNPC("Human", "Allaire", "Milite", "", 5, "Silver"),
+        // ...WFRP4eNPC("Human", "Allaire", "Knight", "", 2, "Gold"),
+        //----Krasaheim
+        //----Messar
+        // ...WFRP4eNPC("Human", "Messar", "Archer", "", 3, "Silver"),
+        // ...WFRP4eNPC("Human", "Messar", "Fyrd", "", 5, "Brass"),
+        // ...WFRP4eNPC("Human", "Messar", "Select-Fyrd", "", 1, "Silver"),
+        // ...WFRP4eNPC("Human", "Messar", "Huscarl", "", 4, "Silver"),
+
     }
 
     const json = {
