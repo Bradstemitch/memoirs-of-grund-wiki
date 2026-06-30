@@ -11,7 +11,7 @@ function WFRP4eNPCJSON(props: any) {
         // ...WFRP4eNPC("Human", "Outlaw", "Marauder", "", 4, "Brass"),
         //----Allaire
         // ...WFRP4eNPC("Human", "Allaire", "Levy", "", 1, "Silver"),
-        // ...WFRP4eNPC("Human", "Allaire", "Pedite", "", 3, "Silver"),
+        ...WFRP4eNPC("Human", "Allaire", "Pedite", "", 3, "Silver"),
         // ...WFRP4eNPC("Human", "Allaire", "Milite", "", 5, "Silver"),
         // ...WFRP4eNPC("Human", "Allaire", "Knight", "", 2, "Gold"),
         //----Krasaheim
@@ -20,6 +20,8 @@ function WFRP4eNPCJSON(props: any) {
         // ...WFRP4eNPC("Human", "Messar", "Fyrd", "", 5, "Brass"),
         // ...WFRP4eNPC("Human", "Messar", "Select-Fyrd", "", 1, "Silver"),
         // ...WFRP4eNPC("Human", "Messar", "Huscarl", "", 4, "Silver"),
+        // ...WFRP4eNPC("Giant", "Giant", "Ogre", "", 4, "Silver"),
+
 
     }
 

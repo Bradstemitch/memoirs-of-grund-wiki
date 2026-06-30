@@ -1,3 +1,123 @@
+export function wep_lance(equipped: boolean) {
+  return {
+    "folder": "o8W3vHYG6Tv7SgNp",
+    "name": "Lance",
+    "type": "weapon",
+    "img": "modules/wfrp4e-up-in-arms/assets/icons/lance.png",
+    "system": {
+      "description": {
+        "value": "<p>Lances resemble spears, but with a weighty grip designed to brace the weapon against the arm and chest of a charging knight. The demi-lance is similar, but shorter and lighter.</p><p>* Lances and Demi-Lances count as @UUID[Compendium.wfrp4e-up-in-arms.items.okPRj8ixa55d9ETF]{Improvised Weapons} if used on a round where you have not charged.</p>"
+      },
+      "gmdescription": {
+        "value": ""
+      },
+      "quantity": {
+        "value": 1
+      },
+      "encumbrance": {
+        "value": 3
+      },
+      "price": {
+        "gc": 1,
+        "ss": 0,
+        "bp": 0
+      },
+      "availability": {
+        "value": "scarce"
+      },
+      "location": {
+        "value": ""
+      },
+      "damageToItem": {
+        "value": 0,
+        "shield": 0
+      },
+      "damage": {
+        "dice": "",
+        "value": "+SB+6"
+      },
+      "reach": {
+        "value": "vLong"
+      },
+      "range": {
+        "value": ""
+      },
+      "skill": {
+        "value": ""
+      },
+      "modeOverride": {
+        "value": ""
+      },
+      "twohanded": {
+        "value": false
+      },
+      "ammunitionGroup": {
+        "value": ""
+      },
+      "currentAmmo": {
+        "value": "0"
+      },
+      "consumesAmmo": {
+        "value": true
+      },
+      "weaponGroup": {
+        "value": "cavalry"
+      },
+      "qualities": {
+        "value": [
+          {
+            "name": "impact",
+            "value": null
+          },
+          {
+            "name": "impale",
+            "value": null
+          }
+        ]
+      },
+      "flaws": {
+        "value": []
+      },
+      "special": {
+        "value": ""
+      },
+      "equipped": {
+        "value": equipped
+      },
+      "loaded": {
+        "value": false,
+        "repeater": false,
+        "amt": 0
+      },
+      "offhand": {
+        "value": false
+      }
+    },
+    "effects": [],
+    "sort": -100000,
+    "flags": {
+      "wfrp4e-up-in-arms": {
+        "initialization-folder": "Weapons",
+        "sort": 3600000
+      }
+    },
+    "_stats": {
+      "compendiumSource": "Compendium.wfrp4e-up-in-arms.items.Item.efk3W6z1CMAA8NrB",
+      "duplicateSource": null,
+      "exportSource": null,
+      "coreVersion": "14.364",
+      "systemId": "wfrp4e",
+      "systemVersion": "9.6.1",
+      "createdTime": 1782295637423,
+      "modifiedTime": 1782295637423,
+      "lastModifiedBy": "khhY7fuxf56JOp5M"
+    },
+    "_id": "Jkiyi93qlKpX2E2O",
+    "ownership": {
+      "default": 0
+    }
+  }
+}
 export function wep_spear(equipped: boolean) {
   return {
     "folder": "o8W3vHYG6Tv7SgNp",

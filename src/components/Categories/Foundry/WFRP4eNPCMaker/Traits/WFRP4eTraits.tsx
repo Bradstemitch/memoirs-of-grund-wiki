@@ -162,3 +162,183 @@ export const trait_hardy = {
         "default": 0
     }
 }
+
+export function trait_size(size: string) {
+    return {
+        "name": "Size",
+        "type": "trait",
+        "img": "modules/wfrp4e-core/icons/traits/trait.png",
+        "effects": [
+            {
+                "name": "Size ("+size+")",
+                "_id": "JMSrxnNcqyguP1pz",
+                "disabled": false,
+                "duration": {
+                    "value": null,
+                    "units": "seconds",
+                    "expiry": null,
+                    "expired": false
+                },
+                "description": "",
+                "origin": null,
+                "transfer": true,
+                "statuses": [],
+                "flags": {
+                    "wfrp4e": {
+                        "applicationData": {},
+                        "scriptData": [],
+                        "_legacyData": {}
+                    }
+                },
+                "tint": "#ffffff",
+                "_stats": {
+                    "coreVersion": "14.364",
+                    "systemId": "wfrp4e",
+                    "systemVersion": "9.6.1",
+                    "createdTime": 1782345963585,
+                    "modifiedTime": 1782345963585,
+                    "lastModifiedBy": "khhY7fuxf56JOp5M",
+                    "compendiumSource": null,
+                    "duplicateSource": null,
+                    "exportSource": null
+                },
+                "img": "modules/wfrp4e-core/icons/traits/trait.png",
+                "type": "base",
+                "system": {
+                    "transferData": {
+                        "type": "document",
+                        "documentType": "Actor",
+                        "avoidTest": {
+                            "value": "none",
+                            "opposed": false,
+                            "prevention": true,
+                            "reversed": false
+                        },
+                        "testIndependent": false,
+                        "equipTransfer": false,
+                        "prompt": false,
+                        "area": {
+                            "aura": {
+                                "transferred": false,
+                                "render": false,
+                                "visibility": 0
+                            },
+                            "shape": {
+                                "color": null,
+                                "type": "circle",
+                                "angle": 60,
+                                "curvature": "round",
+                                "base": {
+                                    "width": 1,
+                                    "height": 1,
+                                    "hole": false,
+                                    "shape": 4,
+                                    "type": "token"
+                                }
+                            },
+                            "keep": false,
+                            "duration": "sustained"
+                        },
+                        "originalType": "document",
+                        "selfOnly": false,
+                        "zone": {
+                            "type": "zone",
+                            "transferred": false,
+                            "traits": {},
+                            "skipImmediateOnPlacement": false,
+                            "keep": false
+                        }
+                    },
+                    "scriptData": [
+                        {
+                            "label": "Size",
+                            "trigger": "immediate",
+                            "options": {
+                                "hideScript": "",
+                                "activateScript": "",
+                                "submissionScript": "",
+                                "targeter": false,
+                                "deleteEffect": false,
+                                "defending": false,
+                                "runIfDisabled": false,
+                                "showDuplicates": false
+                            },
+                            "script": "[Script.PmELrzD3RmF9qKkO]",
+                            "async": false
+                        }
+                    ],
+                    "zone": {
+                        "type": "zone",
+                        "traits": {},
+                        "skipImmediateOnPlacement": false
+                    },
+                    "sourceData": {
+                        "test": {}
+                    },
+                    "changes": [],
+                    "itemTargetData": {
+                        "ids": [],
+                        "allItems": false
+                    },
+                    "condition": {
+                        "numbered": false
+                    }
+                },
+                "sort": 0,
+                "start": null,
+                "showIcon": 1,
+                "folder": null
+            }
+        ],
+        "flags": {
+            "_sheetTab": {},
+            "core": {}
+        },
+        "system": {
+            "description": {
+                "value": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.3ZynTGhFpgwv6l1n.JournalEntryPage.JY7F6lwqt2YGPddY]{Size}</p>"
+            },
+            "gmdescription": {
+                "value": ""
+            },
+            "rollable": {
+                "value": false,
+                "damage": false,
+                "skill": "",
+                "bonusCharacteristic": "",
+                "dice": "",
+                "defaultDifficulty": "challenging",
+                "SL": true,
+                "attackType": "melee"
+            },
+            "specification": {
+                "value": "Small"
+            },
+            "qualities": {
+                "value": []
+            },
+            "flaws": {
+                "value": []
+            },
+            "category": "standard",
+            "disabled": false
+        },
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "9.6.1",
+            "coreVersion": "14.364",
+            "createdTime": 1782345963585,
+            "modifiedTime": 1782345963585,
+            "lastModifiedBy": "khhY7fuxf56JOp5M",
+            "compendiumSource": "Compendium.wfrp4e-core.items.Item.8slW8CJ2oVTxeQ6q",
+            "duplicateSource": null,
+            "exportSource": null
+        },
+        "_id": "yB6azOaL9k1x207v",
+        "folder": "LjyFyBwUbRxLvkuI",
+        "sort": 1200000,
+        "ownership": {
+            "default": 0
+        }
+    }
+}

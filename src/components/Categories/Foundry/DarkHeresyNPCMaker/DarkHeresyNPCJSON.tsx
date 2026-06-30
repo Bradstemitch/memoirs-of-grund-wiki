@@ -40,13 +40,13 @@ function DarkHeresyNPCJSON(props: any) {
         // ...DarkHeresyNPC("Orlock", "Greenhorn", "Shotgun", 5, "Juve"),
         // ...DarkHeresyNPC("Orlock", "Gunner", "Autogun", 7, "Ganger"),
         // ...DarkHeresyNPC("Orlock", "Gunner", "Pistol", 7, "Ganger"),
-        ...DarkHeresyNPC("Orlock", "Gunner", "Pistols", 7, "Ganger"),
+        // ...DarkHeresyNPC("Orlock", "Gunner", "Pistols", 7, "Ganger"),
         // ...DarkHeresyNPC("Orlock", "Gunner", "Shotgun", 7, "Ganger"),
         // ...DarkHeresyNPC("Orlock", "Road Sergeant", "Heavy Bolter", 14, "Elite"),
         // ...DarkHeresyNPC("Orlock", "Road Sergeant", "Chainsword", 14, "Elite"),
         // ...DarkHeresyNPC("Orlock", "Road Captain", "Powerfist", 30, "Master"),
         //Van Saar
-        // ...DarkHeresyNPC("Van Saar", "Subtek", "Lasgun", 6, "Juve"),
+        ...DarkHeresyNPC("Van Saar", "Subtek", "Lasgun", 6, "Juve"),
         // ...DarkHeresyNPC("Van Saar", "Tek", "Lasgun", 7, "Ganger"),
         // ...DarkHeresyNPC("Van Saar", "Augmek", "Lasgun", 22, "Elite"),
         //Corpse Grinder Cults
