@@ -1,11 +1,7 @@
 import { HumanoidsGoblinoid } from "./Humanoids/Goblinoids";
-import { HumanoidsHuman } from "./Humanoids/Human";
-import { HumanoidsOutlaw } from "./Humanoids/Outlaw";
 
 export const Humanoids: any = [
-    ...HumanoidsGoblinoid, 
-    ...HumanoidsHuman, 
-    ...HumanoidsOutlaw
+    ...HumanoidsGoblinoid,
 ]
 
 export const HumanoidDnD5eCategories: any = [

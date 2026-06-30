@@ -38,7 +38,8 @@ export const itemTypes: any = {
 
 export const magicItemTypes: any = {
     'DnD5e': ['Armour', 'Potion', 'Ring', 'Rod', 'Scroll', 'Staff', 'Wand', 'Weapon', 'Wondrous Item'],
-    'Path2e': ['Armour', 'Held Items', 'Runes', 'Shields', 'Weapons', 'Worn Items']
+    'Path2e': ['Armour', 'Held Items', 'Runes', 'Shields', 'Weapons', 'Worn Items'],
+    'WFRP4e': ['Armour', 'Potion', 'Ring', 'Rod', 'Scroll', 'Staff', 'Wand', 'Weapon', 'Wondrous Item'],
 }
 
 export const creatureTypes: any = {

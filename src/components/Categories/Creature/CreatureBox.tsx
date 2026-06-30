@@ -7,16 +7,18 @@ interface CreatureBoxProps {
     width: string,
     height: string,
     roleplaySystem: string,
-    creature: { name: string, fileName: string, tags: string[] }
+    creature: { name: string, species: string, faction: string, weapon: string, threat: number, rank: string, tags: string[], fileName: string }
 }
 
 function CreatureBox(props: CreatureBoxProps) {
     let creature
     let error = false
-    try {
-        creature = require(`../../../data/creatures/${props.roleplaySystem}/fvtt-${props.creature.fileName}.json`);
-    } catch (e) {
-        error = true
+    if (props.roleplaySystem !== "WFRP4e") {
+        try {
+            creature = require(`../../../data/creatures/${props.roleplaySystem}/fvtt-${props.creature.fileName}.json`);
+        } catch (e) {
+            error = true
+        }
     }
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
@@ -35,7 +37,7 @@ function CreatureBox(props: CreatureBoxProps) {
                     }
                     {props.roleplaySystem === 'WFRP4e' ?
                         <WHF4eCreatureBlock
-                            creature={creature}
+                            creature={props.creature}
                         /> : null
                     }
                 </>

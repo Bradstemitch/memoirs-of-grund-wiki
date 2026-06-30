@@ -155,9 +155,9 @@ function RoleplayLayout(props: LayoutProps) {
                             Grund Wiki:
                         </Typography>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" style={{ "marginLeft": "20px", "height": "140%" }}>
-                            <Tab label="D&D 5E" {...a11yProps(0)} onClick={(event) => props.setRoleplaySystem('DnD5e')} />
-                            <Tab label="Pathfinder 2E" {...a11yProps(1)} onClick={(event) => props.setRoleplaySystem('Path2e')} />
                             <Tab label="Warhammer 4E" {...a11yProps(2)} onClick={(event) => props.setRoleplaySystem('WFRP4e')} />
+                            {/* <Tab label="D&D 5E" {...a11yProps(0)} onClick={(event) => props.setRoleplaySystem('DnD5e')} /> */}
+                            {/* <Tab label="Pathfinder 2E" {...a11yProps(1)} onClick={(event) => props.setRoleplaySystem('Path2e')} /> */}
                         </Tabs>
                     </Toolbar>
                 </AppBar>

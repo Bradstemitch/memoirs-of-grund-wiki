@@ -1,7 +1,7 @@
 import React from 'react';
 import { DarkHeresyNPC } from './DarkHeresyNPCMaker/Summary/DarkHeresyNPC';
 import DarkHeresyNPCJSON from './DarkHeresyNPCMaker/DarkHeresyNPCJSON';
-import WFRP4eNPCJSON from './WFRP4eNPCMaker/WFRP4eNPCJSON';
+import WFRP4eNPCJSON from '../../../data/creatures/WFRP4e/WFRP4eNPCJSON';
 function FoundryJSON(props: any) {
     const json = {
         // ...DarkHeresyNPCJSON(""),

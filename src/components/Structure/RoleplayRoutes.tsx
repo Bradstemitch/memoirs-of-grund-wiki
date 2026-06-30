@@ -15,7 +15,7 @@ import OrgRouting from '../Categories/Organisations/OrgRouting';
 import FoundryJSON from '../Categories/Foundry/FoundryJSON';
 
 function RoleplayRoutes() {
-    const [roleplaySystem, setRoleplaySystem] = useState<string>('DnD5e')
+    const [roleplaySystem, setRoleplaySystem] = useState<string>('WFRP4e')
 
     return (
         <Routes>
