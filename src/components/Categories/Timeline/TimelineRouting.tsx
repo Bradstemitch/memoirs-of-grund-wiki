@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { TimelineCenturies, TimelineList } from '../../../data/TimelineList';
+import { TimelineList } from '../../../data/TimelineList';
 import TimelineBox from './TimelineBox';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';

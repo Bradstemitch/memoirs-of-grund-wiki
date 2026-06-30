@@ -7,5 +7,6 @@ export default defineConfig(() => {
       outDir: 'build',
     },
     plugins: [react()],
+    base: 'https://bradstemitch.github.io/memoirs-of-grund-wiki/'
   };
 });
