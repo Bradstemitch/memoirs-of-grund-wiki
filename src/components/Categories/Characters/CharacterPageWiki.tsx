@@ -3,8 +3,9 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import { styled } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { InfoRow, StyledTab } from '../../../utils/common';
+import { Table, TableCell, TableRow } from '@mui/material';
 
 interface CreatureBoxProps {
     width: string,
@@ -12,26 +13,6 @@ interface CreatureBoxProps {
     roleplaySystem: string,
     character: any
 }
-interface StyledTabProps {
-    label: string;
-    value: string;
-}
-
-const StyledTab = styled((props: StyledTabProps) => (
-    <Tab disableRipple {...props} />
-))(({ theme }) => ({
-    textTransform: 'none',
-    fontWeight: theme.typography.fontWeightRegular,
-    fontSize: theme.typography.pxToRem(15),
-    marginRight: theme.spacing(1),
-    color: 'rgba(0, 0, 0, 0.7)',
-    // '&.Mui-selected': {
-    //     color: '#fff',
-    // },
-    // '&.Mui-focusVisible': {
-    //     backgroundColor: 'rgba(100, 95, 228, 0.32)',
-    // },
-}));
 
 function CharacterPage(props: CreatureBoxProps) {
     const [value, setValue] = React.useState("Overview");
@@ -61,30 +42,20 @@ function CharacterPage(props: CreatureBoxProps) {
                 </TabList >
 
                 <TabPanel value={"Overview"}>
-
-                    {character.summary && character.summary.map((x: any) =>
-                        <div dangerouslySetInnerHTML={{ __html: x }} />
-                    )}
-
-                    <br />
-
-                    <h3> Trivia </h3>
+                    {character.summary && <>{character.summary}<br /></>}
+                    {character.appearance && <><h3>Appearance</h3><>{character.appearance}</><br /></>}
+                    {character.trivia && <><h3>Trivia</h3><>{character.trivia}</><br /></>}
                 </TabPanel>
 
                 <TabPanel value={"History"}>
                     <h3> History </h3>
-
-                    {character.history && character.history.map((x: any) =>
-                        <p>
-                            <strong>{x.name + " (" + x.date + ")"}</strong>
-                            {x.text.map((x: string) => <p> {x} </p>)}
-                        </p>
-                    )}
-
+                    {character.history && character.history}
                 </TabPanel>
-                {/* <TabPanel value={"Personality"}>
+
+                <TabPanel value={"Personality"}>
                     <h3> Personality </h3>
-                </TabPanel> */}
+                    {character.personality && character.personality}
+                </TabPanel>
             </TabContext>
             <br />
             Tags: {props.character.tags}
@@ -92,106 +63,20 @@ function CharacterPage(props: CreatureBoxProps) {
     );
 }
 
-function InfoRow(RowType: string, data: any) {
-    return (
-        <tr>
-            <td style={{
-                'width': '100px',
-                'textAlign': 'right',
-                'paddingRight': '5px',
-            }}>
-                <div style={{
-                    'textAlign': 'right',
-                    'padding': '2px',
-                }}>
-                    <strong> {RowType} </strong>
-                </div>
-            </td>
-
-            <td style={{ 'padding': '2px', }}>
-
-                {data.map((i: any) => {
-                    const name = i.name ?
-                        i.name
-                        : i.detail ?
-                            i.data.name
-                            : i
-                    const processedName = i.data && i.data.fileLoc === "characters" ?
-                        `${name.byNameBef || ''} ${name.fore || ''} ${name.sur || ''} ${name.byNameAft || ''}`
-                        : name
-                    const fileName = i.fileName ?
-                        i.fileName
-                        : i.data && i.data.fileName ?
-                            i.data.fileName
-                            : null
-                    const fileLoc = i.fileLoc ?
-                        i.fileLoc
-                        : i.data && i.data.fileLoc ?
-                            i.data.fileLoc
-                            : null
-                    return (
-                        <div>
-                            {fileName ?
-                                <Link
-                                    key={fileName + '-characterPage-Link'}
-                                    to={`/${fileLoc}/${fileName}`}
-                                >
-                                    {`${processedName}`}
-                                </Link>
-                                :
-                                <>{processedName}</>
-                            }
-                            {i.detail &&
-                                <> {` (${i.detail})`}</>
-                            }
-                        </div>
-                        // i.name ?
-                        //     <div>
-                        //         <Link
-                        //             key={i.fileName + '-characterPage-Link'}
-                        //             to={`/${i.fileLoc}/${i.fileName}`}
-                        //         >
-                        //             {`${i.name}`}
-                        //         </Link>
-                        //     </div>
-
-                        //     : i.detail ?
-                        //         <div>
-                        //             {i.data.name && i.data.fileName && i.data.fileLoc ?
-                        //                 <Link
-                        //                     key={i.fileName + '-characterPage-Link'}
-                        //                     to={`/${i.data.fileLoc}/${i.data.fileName}`}
-                        //                 >
-                        //                     {`${i.data.name}`}
-                        //                 </Link>
-                        //                 :
-                        //                 <>{`${i.data.name}`}</>
-                        //             }
-                        //             {` (${i.detail})`}
-                        //         </div>
-                        //         :
-                        //         <div> {i} </div>
-                    )
-                })}
-            </td>
-        </tr>
-    )
-}
 
 function WikiBar(nation: any) {
+    console.log(nation.info.basic)
     return (
         <div style={{
             'float': 'right',
             'width': '340px',
             'paddingLeft': '20px',
         }}>
-            <table style={{
-                'width': '340px',
-            }}>
+            <Table size="small" aria-label="purchases">
                 <tbody>
                     <tr>
                         <th colSpan={2}>
-                            <img src={nation.emblem}
+                            <img src={nation.imageLoc}
                                 style={{
                                     'width': '250px',
                                 }}
@@ -201,40 +86,69 @@ function WikiBar(nation: any) {
 
                     {nation.info.alias && InfoRow("Alias", nation.info.alias)}
 
-                    <tr>
-                        <th colSpan={2}> Basic Information </th>
-                    </tr>
-                    {nation.info.basic.nationality && InfoRow("Nationality", nation.info.basic.nationality)}
-                    {nation.info.basic.born && InfoRow("Born", nation.info.basic.born)}
-                    {nation.info.basic.status && InfoRow("Status", nation.info.basic.status)}
+                    {nation.info.basic.show && <>
+                        <TableRow>
+                            <TableCell colSpan={2}>
+                                <strong>
+                                    Basic Information
+                                </strong>
+                            </TableCell>
+                        </TableRow>
+                        {nation.info.basic.nationality && InfoRow("Nationality", nation.info.basic.nationality)}
+                        {nation.info.basic.status && InfoRow("Status", nation.info.basic.status)}
+                        {nation.info.basic.born && InfoRow("Birth", nation.info.basic.born.toString().replace('-','') + (nation.info.basic.born >= 0 ? ` CE`:` BCE`))}
+                        {nation.info.basic.died && InfoRow("Death", nation.info.basic.died.toString().replace('-','') + (nation.info.basic.died >= 0 ? ` CE`:` BCE`))}
+                    </>
+                    }
 
-                    <tr>
-                        <th colSpan={2}> Physical Information </th>
-                    </tr>
-                    {nation.info.physical.species && InfoRow("Species", nation.info.physical.species)}
-                    {nation.info.physical.gender && InfoRow("Gender", nation.info.physical.gender)}
-                    {nation.info.physical.height && InfoRow("Height", nation.info.physical.height)}
-                    {nation.info.physical.hair && InfoRow("Hair", nation.info.physical.hair)}
-                    {nation.info.physical.eyes && InfoRow("Eyes", nation.info.physical.eyes)}
-                    {nation.info.physical.skin && InfoRow("Skin", nation.info.physical.skin)}
+                    {nation.info.physical.show && <>
+                        <TableRow>
+                            <TableCell colSpan={2}>
+                                <strong>
+                                    Physical Information
+                                </strong>
+                            </TableCell>
+                        </TableRow>
+                        {nation.info.physical.species && InfoRow("Species", nation.info.physical.species)}
+                        {nation.info.physical.gender && InfoRow("Gender", nation.info.physical.gender)}
+                        {nation.info.physical.height && InfoRow("Height", nation.info.physical.height)}
+                        {nation.info.physical.hair && InfoRow("Hair", nation.info.physical.hair)}
+                        {nation.info.physical.eyes && InfoRow("Eyes", nation.info.physical.eyes)}
+                        {nation.info.physical.skin && InfoRow("Skin", nation.info.physical.skin)}
+                    </>
+                    }
 
-                    <tr>
-                        <th colSpan={2}> Personal Information </th>
-                    </tr>
-                    {nation.info.personal.titles && InfoRow("Title(s)", nation.info.personal.titles)}
-                    {nation.info.personal.professions && InfoRow("Professon(s)", nation.info.personal.professions)}
-                    {nation.info.personal.affiliations && InfoRow("Affiliations", nation.info.personal.affiliations)}
-                    {nation.info.personal.skills && InfoRow("Skills", nation.info.personal.skills)}
+                    {nation.info.personal.show && <>
+                        <TableRow>
+                            <TableCell colSpan={2}>
+                                <strong>
+                                    Personal Information
+                                </strong>
+                            </TableCell>
+                        </TableRow>
+                        {nation.info.personal.titles && InfoRow("Title(s)", nation.info.personal.titles)}
+                        {nation.info.personal.professions && InfoRow("Professon(s)", nation.info.personal.professions)}
+                        {nation.info.personal.affiliations && InfoRow("Affiliations", nation.info.personal.affiliations)}
+                        {nation.info.personal.skills && InfoRow("Skills", nation.info.personal.skills)}
+                    </>
+                    }
 
-                    <tr>
-                        <th colSpan={2}> Family Information </th>
-                    </tr>
-                    {nation.info.family.relatives && InfoRow("Relatives", nation.info.family.relatives)}
-                    {nation.info.family.partner && InfoRow("Partner", nation.info.family.partner)}
-                    {nation.info.family.children && InfoRow("Children", nation.info.family.children)}
+                    {nation.info.family.show && <>
+                        <TableRow>
+                            <TableCell colSpan={2}>
+                                <strong>
+                                    Family Information
+                                </strong>
+                            </TableCell>
+                        </TableRow>
+                        {nation.info.family.relatives && InfoRow("Relatives", nation.info.family.relatives)}
+                        {nation.info.family.partner && InfoRow("Partner", nation.info.family.partner)}
+                        {nation.info.family.children && InfoRow("Children", nation.info.family.children)}
+                    </>
+                    }
                 </tbody>
-            </table>
-        </div>
+            </Table>
+        </div >
     )
 }
 

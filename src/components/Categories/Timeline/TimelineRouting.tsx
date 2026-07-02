@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { TimelineList } from '../../../data/TimelineList';
+import { TimelineList } from '../../../data/timeline/_TimelineList';
 import TimelineBox from './TimelineBox';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
@@ -55,58 +55,72 @@ function TimelineRouting(props: any) {
                         <h2>
                             Timeline
                         </h2>
-                        <React.Fragment>
-                            <Table size="small" aria-label="purchases">
-                                {TimelineList.map(century => {
-                                    return (
-                                        <div>
-                                            <TableRow style={{ width: '100%' }}>
-                                                <TableCell colSpan={2}>
-                                                    <strong>
-                                                        {century.century}
-                                                    </strong>
-                                                </TableCell>
-                                            </TableRow>
-                                            {
-                                                century.years.map(year => {
-                                                    return (
-                                                        <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
-                                                            <TableCell style={{ minWidth: '65px', textAlign: 'right', verticalAlign: 'top', paddingRight: 0  }}>
-                                                                {Math.sqrt(year.year * year.year)}
-                                                            </TableCell>
-                                                            <TableCell>
-                                                                {year.events.map(event => {
-                                                                    return (
-                                                                        <Table>
-                                                                            <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
-                                                                                <TableCell key={event.fileName + '-timelinePage-li'} style={{ paddingBottom: "5px", paddingTop: 0, paddingLeft: 0 }} >
-                                                                                    {event.fileName !== "TODO" ?
-                                                                                        < Link
-                                                                                            key={event.fileName + '-timelinePage-Link'}
-                                                                                            to={`/timeline/${event.fileName}`}
-                                                                                        >
-                                                                                            {`${event.name}`}
-                                                                                        </Link>
-                                                                                        : event.name
-                                                                                    }
-                                                                                </TableCell>
-                                                                            </TableRow>
-                                                                        </Table>
-                                                                    )
-                                                                })}
-                                                            </TableCell>
-                                                        </TableRow>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    )
-                                })}
-                            </Table>
-                        </React.Fragment>
+                        <Table size="small" aria-label="purchases">
+                            {TimelineList.map(century => {
+                                return (
+                                    <div>
+                                        <TableRow>
+                                            <TableCell colSpan={2}>
+                                                <strong>
+                                                    {century.century}
+                                                </strong>
+                                            </TableCell>
+                                        </TableRow>
+                                        {century.years.map(year => {
+                                            return (
+                                                <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
+                                                    <TableCell style={{ minWidth: '65px', textAlign: 'right', verticalAlign: 'top', paddingRight: 0 }}>
+                                                        {Math.sqrt(year.year * year.year)}
+                                                    </TableCell>
+                                                    <TableCell>
+                                                        {year.events.map(event => {
+                                                            return (
+                                                                <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
+                                                                    <TableCell key={event.fileName + '-timelinePage-li'} style={{ paddingBottom: "5px", paddingTop: 0, paddingLeft: 0 }} >
+                                                                        {event.fileName !== "TODO" ?
+                                                                            < Link
+                                                                                key={event.fileName + '-timelinePage-Link'}
+                                                                                to={`/timeline/${event.fileName}`}
+                                                                            >
+                                                                                {`${event.name}`}
+                                                                            </Link>
+                                                                            : event.name
+                                                                        }
+                                                                    </TableCell>
+                                                                </TableRow>
+                                                            )
+                                                        })}
+                                                    </TableCell>
+                                                </TableRow>
+                                            )
+                                        })}
+                                    </div>
+                                )
+                            })}
+                        </Table>
                     </div>
                 } />
             </Route>
+            {TimelineList.map(century => (
+                century.years.map(year => (
+                    year.events.map(event => (
+                        <Route
+                            key={event.fileName + '-nationsPage-Route'}
+                            path={event.fileName}
+                            element={
+                                <>
+                                    <Outlet />
+                                    <TimelineBox
+                                        key={event.fileName + '-nationsPage-CreatureBox'}
+                                        width={'100%'} height={'auto'}
+                                        rumour={event}
+                                    />
+                                </>
+                            }
+                        />
+                    ))
+                ))
+            ))}
         </Routes >
     );
 }

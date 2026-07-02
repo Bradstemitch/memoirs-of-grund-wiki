@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import MagicItem from './MagicItem';
-import { ArmouryListMagic } from '../../../data/ArmouryList';
+import { ArmouryListMagic } from '../../../data/armoury/_ArmouryList';
 import ArmouryItem from '../Armoury/ArmouryItem';
 import { magicItemTypes } from '../../../data/CategoryList';
 

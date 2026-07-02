@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { CreatureList } from '../../../data/creatures/CreatureList';
 import CreatureBox from './CreatureBox';
 import { creatureTypes } from '../../../data/CategoryList';
+import { CreatureList } from '../../../data/creatures/_CreatureList';
 
 function CreaturesRouting(props: any) {
     return (
@@ -100,7 +100,7 @@ function CreatureListGen(creatureList: any) {
                             to={`/creatures/${creature.fileName}`}
                         >
                             <button key={creature.fileName + '-creaturesRouting-creature-Button'}>
-                                {creature.name}
+                                {creature.name} {creature.weapon !== '' ? `(${creature.weapon})`: ''}
                             </button>
                         </Link>
                         {' '}

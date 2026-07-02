@@ -1,11 +1,11 @@
-import { AberrationDnD5eCategories } from "./creatures/CreatureList/Aberrations"
-import { DragonDnD5eCategories } from "./creatures/CreatureList/Dragons"
-import { FeyDnD5eCategories } from "./creatures/CreatureList/Fey"
-import { FiendDnD5eCategories } from "./creatures/CreatureList/Fiends"
-import { GiantDnD5eCategories } from "./creatures/CreatureList/Giants"
-import { HumanoidDnD5eCategories } from "./creatures/CreatureList/Humanoids"
-import { MonsterDnD5eCategories } from "./creatures/CreatureList/Monsters"
-import { UndeadDnD5eCategories } from "./creatures/CreatureList/Undead"
+import { AberrationDnD5eCategories } from "./creatures/Aberrations"
+import { DragonDnD5eCategories } from "./creatures/Dragons"
+import { FeyDnD5eCategories } from "./creatures/Fey"
+import { FiendDnD5eCategories } from "./creatures/Fiends"
+import { GiantDnD5eCategories } from "./creatures/Giants"
+import { HumanoidDnD5eCategories } from "./creatures/Humanoids"
+import { MonsterDnD5eCategories } from "./creatures/Monsters"
+import { UndeadDnD5eCategories } from "./creatures/Undead"
 
 export const nationTypes: any = [
     {
@@ -41,6 +41,36 @@ export const magicItemTypes: any = {
     'Path2e': ['Armour', 'Held Items', 'Runes', 'Shields', 'Weapons', 'Worn Items'],
     'WFRP4e': ['Armour', 'Potion', 'Ring', 'Rod', 'Scroll', 'Staff', 'Wand', 'Weapon', 'Wondrous Item'],
 }
+function categoryBuilder(single: string, plural: string | null, subCat?: any) {
+    return ({
+        'single': single,
+        'plural': plural || single + 's',
+        'searchCat': single,
+        'subCat': subCat
+    })
+}
+export const factions: any = [
+    categoryBuilder('Elf', 'Elves', [
+        categoryBuilder('Alder', 'Alder'),
+        categoryBuilder('Sylvan', null),
+        categoryBuilder('Drow', 'Drow'),
+    ]),
+    categoryBuilder('Human Kingdom', null, [
+        categoryBuilder('Akitsudan', null),
+        categoryBuilder('Allairan', null),
+        categoryBuilder('Brytthon', null),
+        categoryBuilder('Carnan', null),
+        categoryBuilder('Fomorian', null),
+        categoryBuilder('Gol', 'Gol'),
+        categoryBuilder('Krasen', null),
+        categoryBuilder('Messan', null),
+    ]),
+    categoryBuilder('Dryad', null),
+    categoryBuilder('Primordial', null),
+    categoryBuilder('Damocles', 'Damocles'),
+    categoryBuilder('Vindictis', 'Vindictis'),
+    categoryBuilder('Promethean', null),
+]
 
 export const creatureTypes: any = {
     'DnD5e': [

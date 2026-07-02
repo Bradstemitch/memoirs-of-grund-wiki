@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import ArmouryItem from './ArmouryItem';
-import { ArmouryList } from '../../../data/ArmouryList';
+import { ArmouryList } from '../../../data/armoury/_ArmouryList';
 import { itemTypes } from '../../../data/CategoryList';
 
 const Rarity = ['Rare']

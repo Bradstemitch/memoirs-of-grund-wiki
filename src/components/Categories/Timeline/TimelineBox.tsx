@@ -1,4 +1,6 @@
 import React from 'react';
+import TimelineEvents from '../../../data/timeline/_TimelineEvents';
+import { Link } from 'react-router-dom';
 
 interface RumourBoxProps {
     width: string,
@@ -7,19 +9,17 @@ interface RumourBoxProps {
 }
 
 function TimelineBox(props: RumourBoxProps) {
-    let rumour
-    let error = false
-    try {
-        rumour = require(`../../../data/timeline/${props.rumour.fileName}.json`);
-    } catch (e) {
-        error = true
-    }
+    const event = TimelineEvents[props.rumour.fileName]
+
+    console.log(event.html)
+
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
             <h2>{props.rumour.name}</h2>
-            {!error ?
+            {event.html ?
+                <>{event.html}</> :
                 <>
-                    {rumour.story.map((paragraph: any) => {
+                    {event.story.map((paragraph: any) => {
                         return (
                             <p>
                                 {paragraph}
@@ -27,7 +27,6 @@ function TimelineBox(props: RumourBoxProps) {
                         )
                     })}
                 </>
-                : <>File Not Found</>
             }
             <br />
             Tags: {props.rumour.tags}

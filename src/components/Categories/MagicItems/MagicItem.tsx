@@ -1,7 +1,7 @@
 import React from 'react';
-import { magicWeapon } from '../../../data/MagicItem';
-import DnD5eMagicItemBlock from './DnD5e/DnD5eMagicItemBlock';
-import DnD5eMagicItemVariantsBlock from './DnD5e/DnD5eMagicItemVariantsBlock';
+import { magicWeapon } from '../../../data/magicItems/MagicItem';
+import DnD5eMagicItemBlock from '../../_DnD5e/DnD5eMagicItemBlock';
+import DnD5eMagicItemVariantsBlock from '../../_DnD5e/DnD5eMagicItemVariantsBlock';
 
 interface MagicItemProps {
     width: string,

@@ -1,7 +1,7 @@
 import React from 'react';
-import WHF4eCreatureBlock from './WFRP4e/WFRP4eCreatureBlock';
-import CreatureStatBlockDnD5e from './DnD5e/CreatureStatBlockDnD5e';
-import CreatureStatBlockPath2e from './Path2e/CreatureStatBlockPath2e';
+import WHF4eCreatureBlock from '../../_WFRP4e/WFRP4eCreatureBlock';
+import CreatureStatBlockDnD5e from '../../_DnD5e/CreatureStatBlockDnD5e';
+import CreatureStatBlockPath2e from '../../_Path2e/CreatureStatBlockPath2e';
 
 interface CreatureBoxProps {
     width: string,
@@ -22,7 +22,7 @@ function CreatureBox(props: CreatureBoxProps) {
     }
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
-            <h2>{props.creature.name}</h2>
+            <h2>{props.creature.name} {props.creature.weapon !== `` && `( ${props.creature.weapon} )`}</h2>
             {!error ?
                 <>
                     {props.roleplaySystem === 'DnD5e' ?

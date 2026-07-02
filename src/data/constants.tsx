@@ -1,29 +1,3 @@
-export const CHARACTERS = {
-    "ARLYSS_KNIGHT": {
-        "name": {
-            "fore": "Arlyss",
-            "sur": "Knight",
-        },
-        "fileName": "arlyssKnight",
-        "fileLoc": "characters",
-    },
-    "LETA": {
-        "name": {
-            "fore": "Leta",
-        },
-        "fileName": "leta",
-        "fileLoc": "characters",
-    },
-    "LILITH_FAIRE": {
-        "name": {
-            "fore": "Lilith",
-            "sur": "Faire",
-        },
-        "fileName": "lilithFaire",
-        "fileLoc": "characters",
-    }
-}
-
 export const NATIONS = {
     "TUATHA_DE_DANANN": {
         "name": "Tuatha Dé Danann",

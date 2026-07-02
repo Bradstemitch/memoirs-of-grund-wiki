@@ -1,11 +1,11 @@
 import React from 'react';
-import { MagicItemList, magicWeapon } from '../../../data/MagicItem';
-import DnD5eMagicItemBlock from './DnD5e/DnD5eMagicItemBlock';
-import DnD5eMagicItemVariantsBlock from './DnD5e/DnD5eMagicItemVariantsBlock';
-import Path2eItemVariants from './Path2e/Path2eItemVariants';
-import Path2eItemBlock from './Path2e/Path2eItemBlock';
+import { MagicItemList, magicWeapon } from '../../../data/magicItems/MagicItem';
 import { Link } from 'react-router-dom';
-import { ArmouryList, ArmouryListMagic } from '../../../data/ArmouryList';
+import { ArmouryList, ArmouryListMagic } from '../../../data/armoury/_ArmouryList';
+import DnD5eMagicItemVariantsBlock from '../../_DnD5e/DnD5eMagicItemVariantsBlock';
+import DnD5eMagicItemBlock from '../../_DnD5e/DnD5eMagicItemBlock';
+import Path2eItemVariants from '../../_Path2e/Path2eItemVariants';
+import Path2eItemBlock from '../../_Path2e/Path2eItemBlock';
 
 interface MagicItemProps {
     width: string,

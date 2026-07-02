@@ -3,14 +3,14 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import { styled } from '@mui/material';
+import { styled, Table, TableCell, TableRow } from '@mui/material';
 import NationButton from './NationsButton';
 import { Link } from 'react-router-dom';
+import { InfoRow } from '../../../utils/common';
 
-interface CreatureBoxProps {
+interface NationBoxProps {
     width: string,
     height: string,
-    roleplaySystem: string,
     nation: any
 }
 interface StyledTabProps {
@@ -34,7 +34,7 @@ const StyledTab = styled((props: StyledTabProps) => (
     // },
 }));
 
-function NationBox(props: CreatureBoxProps) {
+function NationBox(props: NationBoxProps) {
     const [value, setValue] = React.useState("Overview");
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue);
@@ -69,7 +69,7 @@ function NationBox(props: CreatureBoxProps) {
                     <br />
 
                     {nation.notables && nation.notables.length > 0 && <>
-                        <h3> Notable {nation.info.social.demonym}s </h3>
+                        <h3> Notable {nation.info.social && nation.info.social.demonym}s </h3>
 
                         {nation.notables.map((x: any) => <>
                             <strong> {x.type} </strong>
@@ -171,7 +171,7 @@ function NationBox(props: CreatureBoxProps) {
                     <h3> National Emblems </h3>
                 </TabPanel>
                 <TabPanel value={"Notables"}>
-                    <h3> Notable {nation.info.social.demonym}s </h3>
+                    <h3> Notable {nation.info.social && nation.info.social.demonym}s </h3>
                 </TabPanel>
                 <TabPanel value={"Locations"}>
                     <h3> Locations </h3>
@@ -186,42 +186,6 @@ function NationBox(props: CreatureBoxProps) {
     );
 }
 
-function InfoRow(RowType: string, data: any) {
-    return (
-        <tr>
-            <td style={{
-                'width': '100px',
-                'textAlign': 'right',
-                'paddingRight': '5px',
-            }}>
-                <div style={{
-                    'textAlign': 'right',
-                    'padding': '2px',
-                }}>
-                    <strong> {RowType} </strong>
-                </div>
-            </td>
-            <td style={{ 'padding': '2px', }}>
-                {data.map((i: any) => <>
-                    {i.name ?
-                        <div>
-                            <Link
-                                key={i.fileName + '-nationsPage-Link'}
-                                to={`/${i.fileLoc}/${i.fileName}`}
-                            >
-                                {`${i.name}`}
-                            </Link>
-                        </div>
-                        :
-                        <div> {i} </div>
-                    }
-                </>)}
-            </td>
-        </tr>
-    )
-}
-
-
 function WikiBar(nation: any) {
     return (
         <div style={{
@@ -229,13 +193,8 @@ function WikiBar(nation: any) {
             'width': '340px',
             'paddingLeft': '20px',
         }}>
-
-            <table style={{
-                'width': '340px',
-
-            }}>
+            <Table size="small" aria-label="purchases">
                 <tbody>
-
                     <tr>
                         <th colSpan={2}>
                             <img src={nation.emblem}
@@ -245,61 +204,60 @@ function WikiBar(nation: any) {
                             />
                         </th>
                     </tr>
-                    {nation.info.basic.variations.length +
-                        nation.info.basic.government.length +
-                        nation.info.basic.status.length +
-                        nation.info.basic.ruler.length +
-                        nation.info.basic.founded.length +
-                        nation.info.basic.area.length +
-                        nation.info.basic.population.length > 0 && <>
-                            <tr>
-                                <th colSpan={2}> Basic Information </th>
-                            </tr>
-                            {nation.info.basic.variations.length > 0 && InfoRow("Variations", nation.info.basic.variations)}
-                            {nation.info.basic.government.length > 0 && InfoRow("Government", nation.info.basic.government)}
-                            {nation.info.basic.status.length > 0 && InfoRow("Status", nation.info.basic.status)}
-                            {nation.info.basic.ruler.length > 0 && InfoRow("Ruler", nation.info.basic.ruler)}
-                            {nation.info.basic.founded.length > 0 && InfoRow("Founded", nation.info.basic.founded)}
-                            {nation.info.basic.area.length > 0 && InfoRow("Area", nation.info.basic.area)}
-                            {nation.info.basic.population.length > 0 && InfoRow("Population", nation.info.basic.population)}
+                    {nation.info.basic &&
+                        <>
+                            <TableRow>
+                                <TableCell colSpan={2}>
+                                    <strong>
+                                        Basic Information
+                                    </strong>
+                                </TableCell>
+                            </TableRow>
+                            {nation.info.basic.variations && InfoRow("Variations", nation.info.basic.variations)}
+                            {nation.info.basic.government && InfoRow("Government", nation.info.basic.government)}
+                            {nation.info.basic.status && InfoRow("Status", nation.info.basic.status)}
+                            {nation.info.basic.ruler && InfoRow("Ruler", nation.info.basic.ruler)}
+                            {nation.info.basic.founded && InfoRow("Founded", nation.info.basic.founded)}
+                            {nation.info.basic.area && InfoRow("Area", nation.info.basic.area)}
+                            {nation.info.basic.population && InfoRow("Population", nation.info.basic.population)}
                         </>
                     }
 
-                    {nation.info.government.headOfState.length +
-                        nation.info.government.headOfGovernment.length +
-                        nation.info.government.commander.length +
-                        nation.info.government.military.length +
-                        nation.info.government.intelligence.length > 0 &&
+                    {nation.info.government &&
                         <>
-                            <tr>
-                                <th colSpan={2}> Government Information </th>
-                            </tr>
-                            {nation.info.government.headOfState.length > 0 && InfoRow("Head of State", nation.info.government.headOfState)}
-                            {nation.info.government.headOfGovernment.length > 0 && InfoRow("Head of Government", nation.info.government.headOfGovernment)}
-                            {nation.info.government.commander.length > 0 && InfoRow("Commander", nation.info.government.commander)}
-                            {nation.info.government.military.length > 0 && InfoRow("Military", nation.info.government.military)}
-                            {nation.info.government.intelligence.length > 0 && InfoRow("Intelligence Service", nation.info.government.intelligence)}
+                            <TableRow>
+                                <TableCell colSpan={2}>
+                                    <strong>
+                                        Government Information
+                                    </strong>
+                                </TableCell>
+                            </TableRow>
+                            {nation.info.government.headOfState && InfoRow("Head of State", nation.info.government.headOfState)}
+                            {nation.info.government.headOfGovernment && InfoRow("Head of Government", nation.info.government.headOfGovernment)}
+                            {nation.info.government.commander && InfoRow("Commander", nation.info.government.commander)}
+                            {nation.info.government.military && InfoRow("Military", nation.info.government.military)}
+                            {nation.info.government.intelligence && InfoRow("Intelligence Service", nation.info.government.intelligence)}
                         </>
                     }
 
-                    {nation.info.social.capital.length +
-                        nation.info.social.language.length +
-                        nation.info.social.demonym.length +
-                        nation.info.social.currency.length +
-                        nation.info.social.religion.length > 0 &&
+                    {nation.info.social &&
                         <>
-                            <tr>
-                                <th colSpan={2}> Social Information </th>
-                            </tr>
-                            {nation.info.social.capital.length > 0 && InfoRow("Capital", nation.info.social.capital)}
-                            {nation.info.social.language.length > 0 && InfoRow("Language", nation.info.social.language)}
-                            {nation.info.social.demonym.length > 0 && InfoRow("Demonym", nation.info.social.demonym)}
-                            {nation.info.social.currency.length > 0 && InfoRow("Currency", nation.info.social.currency)}
-                            {nation.info.social.religion.length > 0 && InfoRow("Religion", nation.info.social.religion)}
+                            <TableRow>
+                                <TableCell colSpan={2}>
+                                    <strong>
+                                        Social Information
+                                    </strong>
+                                </TableCell>
+                            </TableRow>
+                            {nation.info.social.capital && InfoRow("Capital", nation.info.social.capital)}
+                            {nation.info.social.language && InfoRow("Language", nation.info.social.language)}
+                            {nation.info.social.demonym && InfoRow("Demonym", nation.info.social.demonym)}
+                            {nation.info.social.currency && InfoRow("Currency", nation.info.social.currency)}
+                            {nation.info.social.religion && InfoRow("Religion", nation.info.social.religion)}
                         </>
                     }
                 </tbody>
-            </table>
+            </Table>
         </div>
     )
 }

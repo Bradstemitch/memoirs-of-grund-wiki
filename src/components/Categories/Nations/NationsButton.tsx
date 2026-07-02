@@ -8,7 +8,7 @@ function NationButton(nation: any, width:number) {
             'verticalAlign': 'top',
             'textAlign': 'center',
         }}>
-            <img src={nation.emblem}
+            <img src={nation.imageLoc}
                 style={{
                     'width': width-20+'px',
                     'height': 'auto',
