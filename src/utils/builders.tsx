@@ -5,7 +5,7 @@ function coreBuilder(name: any, filename: any, fileLoc: any, imageLoc: any, pron
         "name": name,
         "fileName": latinize(filename),
         "fileLoc": fileLoc,
-        "imageLoc": `src/images/${latinize(imageLoc)}`,
+        "imageLoc": `images/${latinize(imageLoc)}`,
         "pronunciation": pronunciation,
         "tags": tags,
     })
