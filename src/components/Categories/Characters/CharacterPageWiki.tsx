@@ -23,9 +23,7 @@ function CharacterPage(props: CreatureBoxProps) {
     let character = props.character
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
-            {character.info &&
-                WikiBar(character)
-            }
+            {WikiBar(character)}
 
             <h2>{`${character.name.fore} ${character.name.sur}`}</h2>
             <TabContext value={value}>
@@ -75,15 +73,17 @@ function WikiBar(nation: any) {
         }}>
             <Table size="small" aria-label="purchases">
                 <tbody>
-                    <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
-                        <TableCell colSpan={2} style={{ textAlign: 'center' }}>
-                            <img src={nation.imageLoc}
-                                style={{
-                                    'width': '100%',
-                                }}
-                            />
-                        </TableCell>
-                    </TableRow>
+                    {nation.imageLoc &&
+                        <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
+                            <TableCell colSpan={2} style={{ textAlign: 'center' }}>
+                                <img src={nation.imageLoc}
+                                    style={{
+                                        'width': '100%',
+                                    }}
+                                />
+                            </TableCell>
+                        </TableRow>
+                    }
 
                     {nation.info && nation.info.basic.show && <>
                         <TableRow>

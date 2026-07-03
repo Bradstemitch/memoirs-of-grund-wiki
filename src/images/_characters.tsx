@@ -34,7 +34,7 @@ import SYLVAN from "./emblems/Sylvan.webp"
 import DROW from "./emblems/Drow.webp"
 import TEMP from "./emblems/ZZZ.webp"
 
-export const EMBLEM = import.meta.glob('./emblems/*.webp', {
+export const THUMBNAIL = import.meta.glob('./characters/*.webp', {
     eager: true,
     import:'default'
 })

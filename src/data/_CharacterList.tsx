@@ -104,6 +104,55 @@ export const CHARACTER_Info = {
         ],),
     }
   },
+  'ELIJAH_SPENCER': {
+    'alias': ['Doc', 'Doctor'],
+    'info': {
+      ...characterInfoBasic('Tuatha De Danann', -34, 'Stasis (9 BCE)', null),
+      ...characterInfoPhysical(
+        ['Human'],
+        'Male', 1.88, 'Brown', '1 Blue, 1 White', 'White'),
+      ...characterInfoPersonal(['Doctor'], ['Physician and Priest'],
+        [detailBuilder('Vindictis', 'Formerly')],
+        ['Magic',]),
+      ...characterInfoFamily(
+        [
+          detailBuilder('Kathleen', 'Mother'),
+          detailBuilder('Elijah Spencer', 'Father'),
+          detailBuilder('Felix ', 'Brother'),
+        ],
+        [
+          detailBuilder('Lydia Spencer', 'Wife'),
+        ],
+        [
+          detailBuilder('Arlo Spencer', 'Son'),
+        ],),
+    }
+  },
+  'BARDR': {
+    'alias': ['Exile'],
+    'info': {
+      ...characterInfoBasic('', -237, 'Deceased', null),
+      ...characterInfoPhysical(
+        [
+          'Dwarf'
+        ],
+        'Male', 1.12, 'Black', 'Gold', 'White'),
+      ...characterInfoPersonal(
+        ['Exile'],
+        ['Blacksmith'],
+        [null],
+        [
+          'Blacksmithing',
+        ]),
+      ...characterInfoFamily(
+        [
+          detailBuilder('Unknown', 'Mother'),
+          detailBuilder('Unknown', 'Father'),
+        ],
+        [null],
+        [null],),
+    }
+  },
   "ArlyssKnight": {
     'alias': ['Reaper', `'Tac'`, 'Knight'],
     'info': {
@@ -364,6 +413,50 @@ export const CHARACTER_Contents = {
     "personality":
       <div>
       </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
+      <div>
+      </div>,
+    "trivia":
+      <div>
+      </div>,
+  },
+  'ELIJAH_SPENCER': {
+    "summary":
+      <div>
+        <p>
+        </p>
+      </div>,
+    "appearance":
+      <div>
+        5’9 height, weight 76kg, short brown hair with stubble beard, Slim build doesn’t look that strong. Has a scar across his right eye from when he was attacked dragging a man away from the battlefield.
+      </div>,
+    "personality":
+      <div>
+        Elijah is a calm collected Military doctor who helped the Vindictis at the frontlines, he didn’t use magic when healing people but used his knowledge that he studied and applied it to the frontline. Due to what I’ve seen on the frontlines I do hate elves and grew up with that mindset, any elves I come across I do not trust and won’t listen to them.
+
+        After adventuring with Red and spending time with elves he found a new understanding and a tolerance to elves, began a friendship with them and started questioning if he was doing the right thing for vindictis.
+
+        Elijah became a shell of a man when he was captured and brought in on the ship, he overloaded the reactor as he thought he was doing the right thing destroying everything of these evil people but doing so wiped out roughly 3/4 of his nation and the high elves killing his wife and father in the process. With nothing to live or fight though he became suicidal and was about to take his own life until he remembered the promise he made to his dear friend Trentin on finding Trentin’s father killer. At this current moment Elijah has splint from the group with Trentin to find out some information
+      </div>,
+    'relationships':
+      <div>
+        Brother -
+        Friend: Childhood friend and war buddy
+        ENEMY: Vindictis general who treats his soldiers as currency
+      </div>,
+    'history':
+      <div>
+        Military Medic
+        Wife wounded
+        Heals her
+        Reported as magic user (by wife)
+        Captured, bound and sent aboard an airship
+        Airship crashes in freak storm
+        Still manacled, tries to head
+      </div>,
     "trivia":
       <div>
       </div>,
@@ -379,6 +472,12 @@ export const CHARACTER_Contents = {
       <div>
       </div>,
     "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
       <div>
       </div>,
     "trivia":
@@ -399,6 +498,12 @@ export const CHARACTER_Contents = {
       <div>
       </div>,
     "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
       <div>
       </div>,
     "trivia":
@@ -422,6 +527,12 @@ export const CHARACTER_Contents = {
       <div>
       </div>,
     "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
       <div>
       </div>,
     "trivia":
@@ -981,6 +1092,52 @@ export const CHARACTER_Contents = {
           As he arrived he saw a knight approach a group camped ahead outside the city not far from the road. Shortly thereafter a pair left with all their belongings. Upon spotting Threstrom, the pair hailed him and asked if he had heard of Damocles. Dissatisfied with his lack of knowledge they left with the younger grumbling, "stupid bloody spies... It's not proper soldiering." Confused but otherwise still cheerful. Threstrom went into town to begin seeking answers and justice for the explosion.
         </p>
       </div >,
+    "trivia":
+      <div>
+      </div>,
+  },
+  'BARDR': {
+    "summary":
+      <div>
+        <p>
+          <i>"Ask the Gods. They put the metal there. Dwarfs just dig it out"</i> -Bárðr
+        </p>
+        <p>
+          He has cropped, wavy, black hair and golden eyes.
+
+          He has smooth white skin.
+
+          He stands 112cm (3'8") tall and has a massive build.
+
+          He has a round, mediocre face with a long, braided moustache.
+
+          He occasionally squints.
+
+
+          He zealously worships Torm, God of duty, loyalty, obedience, paladins. (Lawful Good)
+
+          He is very patient.
+
+          He is not very obstinate.
+
+          He only dresses in very expensive clothes.
+
+          He collects dried rose petals.
+
+          He sees insults as an art.
+
+          Straight
+
+          Widowed
+
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
     "trivia":
       <div>
       </div>,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { EMBLEM } from '../../../images/_emblems';
 
 function NationButton(nation: any, width:number) {
     return (
@@ -8,7 +9,7 @@ function NationButton(nation: any, width:number) {
             'verticalAlign': 'top',
             'textAlign': 'center',
         }}>
-            <img src={nation.imageLoc}
+            <img src={nation.imageLoc || EMBLEM['./emblems/ZZZ.webp']}
                 style={{
                     'width': width-20+'px',
                     'height': 'auto',

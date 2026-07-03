@@ -9,6 +9,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import { factions } from '../../../data/CategoryList';
 import { Table, TableCell, TableRow } from '@mui/material';
 import { CHARACTER_Core } from '../../../data/__DATA_Core';
+import { THUMBNAIL } from '../../../images/_characters';
 
 function characterButton(character: any) {
     return (
@@ -16,30 +17,26 @@ function characterButton(character: any) {
             key={character.fileName + '-creaturePage-Link'}
             to={`/${character.fileLoc}/${character.fileName}`}
             style={{
-                width: `70px`,
+                width: `90px`,
                 display: 'inline-block',
                 verticalAlign: 'top',
                 textAlign: 'center',
-                paddingRight: '7px'
             }}>
-            <div style={{
-                display: 'inline-block',
-                verticalAlign: 'top',
-                textAlign: 'center',
-                paddingBottom: '0px'
-            }}>
-                <img src={character.imageLoc}
-                    style={{
-                        'width': `60px`,
-                        'height': 'auto',
-                        'display': 'inline-block',
-                    }}
-                />
-                <p style={{ paddingTop: '0px', verticalAlign:'top'}}>
-                    {character.name.fore} {character.name.sur}
+            <div style={{ display: 'inline-block' }}>
+                <p style={{ paddingTop: '0px', verticalAlign: 'top' }}>
+                    <img src={character.imageLoc || THUMBNAIL['./characters/ZZZ.webp']}
+                        style={{
+                            'width': `70px`,
+                            'height': 'auto',
+                            'display': 'inline-block',
+                        }}
+                    />
+                    <div>
+                        {character.name.fore} {character.name.sur}
+                    </div>
                 </p>
             </div>
-        </Link>
+        </Link >
     )
 }
 
