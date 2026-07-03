@@ -8,20 +8,38 @@ import { StyledTab } from '../../../utils/common';
 import TabPanel from '@mui/lab/TabPanel';
 import { factions } from '../../../data/CategoryList';
 import { Table, TableCell, TableRow } from '@mui/material';
-import { CHARACTER_Core } from '../../../data/_DATA_Core';
+import { CHARACTER_Core } from '../../../data/__DATA_Core';
 
 function characterButton(character: any) {
     return (
-        <div key={character.fileName + '-creaturePage-Link-div'}>
-            <Link
-                key={character.fileName + '-creaturePage-Link'}
-                to={`/${character.fileLoc}/${character.fileName}`}
-            >
-                {/* <button style={{ minWidth: "90px", padding: '1px', margin: '2px' }}> */}
-                {character.name.fore} {character.name.sur}
-                {/* </button> */}
-            </Link>
-        </div>
+        <Link
+            key={character.fileName + '-creaturePage-Link'}
+            to={`/${character.fileLoc}/${character.fileName}`}
+            style={{
+                width: `70px`,
+                display: 'inline-block',
+                verticalAlign: 'top',
+                textAlign: 'center',
+                paddingRight: '7px'
+            }}>
+            <div style={{
+                display: 'inline-block',
+                verticalAlign: 'top',
+                textAlign: 'center',
+                paddingBottom: '0px'
+            }}>
+                <img src={character.imageLoc}
+                    style={{
+                        'width': `60px`,
+                        'height': 'auto',
+                        'display': 'inline-block',
+                    }}
+                />
+                <p style={{ paddingTop: '0px', verticalAlign:'top'}}>
+                    {character.name.fore} {character.name.sur}
+                </p>
+            </div>
+        </Link>
     )
 }
 
@@ -60,55 +78,56 @@ function CharacterRouting(props: any) {
                                         })
                                     }
                                     const noSubList = Object.values(CHARACTER_Core).filter((i: any) => !(i.tags!.some((e: any) => subCategories.includes(e))))
-                                    return (
-                                        <Table size="small" aria-label="purchases" key={faction.single + '-creaturesRouting-creatureType-table'}>
-                                            <tbody>
-                                                <TableRow>
-                                                    <TableCell colSpan={2}>
-                                                        <strong key={faction.single + '-creaturesRouting-creatureType-header'}>
-                                                            {faction.plural}
-                                                        </strong>
-                                                    </TableCell>
-                                                </TableRow>
-                                                <TableRow >
-                                                    <TableCell style={{ paddingBottom: '20px' }}>
-                                                        {noSubList
+                                    if (faction.subCat)
+                                        return (
+                                            <Table size="small" aria-label="purchases" key={faction.single + '-creaturesRouting-creatureType-table'}>
+                                                <tbody>
+                                                    <TableRow>
+                                                        <TableCell colSpan={2}>
+                                                            <strong key={faction.single + '-creaturesRouting-creatureType-header'}>
+                                                                {faction.plural}
+                                                            </strong>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                    <TableRow >
+                                                        <TableCell style={{ paddingBottom: '20px' }}>
+                                                            {/* {noSubList
                                                             .filter((i: any) => (i.tags!.some((e: any) => e === faction.searchCat)))
                                                             .map((character: any) => {
                                                                 return (
                                                                     characterButton(character)
                                                                 )
-                                                            })}
+                                                            })} */}
 
-                                                        <Table size="small" key={faction.single + '-creaturesRouting-creatureSubType-table'} >
-                                                            <tbody>
-                                                                {faction.subCat && faction.subCat.map((system: any) => {
-                                                                    const catFilteredList = CharacterList.filter((i: any) => i.tags!.some((e: any) => e === system.searchCat))
-                                                                    return (
-                                                                        <TableRow key={system.searchCat + '-creaturesRouting-creatureSubType-tableRow'}>
-                                                                            <TableCell style={{ minWidth: '65px', width: '90px', textAlign: 'right', verticalAlign: 'top', paddingRight: 0 }}>
-                                                                                <strong>{system.plural}</strong>
-                                                                            </TableCell>
+                                                            <Table size="small" key={faction.single + '-creaturesRouting-creatureSubType-table'} >
+                                                                <tbody>
+                                                                    {faction.subCat && faction.subCat.map((system: any) => {
+                                                                        const catFilteredList = CharacterList.filter((i: any) => i.tags!.some((e: any) => e === system.searchCat))
+                                                                        return (
+                                                                            <TableRow key={system.searchCat + '-creaturesRouting-creatureSubType-tableRow'}>
+                                                                                <TableCell style={{ minWidth: '65px', width: '90px', textAlign: 'right', verticalAlign: 'top', paddingRight: 0 }}>
+                                                                                    <strong>{system.single}</strong>
+                                                                                </TableCell>
 
-                                                                            <TableCell>
-                                                                                {
-                                                                                    catFilteredList.filter((i: any) => i.tags!.some((e: any) => e === system.searchCat)).map((character: any) => {
-                                                                                        return (
-                                                                                            characterButton(character)
-                                                                                        )
-                                                                                    })
-                                                                                }
-                                                                            </TableCell>
-                                                                        </TableRow>
-                                                                    )
-                                                                })}
-                                                            </tbody>
-                                                        </Table>
-                                                    </TableCell>
-                                                </TableRow>
-                                            </tbody>
-                                        </Table>
-                                    )
+                                                                                <TableCell>
+                                                                                    {
+                                                                                        catFilteredList.filter((i: any) => i.tags!.some((e: any) => e === system.searchCat)).map((character: any) => {
+                                                                                            return (
+                                                                                                characterButton(character)
+                                                                                            )
+                                                                                        })
+                                                                                    }
+                                                                                </TableCell>
+                                                                            </TableRow>
+                                                                        )
+                                                                    })}
+                                                                </tbody>
+                                                            </Table>
+                                                        </TableCell>
+                                                    </TableRow>
+                                                </tbody>
+                                            </Table>
+                                        )
                                 })}
                             </TabPanel>
 

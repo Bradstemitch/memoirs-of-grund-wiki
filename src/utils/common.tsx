@@ -67,12 +67,9 @@ export const StyledTab = styled((props: StyledTabProps) => (
     // },
 }));
 
-
-
 export function internalLink(text: string, reference: any) {
     return <Link to={`/${reference.fileLoc}/${reference.fileName}`} >{text}</Link>
 }
-
 
 export function InfoRow(RowType: string, data: any) {
     let content = []
@@ -84,6 +81,7 @@ export function InfoRow(RowType: string, data: any) {
             }
         ]
     }
+
     if (Array.isArray(data)) {
         data.map((i: any) => {
             if (typeof i !== 'object') {
@@ -108,6 +106,17 @@ export function InfoRow(RowType: string, data: any) {
             }
 
         })
+    } else if (typeof data === 'object') {
+        if (data.fileName) {
+            content.push(
+                {
+                    "detail": null,
+                    "data": { 'name': data }
+                }
+            )
+        } else {
+            content.push(data)
+        }
     }
 
     return (
@@ -137,7 +146,6 @@ export function InfoRow(RowType: string, data: any) {
         </TableRow>
     )
 }
-
 
 function InfoRowChar(RowType: string, data: any) {
     let content

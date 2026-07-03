@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import OrgBox from './OrgBox';
-import { OrgList } from '../../../data/organisations/_OrgList';
+import { OrgList } from '../../../data/_OrgList';
 import OrgButton from './OrgButton';
 
 

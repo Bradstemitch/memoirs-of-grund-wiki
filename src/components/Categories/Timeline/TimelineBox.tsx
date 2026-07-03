@@ -11,8 +11,6 @@ interface RumourBoxProps {
 function TimelineBox(props: RumourBoxProps) {
     const event = TimelineEvents[props.rumour.fileName]
 
-    console.log(event.html)
-
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
             <h2>{props.rumour.name}</h2>

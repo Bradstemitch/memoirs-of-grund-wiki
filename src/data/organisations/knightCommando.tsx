@@ -1,6 +1,5 @@
-import Emblem from "../../images/damoclesKnightCommando.png"
 import { ORGANISATIONS } from "../constants";
-import { DATA_Core } from "../_DATA_Core";
+import { DATA_Core } from "../__DATA_Core";
 
 
 export const KnightCommando: any = {

@@ -63,30 +63,29 @@ function CharacterPage(props: CreatureBoxProps) {
     );
 }
 
-
 function WikiBar(nation: any) {
-    console.log(nation.info.basic)
     return (
         <div style={{
             'float': 'right',
             'width': '340px',
-            'paddingLeft': '20px',
+            'paddingTop': '0px',
+            'paddingLeft': '40px',
+            'paddingRight': '40px',
+            'paddingBottom': '40px',
         }}>
             <Table size="small" aria-label="purchases">
                 <tbody>
-                    <tr>
-                        <th colSpan={2}>
+                    <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
+                        <TableCell colSpan={2} style={{ textAlign: 'center' }}>
                             <img src={nation.imageLoc}
                                 style={{
-                                    'width': '250px',
+                                    'width': '100%',
                                 }}
                             />
-                        </th>
-                    </tr>
+                        </TableCell>
+                    </TableRow>
 
-                    {nation.info.alias && InfoRow("Alias", nation.info.alias)}
-
-                    {nation.info.basic.show && <>
+                    {nation.info && nation.info.basic.show && <>
                         <TableRow>
                             <TableCell colSpan={2}>
                                 <strong>
@@ -94,14 +93,15 @@ function WikiBar(nation: any) {
                                 </strong>
                             </TableCell>
                         </TableRow>
+                        {nation.alias && nation.alias && InfoRow("Alias", nation.alias)}
                         {nation.info.basic.nationality && InfoRow("Nationality", nation.info.basic.nationality)}
                         {nation.info.basic.status && InfoRow("Status", nation.info.basic.status)}
-                        {nation.info.basic.born && InfoRow("Birth", nation.info.basic.born.toString().replace('-','') + (nation.info.basic.born >= 0 ? ` CE`:` BCE`))}
-                        {nation.info.basic.died && InfoRow("Death", nation.info.basic.died.toString().replace('-','') + (nation.info.basic.died >= 0 ? ` CE`:` BCE`))}
+                        {nation.info.basic.born && InfoRow("Birth", nation.info.basic.born.toString().replace('-', '') + (nation.info.basic.born >= 0 ? ` CE` : ` BCE`))}
+                        {nation.info.basic.died && InfoRow("Death", nation.info.basic.died.toString().replace('-', '') + (nation.info.basic.died >= 0 ? ` CE` : ` BCE`))}
                     </>
                     }
 
-                    {nation.info.physical.show && <>
+                    {nation.info && nation.info.physical.show && <>
                         <TableRow>
                             <TableCell colSpan={2}>
                                 <strong>
@@ -118,7 +118,7 @@ function WikiBar(nation: any) {
                     </>
                     }
 
-                    {nation.info.personal.show && <>
+                    {nation.info && nation.info.personal.show && <>
                         <TableRow>
                             <TableCell colSpan={2}>
                                 <strong>
@@ -133,7 +133,7 @@ function WikiBar(nation: any) {
                     </>
                     }
 
-                    {nation.info.family.show && <>
+                    {nation.info && nation.info.family.show && <>
                         <TableRow>
                             <TableCell colSpan={2}>
                                 <strong>

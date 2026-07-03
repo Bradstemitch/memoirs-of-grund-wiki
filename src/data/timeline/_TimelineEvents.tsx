@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CHARACTER_Core } from "../_DATA_Core";
+import { CHARACTER_Core } from "../__DATA_Core";
 import { internalLink } from "../../utils/common";
 
 

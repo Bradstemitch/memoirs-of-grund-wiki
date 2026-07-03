@@ -1,4 +1,3 @@
-import Emblem from "../../images/zzz.png"
 
 export const HarlequinsRevelry = {
     "name": "Harlequin's Revelry",
@@ -7,7 +6,7 @@ export const HarlequinsRevelry = {
     "tags": [
         "Harlequin's Revelry",
     ],
-    "emblem": Emblem,
+    "emblem": 'Emblem',
     "pronunciation": "Bree - th",
     "info": {
         "basic": {

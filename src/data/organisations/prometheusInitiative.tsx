@@ -1,4 +1,3 @@
-import Emblem from "../../images/prometheusInitiative.png"
 
 export const PrometheusInitiative = {
     "name": "Prometheus Initiative",
@@ -7,7 +6,7 @@ export const PrometheusInitiative = {
     "tags": [
         "Prometheus Initiative",
     ],
-    "emblem": Emblem,
+    "emblem": 'Emblem',
     "pronunciation": "Bree - th",
     "info": {
         "basic": {

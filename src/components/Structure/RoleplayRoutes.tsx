@@ -26,7 +26,11 @@ function RoleplayRoutes() {
             }>
                 <Route index element={
                     <div>
-                        Hello, Welcome to the Grund Wiki
+                        <p>
+                            Hello, Welcome to the Grund Wiki
+                        </p>
+
+                        <img src={'src/images/maps/AucediaInlandSea.webp'} style={{width:'100%'}}/>
                     </div>
                 } />
 

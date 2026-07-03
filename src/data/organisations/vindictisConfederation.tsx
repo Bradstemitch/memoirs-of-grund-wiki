@@ -1,4 +1,3 @@
-import Emblem from "../../images/damoclesShardsOfDamocles.png"
 import { ORGANISATIONS } from "../constants"
 
 export const VindictisConfederation = {
@@ -7,7 +6,7 @@ export const VindictisConfederation = {
         "Damocles",
         "Blades Of Aneurin"
     ],
-    "emblem": Emblem,
+    "emblem": 'Emblem',
     "pronunciation": "Bree - th",
     "info": {
         "basic": {

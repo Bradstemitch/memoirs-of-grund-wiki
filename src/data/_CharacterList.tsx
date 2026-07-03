@@ -1,5 +1,5 @@
 import { NATIONS, ORGANISATIONS, SPECIES } from "./constants"
-import { CHARACTER_Core, NATION_Core } from "./_DATA_Core"
+import { CHARACTER_Core, NATION_Core } from "./__DATA_Core"
 import { coreCharacterBuilder } from "../utils/builders"
 import { internalLink } from "../utils/common"
 
@@ -56,13 +56,6 @@ export function characterInfoFamily(relatives: any, partner: any, children: any)
   })
 }
 
-export function characterBuilder(name: string) {
-  return ({
-    ...CHARACTER_Core[name] || null,
-    ...CHARACTER_Info[name] || null,
-    ...CHARACTER_Contents[name] || null,
-  })
-}
 
 export function detailBuilder(name: any, detail: string) {
   return ({
@@ -71,8 +64,46 @@ export function detailBuilder(name: any, detail: string) {
   })
 }
 
-
 export const CHARACTER_Info = {
+  'ANEURIN': {
+    'alias': ['Reaper', `'Icarus'`],
+    'info': {
+      ...characterInfoBasic('Tuatha De Danann', -34, 'Stasis (9 BCE)', null),
+      ...characterInfoPhysical(
+        [
+          detailBuilder('Human', 'Formerly'),
+          detailBuilder('High Dragon', 'Zyz')
+        ],
+        'Male', 1.88, 'Brown', 'Green', 'White'),
+      ...characterInfoPersonal(['Reaper'], ['Reaper of Damocles'],
+        [
+          detailBuilder('Swords of Damocles', 'Formerly'),
+          'Shards of Damocles',
+        ],
+        [
+          'Master Tactician',
+          'Swordsmanship',
+          'Spearsmanship',
+          'Crossbow',
+          'Magic',
+        ]),
+      ...characterInfoFamily(
+        [
+          detailBuilder('Unknown', 'Mother'),
+          detailBuilder('Unknown', 'Father'),
+          detailBuilder(CHARACTER_Core.Scáthach, 'Mentor'),
+        ],
+        [
+          detailBuilder(CHARACTER_Core.LyraVitae, 'Wife'),
+          detailBuilder('Eve', 'Melded'),
+        ],
+        [
+          detailBuilder('Essylt', 'Scourge Imprint'),
+          detailBuilder(CHARACTER_Core.LETA, 'Daughter'),
+          detailBuilder(CHARACTER_Core.LilithFaire, 'Daughter in law'),
+        ],),
+    }
+  },
   "ArlyssKnight": {
     'alias': ['Reaper', `'Tac'`, 'Knight'],
     'info': {
@@ -98,8 +129,8 @@ export const CHARACTER_Info = {
         ]),
       ...characterInfoFamily(
         [
-          detailBuilder('Mother', 'Unknown'),
-          detailBuilder('Father', 'Unknown'),
+          detailBuilder('Unknown', 'Mother'),
+          detailBuilder('Unknown', 'Father'),
         ],
         [
           detailBuilder(CHARACTER_Core.LyraVitae, 'Wife'),
@@ -140,6 +171,45 @@ export const CHARACTER_Info = {
         ],),
     }
   },
+  'CERBERUS': {
+    'alias': ['C3-R8'],
+    'info': {
+      ...characterInfoBasic(detailBuilder('Terran', 'Greek'), -37, 'Alive', null),
+      ...characterInfoPhysical(
+        [
+          detailBuilder('Human', 'Formerly'),
+          'True Vampire'
+        ],
+        'Male', 1.72, 'Black', 'Red', 'Olive'),
+      ...characterInfoPersonal([null], [null],
+        [
+          detailBuilder('Vindictis', 'Formerly'),
+          'The Remnant',
+          'The Legion',
+          detailBuilder('Messan Rebellion', 'Infiltration'),
+        ],
+        [
+          'Master Tactician',
+          'Swordsmanship',
+          'Spearsmanship',
+          'Crossbow',
+          'Magic',
+        ]),
+      ...characterInfoFamily(
+        [
+          detailBuilder('Unknown', 'Mother'),
+          detailBuilder('Unknown', 'Father'),
+          detailBuilder('C4-R8', 'Brother'),
+          detailBuilder('C2-R8', 'Sister'),
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],),
+    }
+  },
   "DagInnVæni": {
     'alias': ['Dag Bothison'],
     'info': {
@@ -170,22 +240,31 @@ export const CHARACTER_Info = {
           detailBuilder(SPECIES.ELF.name, 'Sylvan')
         ]
         , 'Female', 1.83, 'Orange', 'Green', 'White'),
-      ...characterInfoPersonal(null, null, [
-        detailBuilder(ORGANISATIONS.VINDICTIS_CONFEDERATION.name, 'Formerly'),
-        detailBuilder(ORGANISATIONS.KNIGHT_COMMANDO.name, 'Formerly'),
-        ORGANISATIONS.MESSAN_REBELION.name
-      ],
+      ...characterInfoPersonal(
+        [
+          'Second', 'Captain'
+        ],
+        [
+          'Scout', 'Skirmisher',
+        ],
+        [
+          detailBuilder(ORGANISATIONS.VINDICTIS_CONFEDERATION.name, 'Formerly'),
+          detailBuilder(ORGANISATIONS.KNIGHT_COMMANDO.name, 'Formerly'),
+          ORGANISATIONS.MESSAN_REBELION.name
+        ],
         [
           'Swordsmanship',
           'Archery',
           'Scouting,'
         ]),
-      ...characterInfoFamily([
-        detailBuilder('Mother', 'Unknown'),
-        detailBuilder('Father', 'Unknown'),
-      ], [
-        detailBuilder(CHARACTER_Core.LETA, 'Wife')
-      ], null),
+      ...characterInfoFamily(
+        [
+          detailBuilder('Unknown', 'Mother'),
+          detailBuilder('Unknown', 'Father'),
+        ],
+        [
+          detailBuilder(CHARACTER_Core.LETA, 'Wife')
+        ], null),
     }
   },
   "LyraVitae": {
@@ -269,8 +348,138 @@ export const CHARACTER_Info = {
     }
   },
 }
-
+/*
+{internalLink('Leta', CHARACTER_Core.LETA)}
+*/
 export const CHARACTER_Contents = {
+  '__TEMPLATE': {
+    "summary":
+      <div>
+        <p>
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    "trivia":
+      <div>
+      </div>,
+  },
+  'CERBERUS': {
+    "summary":
+      <div>
+        <p>
+          <i>"I wonder. If you’d been there when I woke up, what would I have become, would I charge into a horde of soldiers to save a single child? I wonder. If they didnt point me at their enemy and cry havoc, could I have been good?"</i> - Cerberus
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    "trivia":
+      <div>
+        <p>
+          Cerberus was the second named character in Decus
+        </p>
+      </div>,
+  },
+  'ACHILLES': {
+    "summary":
+      <div>
+        <p>
+          <i>"Hateful to me as the gates of Hades is that man who hides one thing in his heart and speaks another."</i> - Achilles
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    "trivia":
+      <div>
+      </div>,
+  },
+  'MEDEA': {
+    "summary":
+      <div>
+        <p>
+          In Greek mythology, Medea is the daughter of King Aeëtes of Colchis, a niece of Circe and the granddaughter of the sun god Helios. Medea figures in the myth of Jason and the Argonauts, appearing in Hesiod's Theogony around 700 BC, but best known from Euripides's tragedy Medea and Apollonius of Rhodes' epic Argonautica. Medea is known in most stories as a sorceress and is often depicted as a priestess of the goddess Hecate.
+        </p>
+        <p>
+          She aids Jason in his search for the Golden Fleece out of love, assisting him with her magic and saving his life in several quests, playing the role of an archetypal helper-maiden, before abandoning her native Colchis, marrying him, and fleeing with him westwards where they eventually settle in Corinth. Euripides' 5th century BC tragedy Medea, arguably the best known adaptation of the Medea myth, depicts the ending of said union with Jason, when after ten years of marriage, Jason abandons her to wed the king's daughter Creusa while Medea and her sons by Jason are to be banished from Corinth. In revenge, she murders Creusa and the king with poisoned gifts, and later murders her own sons by Jason before fleeing for Athens, where she eventually marries king Aegeus. Other traditions mention several other causes of death for Medea's sons.
+        </p>
+        <p>
+          What happened afterwards varies according to several accounts. Herodotus in his Histories mentions that she ended up leaving Athens and settling in the Iranian plateau among the Aryans, who subsequently changed their name to the Medes.
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    "trivia":
+      <div>
+      </div>,
+  },
+  'ANEURIN': {
+    "summary":
+      <div>
+        <p>
+          <i>"Honour is nothing so grand, it's really a small thing. Honour means when someone cries you offer your shoulder, when someone goes hungry you offer them food and when someone is attacked you stand beside them"</i> - Aneurin
+        </p>
+        <p>
+          Aneurin, a native of Grund and born among the Tuatha Dé Danann nations bordering the Elven forest of Tír na nÓg. At a young age Aneurin’s family was slaughtered by human supremacists trying to find a way through the mists and when recovered, the Sylvans, not wanting to kill him, yet unwilling to raise him themselves took Aneurin to Dún Scáith, handing him over to the tutelage of Scáthach, where he spent most of his childhood, before being recruited into the Swords of Damocles.
+        </p>
+        <p>
+          As a member of Damocles, Aneurin quickly earned the title of Reaper, going on to become Damocles most preeminent fighter and infiltrator. He admired Ezra’s calm demeanor and friendly attitude but quickly grated against Arlyss Knight upon his arrival, due to the latters reliance on underhanded tactics and trickery. The two eventually grew closer, with Arlyss nicknaming Aneurin ‘Icarus’ because of his often dangerous attachment to his ‘honour’, and Aneurin acting as a moral compass for Arlyss, more than willing to tell him when he was about to go too far.
+        </p>
+        <p>
+          Towards the end of the shadow war, Aneurin and Arlyss fought the primordial dragon Zyz to prevent the Prometheus Initiative using him to clear the world, however after their victory, the ‘Knight Elixir’ proved too potent for Aneurin, destroying and rebuilding him over and over at a cellular level while releasing devastating amount of fire, obliterating the surrounding area. Aneurin teleported to Aegina, offering Medea the location of her daughter in stasis if she can find a way to control his overloading body. Aneurin has remained in stasis in the Palace of Aegina under the watchful gaze of Medea ever since as she tried to find a solution.
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
+      <div>
+        <p>
+          Early Life
+          The Mists - (29 BCE)
+
+          Scáthach - (28 BCE)
+
+          The Last of Damocles
+          Fall of the Refuge - (16 BCE)
+
+          Forming the Shards of Damocles - (15 BCE)
+
+          Man vs Zyz - (9 BCE)
+        //Arlyss and Aneurin kill the Primordial Dragon Zyz
+        </p>
+      </div>,
+    "trivia":
+      <div>
+        <p>
+          Aneurin’s name means ‘Man of Honour’
+        </p>
+        <p>
+          The Reapers: Aneurin, Arlyss and Ezra are inspired by celtic myths of three separate individuals also being one, such as Badb, Macha and Nemain being the Morrigan
+        </p>
+      </div>,
+  },
   'ArlyssKnight': {
     "summary":
       <div>
@@ -295,6 +504,12 @@ export const CHARACTER_Contents = {
         <p>Despite his aversion to his own past, Arlyss takes a strong interest in the world's history, and the history of even fictional worlds, reading both fictional and non-fictional books he finds on his journey in his spare moments. Arlyss possesses a keen interest in architecture and structural planning, often teaching the soldiers who serve beneath him the basics of construction ‘for this war will end’, a statement he wishes for but had never truly believed, as he considers the Knight Commando a suicide unit, destined to fight a losing battle in an already lost war.</p>
 
         <p>Arlyss cares for those under his command and often goes out of his way to ease their burdens if he can, he also feels great revulsion for those who attack civilian targets for any reason, rallying any forces he can to defend even small hamlets from hostility, yet he is keenly aware he cant save everyone, and in those times he arrives late, seeing the broken eyes of those who survived when no other did, he extends the welcoming hand of the Knight Commando.</p>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
+      <div>
       </div>,
     "trivia":
       <div>
@@ -355,6 +570,84 @@ export const CHARACTER_Contents = {
         </p>
       </div>,
   },
+  'EZRA': {
+    "summary":
+      <div>
+        <p>
+          <i>"I have met very few I consider evil, you have been tricked by men of power and there is no fault in that, there is only fault in our ignorance and inactivity once we learn the truth"</i> - Ezra
+        </p>
+        <p>
+          Ezra, formerly named Fia’clann, was a native of Grund, and born amongst the Sylvan Elves living on the outskirts of Tír na nÓg. In his infancy, a Fomóire raid on Tír na nÓg maimed his younger sister and enslaved his parents, while later Vindictis military action imprisoned his elder brother. Ezra and his remaining siblings ended up growing up alongside displaced human travellers, harassed by bandits and the Vindictis Empire before being smuggled to safety by the Swords of Damocles.
+        </p>
+        <p>
+          As a member of Damocles, Ezra proved himself adept at forgery, insidious planning and a familial charm, capable of inspiring and comforting in equal measure. The Reapers accepted him amongst their number after Ezra managed to diffuse multiple hostile situations without violence and even converted Vindictis agents, they considered him the ‘ideal Reaper’ and hoped that future generations would be able to follow his example. Ezra spent many years traveling in his role as Reaper, earning many allies and confidents across the world, ultimately recruiting Aneurin on the word of Scáthach and leading the raid on facility H4-D35 that recovered Arlyss Knight and Oberon Valerian. Ezra quickly grew fond of the two new Reapers, as they reminded him of his brothers throughout their rivalry.
+        </p>
+        <p>
+          During the closing years of the Shadow War, Ezra commanded the Remnant, and acted as liaison between the many city states that formed the Concord of Swords. Ezra became the de facto leader and his camp the central headquarters for all that remained of Damocles, eventually being joined by the Arlyss’ Knight Commando and Aneurin’s Shards of Damocles. Ezra commanded many successful military actions, ultiately winning the war and retaining command until his assassination by Oberon Valerian.
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
+      <div>
+      </div>,
+    "trivia":
+      <div>
+      </div>,
+  },
+  'FiadhÓCionaoith': {
+    'summary':
+      <div>
+        <p>
+          A {internalLink('Fomorian', NATION_Core.FOMOIRE)} clan leader and apparent ‘Chosen’, Fiadh leads the remnants of a people, once abandoned to the cruel forests of {internalLink('Fomoire', NATION_Core.FOMOIRE)}, a people who do not seek the glory of rebirth, they instead study the relics of their forefathers, a mighty vessel, crashed amidst the trees and overflowing with a strange black powder.
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
+      <div>
+      </div >,
+    "trivia":
+      <div>
+      </div>,
+  },
+  'GuaireÓRiagáin': {
+    'summary':
+      <div>
+        <p>
+          Leader of clan Ó Riagáin, Guaire oversees the reconstruction of Riagáin, a town once owned by the Tuatha many centuries ago but ravaged by Fomorian invasions. Under his leadership, clan Ó Riagáin thrive as fishermen on their great lake and under the watchful eye of the Grove of Dagden, yet despite this, he tends to avoid the more warlike aspects of the Fomóiri, ignoring the call to war by Balor and instead sending his people to seek their glory against the beasts and monsters that would plague their walls.
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
+      <div>
+      </div >,
+    "trivia":
+      <div>
+      </div>,
+  },
   'LilithFaire': {
     'summary':
       <div>
@@ -363,6 +656,12 @@ export const CHARACTER_Contents = {
       <div>
       </div>,
     "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
       <div>
       </div>,
     "trivia":
@@ -391,13 +690,13 @@ export const CHARACTER_Contents = {
       <div>
       </div>,
     'relationships':
-    <div>
-      {/* Arlyss Knight
+      <div>
+        {/* Arlyss Knight
       Cerberus
       Lilith Faire
       “As she lay dying in my arms, she asked me if I was her mother, tears in her eyes as the toxin slowly wiped her memories away until she even forgot how to breathe, I sat there with her slowly trying to heal the damage, even just enough to deny death its prize but the girl I knew was no longer there. Those eyes stared at me blankly, uncomprehending of the world before fading away. I knelt there with her cold body in my arms and I promised her that tomorrow will be a better day. Then you came, and reminded me that I have ignored that promise for far too long” - Lyra Vitae
       Oberon Valerian */}
-    </div>,
+      </div>,
     'history':
       <div>
         <p>
@@ -567,6 +866,29 @@ export const CHARACTER_Contents = {
         </p>
       </div>,
   },
+  'Scáthach': {
+    'summary':
+      <div>
+        <p>
+          Scáthach is a figure in the Ulster Cycle of Irish mythology. She is a legendary warrior woman and martial arts teacher who trains the legendary hero Cú Chulainn in the arts of combat. Texts describe her homeland as Scotland (Alpeach); she is especially associated with the Isle of Skye, where her residence Dún Scáith stands. She is called "the Shadow" and "Warrior Maid" and is the rival and sister of Aífe, both of whom are daughters of Árd-Greimne of Lethra.
+        </p>
+      </div>,
+    "appearance":
+      <div>
+      </div>,
+    "personality":
+      <div>
+      </div>,
+    'relationships':
+      <div>
+      </div>,
+    'history':
+      <div>
+      </div >,
+    "trivia":
+      <div>
+      </div>,
+  },
   'THRESTROM': {
     'summary':
       <div>
@@ -664,31 +986,15 @@ export const CHARACTER_Contents = {
       </div>,
   },
 }
-export const CharacterList = [
-  characterBuilder('ANEURIN'),
-  characterBuilder('ArlyssKnight'),
-  characterBuilder('ArthurPendragon'),
-  characterBuilder('ASH'),
-  characterBuilder('BALOR'),
-  characterBuilder('BEHEMOTH'),
-  characterBuilder('DagInnVæni'),
-  characterBuilder('ELM'),
-  characterBuilder('EZRA'),
-  characterBuilder('FiadhÓCionaoith'),
-  characterBuilder('GuaireÓRiagáin'),
-  characterBuilder('LEVIATHAN'),
-  characterBuilder('LETA'),
-  characterBuilder('LilithFaire'),
-  characterBuilder('LyraVitae'),
-  characterBuilder('MarcusDecimusLibaniusBrytthanicus'),
-  characterBuilder('MORDRED'),
-  characterBuilder('NolaThesoti'),
-  characterBuilder('NóttInnRauði'),
-  characterBuilder('OAK'),
-  characterBuilder('OberonValerian'),
-  characterBuilder('REAPER'),
-  characterBuilder('Scáthach'),
-  characterBuilder('THORN'),
-  characterBuilder('THRESTROM'),
-  characterBuilder('ZYZ'),
-]
+
+export function characterBuilder(name: string) {
+  return ({
+    ...CHARACTER_Core[name] || null,
+    ...CHARACTER_Info[name] || null,
+    ...CHARACTER_Contents[name] || null,
+  })
+}
+
+export const CharacterList = Object.keys(CHARACTER_Core).map(character => {
+  return characterBuilder(character)
+})

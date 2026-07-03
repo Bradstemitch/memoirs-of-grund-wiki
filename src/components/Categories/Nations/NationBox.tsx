@@ -43,9 +43,7 @@ function NationBox(props: NationBoxProps) {
     let nation = props.nation
     return (
         <div style={{ 'width': props.width, 'height': props.height }}>
-            {nation.info &&
-                WikiBar(nation)
-            }
+            {WikiBar(nation)}
 
             <h2>{nation.name}</h2>
             <TabContext value={value}>
@@ -171,7 +169,7 @@ function NationBox(props: NationBoxProps) {
                     <h3> National Emblems </h3>
                 </TabPanel>
                 <TabPanel value={"Notables"}>
-                    <h3> Notable {nation.info.social && nation.info.social.demonym}s </h3>
+                    <h3> Notable {nation.info && nation.info.social && nation.info.social.demonym}s </h3>
                 </TabPanel>
                 <TabPanel value={"Locations"}>
                     <h3> Locations </h3>
@@ -195,16 +193,16 @@ function WikiBar(nation: any) {
         }}>
             <Table size="small" aria-label="purchases">
                 <tbody>
-                    <tr>
-                        <th colSpan={2}>
-                            <img src={nation.emblem}
+                    <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
+                        <TableCell colSpan={2}>
+                            <img src={nation.imageLoc}
                                 style={{
                                     'width': '250px',
                                 }}
                             />
-                        </th>
-                    </tr>
-                    {nation.info.basic &&
+                        </TableCell>
+                    </TableRow>
+                    {nation.info && nation.info.basic &&
                         <>
                             <TableRow>
                                 <TableCell colSpan={2}>
@@ -223,7 +221,7 @@ function WikiBar(nation: any) {
                         </>
                     }
 
-                    {nation.info.government &&
+                    {nation.info && nation.info.government &&
                         <>
                             <TableRow>
                                 <TableCell colSpan={2}>
@@ -240,7 +238,7 @@ function WikiBar(nation: any) {
                         </>
                     }
 
-                    {nation.info.social &&
+                    {nation.info && nation.info.social &&
                         <>
                             <TableRow>
                                 <TableCell colSpan={2}>

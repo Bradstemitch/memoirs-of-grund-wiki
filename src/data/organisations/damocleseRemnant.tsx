@@ -1,4 +1,3 @@
-import Emblem from "../../images/zzz.png"
 
 export const DamocleseRemnant = {
     "name": "Damocles Remnant",
@@ -8,7 +7,7 @@ export const DamocleseRemnant = {
         "Damocles",
         "Blades Of Damoclese Remnant"
     ],
-    "emblem": Emblem,
+    "emblem": 'Emblem',
     "pronunciation": "Bree - th",
     "info": {
         "basic": {
