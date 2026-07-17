@@ -13,10 +13,10 @@ export const KnightCommando: any = {
 //     "info": {
 //         "basic": {
 //             "commander": [
-//                 CHARACTER_Core.ArlyssKnight
+//                 CHARACTER_Core.ARLYSS_KNIGHT
 //             ],
 //             "second": [
-//                 CHARACTER_Core.LilithFaire
+//                 CHARACTER_Core.LILITH_FAIRE
 //             ]
 //         },
 //     },

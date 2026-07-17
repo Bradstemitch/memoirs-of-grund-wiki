@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import RoleplayLayout from './RoleplayLayout';
-import CreaturesRouting from '../Categories/Creature/CreaturesRouting';
+import CreaturesRouting from '../Categories/RoutingCreatures';
 import MagicItem from '../Categories/MagicItems/MagicItem';
 import NationsRouting from '../Categories/Nations/NationsRouting';
 import CharacterPage from '../Categories/Characters/CharacterPageWiki';
-import CharacterRouting from '../Categories/Characters/CharacterRouting';
+import CharacterRouting from '../Categories/RoutingChars';
 import MagicItemsRouting from '../Categories/MagicItems/MagicItemsRouting';
 import RumoursRouting from '../Categories/Rumours/RumoursRouting';
 import TimelineRouting from '../Categories/Timeline/TimelineRouting';
-import ReligionsRouting from '../Categories/Religions/ReligionsRouting';
+import ReligionsRouting from '../Categories/RoutingReligions';
 import ArmouryRouting from '../Categories/Armoury/ArmouryRouting';
-import OrgRouting from '../Categories/Organisations/OrgRouting';
+import OrgRouting from '../Categories/RoutingOrgs';
 import FoundryJSON from '../Categories/Foundry/FoundryJSON';
 
 function RoleplayRoutes() {

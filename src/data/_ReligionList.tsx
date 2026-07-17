@@ -2,7 +2,7 @@ import { RELIGION_Core } from "./__DATA_Core"
 
 function religionBuilder(name: string) {
   return ({
-    ...RELIGION_Core[name] || null,
+    ...RELIGION_Core[name],
   })
 }
 

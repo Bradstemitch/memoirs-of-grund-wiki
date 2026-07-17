@@ -3,35 +3,98 @@ import { CHARACTER_Core, CITY_Core, NATION_Core, RELIGION_Core } from "./__DATA_
 function nationInfoBasic(variations: any, government: any, status: string, ruler: any, founded: Number, area: Number, population: Number) {
     return ({
         'basic': {
-            "variations": variations,
-            "government": government,
-            "status": status,
-            "ruler": ruler,
-            "founded": founded,
-            "area": area,
-            "population": population,
+            'title': 'Basic',
+            'values': {
+                "variations": {
+                    'title': 'Variations',
+                    'value': variations,
+                },
+                "government": {
+                    'title': 'Government',
+                    'value': government,
+                },
+                "status": {
+                    'title': 'Status',
+                    'value': status,
+                },
+                "ruler": {
+                    'title': 'Ruler',
+                    'value': ruler,
+                },
+                "founded": {
+                    'title': 'Founded',
+                    'value': founded,
+                },
+                "area": {
+                    'title': 'Area',
+                    'value': area,
+                },
+                "population": {
+                    'title': 'Population',
+                    'value': population,
+                },
+            }
         }
     })
 }
+
+
 function nationInfoGov(headOfState: any, headOfGovernment: any, commander: string, military: any, intelligence: any) {
     return ({
         'government': {
-            "headOfState": headOfState,
-            'headOfGovernment': headOfGovernment,
-            'commander': commander,
-            'military': military,
-            'intelligence': intelligence,
+            'title': 'Government',
+            'values': {
+                "headOfState": {
+                    'title': 'Head of State',
+                    'value': headOfState,
+                },
+                'headOfGovernment': {
+                    'title': 'Head of Government',
+                    'value': headOfGovernment,
+                },
+                'commander': {
+                    'title': 'Commander',
+                    'value': commander,
+                },
+                'military': {
+                    'title': 'Military',
+                    'value': military,
+                },
+                'intelligence': {
+                    'title': 'Intelligence',
+                    'value': intelligence,
+                },
+            }
         }
     })
 }
+
 function nationInfoSocial(capital: any, currency: any, demonym: string, language: any, religion: any) {
     return ({
         'social': {
-            "capital": capital,
-            'currency': currency,
-            'demonym': demonym,
-            'language': language,
-            'religion': religion,
+            'title': 'Social',
+            'values': {
+                "capital": {
+                    'title': 'Capital',
+                    'value': capital,
+                },
+                'currency': {
+                    'title': 'Currency',
+                    'value': currency,
+                },
+                'demonym': {
+                    'title': 'Demonym',
+                    'value': demonym,
+                },
+                'language': {
+                    'title': 'Language',
+                    'value': language,
+                },
+                'religion': {
+                    'title': 'Religion',
+                    'value': religion,
+                },
+            }
         }
     })
 }
@@ -66,17 +129,15 @@ function nationLocations(type: any, location: any) {
 
 export const NATION_Info = {
     'MESSAR': {
-        'info': {
-            ...nationInfoBasic(['Messar'], 'Elective Monarchy', 'Kingdom', 'High King / Queen of Messar', 375, 210000, 9000000),
-            ...nationInfoGov(['High King / Queen', 'King’s Thegn (regent)'], 'Heptarchy', 'High-Thegn of Messar', 'Fyrd', 'The Daughters'),
-            ...nationInfoSocial(CITY_Core.MESSACT, '', 'Messan', 'Aeaxon', RELIGION_Core.DRACONIC_PANTHEON),
-        }
+        ...nationInfoBasic(['Messar'], 'Elective Monarchy', 'Kingdom', 'High King / Queen of Messar', 375, 210000, 9000000),
+        ...nationInfoGov(['High King / Queen', 'King’s Thegn (regent)'], 'Heptarchy', 'High-Thegn of Messar', 'Fyrd', 'The Daughters'),
+        ...nationInfoSocial(CITY_Core.MESSACT, '', 'Messan', 'Aeaxon', RELIGION_Core.DRACONIC_PANTHEON),
     }
 }
 
 export const NATION_Notables = {
     'MESSAR': nationNotables([
-        notablesBuilder('High Kings / Queens', [notableBuilder(CHARACTER_Core.OberonValerian, 982, 983), notableBuilder(CHARACTER_Core.NolaThesoti, 983, null)])
+        notablesBuilder('High Kings / Queens', [notableBuilder(CHARACTER_Core.OBERON_VALERIAN, 982, 983), notableBuilder(CHARACTER_Core.NOLA_THESOTI, 983, null)])
     ])
 }
 
@@ -185,14 +246,14 @@ export const MessanHeptarchyProvinces = {
 }
 
 function nationBuilder(name: string) {
-  return ({
-    ...NATION_Core[name] || null,
-    ...NATION_Info[name] || null,
-    ...NATION_Notables[name] || null,
-    ...NATION_Locations[name] || null,
-  })
+    return ({
+        ...NATION_Core[name],
+        "info": NATION_Info[name],
+        ...NATION_Notables[name],
+        ...NATION_Locations[name],
+    })
 }
 
 export const NationList = Object.keys(NATION_Core).map(nation => {
-  return nationBuilder(nation)
+    return nationBuilder(nation)
 })

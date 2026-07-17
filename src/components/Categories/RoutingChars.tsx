@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import CharacterPage from './CharacterPageWiki';
-import { CharacterList } from '../../../data/_CharacterList';
+import { CharacterList } from '../../data/_CharacterList';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
-import { StyledTab } from '../../../utils/common';
+import { StyledTab } from '../../utils/common';
 import TabPanel from '@mui/lab/TabPanel';
-import { factions } from '../../../data/CategoryList';
+import { factions } from '../../data/CategoryList';
 import { Table, TableCell, TableRow } from '@mui/material';
-import { CHARACTER_Core } from '../../../data/__DATA_Core';
-import { THUMBNAIL } from '../../../images/_characters';
+import { CHARACTER_Core } from '../../data/__DATA_Core';
+import { THUMBNAIL } from '../../images/_images';
+import WikiPageBuilder from './wikiPage';
 
 function characterButton(character: any) {
     return (
@@ -23,18 +24,16 @@ function characterButton(character: any) {
                 textAlign: 'center',
             }}>
             <div style={{ display: 'inline-block' }}>
-                <p style={{ paddingTop: '0px', verticalAlign: 'top' }}>
-                    <img src={character.imageLoc || THUMBNAIL['./characters/ZZZ.webp']}
-                        style={{
-                            'width': `70px`,
-                            'height': 'auto',
-                            'display': 'inline-block',
-                        }}
-                    />
-                    <div>
-                        {character.name.fore} {character.name.sur}
-                    </div>
-                </p>
+                <img src={character.imageLoc || THUMBNAIL['./characters/ZZZ.webp']}
+                    style={{
+                        'width': `70px`,
+                        'height': 'auto',
+                        'display': 'inline-block',
+                    }}
+                />
+                <div style={{ paddingBottom: '20px', verticalAlign: 'top' }}>
+                    {character.name.fore} {character.name.sur}
+                </div>
             </div>
         </Link >
     )
@@ -146,11 +145,11 @@ function CharacterRouting(props: any) {
                             key={char.fileName + '-creaturePage-Route'}
                             path={char.fileName}
                             element={
-                                <CharacterPage
+                                <WikiPageBuilder
                                     key={char.fileName + '-creaturePage-CreatureBox'}
                                     width={'100%'} height={'auto'}
                                     roleplaySystem={props.roleplaySystem}
-                                    character={char}
+                                    context={char}
                                 />}
                         />
                     )

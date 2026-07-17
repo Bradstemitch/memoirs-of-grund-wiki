@@ -29,16 +29,21 @@ export function cleanFoundryVariables(s: string) {
 }
 
 export function creatureBuilder(name: string, species: string, faction: string, weapon: string, threat: number, rank: string, tags: string[]) {
+    const creature = {
+        'name': name,
+        'species': species,
+        'faction': faction,
+        'weapon': weapon,
+        'threat': threat,
+        'rank': rank,
+        'fileName': (faction + name + weapon).replace(/\s/g, ""),
+        'fileLoc': 'creatures',
+        'tags': tags,
+    }
     return (
         {
-            'name': name,
-            'species': species,
-            'faction': faction,
-            'weapon': weapon,
-            'threat': threat,
-            'rank': rank,
-            'fileName': (faction + name + weapon).replace(/\s/g, ""),
-            'tags': tags
+            ...creature,
+            "WFRP4e": WFRP4eNPCJSONBuilder(creature)
         }
     )
 }
@@ -47,6 +52,7 @@ export function creatureBuilder(name: string, species: string, faction: string, 
 import Tab from '@mui/material/Tab';
 import { styled, TableCell, TableRow } from '@mui/material';
 import { Link } from 'react-router-dom';
+import WFRP4eNPCJSONBuilder from '../data/_WFRP4e/Summary/WFRP4eNPCJSONBuilder';
 interface StyledTabProps {
     label: string;
     value: string;
@@ -69,82 +75,6 @@ export const StyledTab = styled((props: StyledTabProps) => (
 
 export function internalLink(text: string, reference: any) {
     return <Link to={`/${reference.fileLoc}/${reference.fileName}`} >{text}</Link>
-}
-
-export function InfoRow(RowType: string, data: any) {
-    let content = []
-    if (typeof data !== 'object' && !Array.isArray(data)) {
-        content = [
-            {
-                "detail": null,
-                "data": { "name": data }
-            }
-        ]
-    }
-
-    if (Array.isArray(data)) {
-        data.map((i: any) => {
-            if (typeof i !== 'object') {
-                content.push(
-                    {
-                        "detail": null,
-                        "data": { "name": i }
-                    }
-
-                )
-            } else {
-                if (i.fileName) {
-                    content.push(
-                        {
-                            "detail": null,
-                            "data": { 'name': i }
-                        }
-                    )
-                } else {
-                    content.push(i)
-                }
-            }
-
-        })
-    } else if (typeof data === 'object') {
-        if (data.fileName) {
-            content.push(
-                {
-                    "detail": null,
-                    "data": { 'name': data }
-                }
-            )
-        } else {
-            content.push(data)
-        }
-    }
-
-    return (
-        <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
-            <TableCell style={{ width: '40px', textAlign: 'right', verticalAlign: 'top', paddingRight: 0 }}>
-                <strong> {RowType} </strong>
-            </TableCell>
-            <TableCell>
-                {content.map((e: any) => {
-                    if (typeof e.data.name !== 'object') {
-                        return (
-                            <div>
-                                {e.data.name}
-                                {e.detail && ` (${e.detail})`}
-                            </div>
-                        )
-                    } else {
-                        return (
-                            <div>
-                                {internalLink(e.data.name.name.fore ? (`${e.data.name.name.fore}` + (e.data.name.name.sur && ` ${e.data.name.name.sur}`)) : `${e.data.name.name}`, e.data.name)}
-                                {e.detail && ` (${e.detail})`}
-                            </div>
-                        )
-                    }
-                })}
-            </TableCell>
-        </TableRow>
-    )
 }
 
 function InfoRowChar(RowType: string, data: any) {
@@ -211,3 +141,5 @@ function InfoRowChar(RowType: string, data: any) {
         </tr>
     )
 }
+
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import ArmouryItem from './ArmouryItem';
-import { ArmouryList } from '../../../data/armoury/_ArmouryList';
+import { ArmouryList } from '../../../data/_ArmouryList';
 import { itemTypes } from '../../../data/CategoryList';
 
 const Rarity = ['Rare']
@@ -9,7 +9,7 @@ const Rarity = ['Rare']
 function ArmouryRouting(props: any) {
     return (
         <Routes>
-            <Route path='/' element={
+            {/* <Route path='/' element={
                 <div>
                     <Outlet />
                 </div>
@@ -36,7 +36,7 @@ function ArmouryRouting(props: any) {
                         />
                     )
                 })}
-            </Route>
+            </Route> */}
         </Routes>
     );
 }

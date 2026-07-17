@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
-import { ReligionList } from '../../../data/ReligionList';
+import { ReligionList } from '../../data/ReligionList';
 import ReligionBox from './ReligionBox';
+import WikiPageBuilder from './wikiPage';
 
 function ReligionsRouting(props: any) {
     return (
@@ -41,10 +42,11 @@ function ReligionsRouting(props: any) {
                         element={
                             <>
                                 <Outlet />
-                                <ReligionBox
+                                <WikiPageBuilder
                                     key={rumour.fileName + '-religionsPage-ReligionBox'}
                                     width={'100%'} height={'auto'}
-                                    rumour={rumour}
+                                    roleplaySystem=''
+                                    context={rumour}
                                 />
                             </>
                         }

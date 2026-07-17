@@ -6,7 +6,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import { styled, Table, TableCell, TableRow } from '@mui/material';
 import NationButton from './NationsButton';
 import { Link } from 'react-router-dom';
-import { InfoRow } from '../../../utils/common';
+import { WikiBar } from '../../../utils/wiki';
 
 interface NationBoxProps {
     width: string,
@@ -182,82 +182,6 @@ function NationBox(props: NationBoxProps) {
             Tags: {props.nation.tags}
         </div >
     );
-}
-
-function WikiBar(nation: any) {
-    return (
-        <div style={{
-            'float': 'right',
-            'width': '340px',
-            'paddingLeft': '20px',
-        }}>
-            <Table size="small" aria-label="purchases">
-                <tbody>
-                    <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
-                        <TableCell colSpan={2}>
-                            <img src={nation.imageLoc}
-                                style={{
-                                    'width': '250px',
-                                }}
-                            />
-                        </TableCell>
-                    </TableRow>
-                    {nation.info && nation.info.basic &&
-                        <>
-                            <TableRow>
-                                <TableCell colSpan={2}>
-                                    <strong>
-                                        Basic Information
-                                    </strong>
-                                </TableCell>
-                            </TableRow>
-                            {nation.info.basic.variations && InfoRow("Variations", nation.info.basic.variations)}
-                            {nation.info.basic.government && InfoRow("Government", nation.info.basic.government)}
-                            {nation.info.basic.status && InfoRow("Status", nation.info.basic.status)}
-                            {nation.info.basic.ruler && InfoRow("Ruler", nation.info.basic.ruler)}
-                            {nation.info.basic.founded && InfoRow("Founded", nation.info.basic.founded)}
-                            {nation.info.basic.area && InfoRow("Area", nation.info.basic.area)}
-                            {nation.info.basic.population && InfoRow("Population", nation.info.basic.population)}
-                        </>
-                    }
-
-                    {nation.info && nation.info.government &&
-                        <>
-                            <TableRow>
-                                <TableCell colSpan={2}>
-                                    <strong>
-                                        Government Information
-                                    </strong>
-                                </TableCell>
-                            </TableRow>
-                            {nation.info.government.headOfState && InfoRow("Head of State", nation.info.government.headOfState)}
-                            {nation.info.government.headOfGovernment && InfoRow("Head of Government", nation.info.government.headOfGovernment)}
-                            {nation.info.government.commander && InfoRow("Commander", nation.info.government.commander)}
-                            {nation.info.government.military && InfoRow("Military", nation.info.government.military)}
-                            {nation.info.government.intelligence && InfoRow("Intelligence Service", nation.info.government.intelligence)}
-                        </>
-                    }
-
-                    {nation.info && nation.info.social &&
-                        <>
-                            <TableRow>
-                                <TableCell colSpan={2}>
-                                    <strong>
-                                        Social Information
-                                    </strong>
-                                </TableCell>
-                            </TableRow>
-                            {nation.info.social.capital && InfoRow("Capital", nation.info.social.capital)}
-                            {nation.info.social.language && InfoRow("Language", nation.info.social.language)}
-                            {nation.info.social.demonym && InfoRow("Demonym", nation.info.social.demonym)}
-                            {nation.info.social.currency && InfoRow("Currency", nation.info.social.currency)}
-                            {nation.info.social.religion && InfoRow("Religion", nation.info.social.religion)}
-                        </>
-                    }
-                </tbody>
-            </Table>
-        </div>
-    )
 }
 
 export default NationBox;

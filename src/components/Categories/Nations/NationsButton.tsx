@@ -1,5 +1,5 @@
 import React from 'react';
-import { EMBLEM } from '../../../images/_emblems';
+import { EMBLEM } from '../../../images/_images';
 
 function NationButton(nation: any, width:number) {
     return (

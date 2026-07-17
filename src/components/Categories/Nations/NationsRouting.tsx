@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import { NationList } from '../../../data/_NationList';
 import NationBox from './NationBox';
@@ -16,7 +16,6 @@ function createNationPages() {
                     path={nation.fileName}
                     element={
                         <NationBox
-                            key={nation.fileName + '-nationsPage-NationBox'}
                             width={'100%'} height={'auto'}
                             nation={nation}
                         />}
@@ -24,7 +23,6 @@ function createNationPages() {
             ))}
         </>
     )
-
 }
 
 function NationsRouting(props: any) {
@@ -43,15 +41,15 @@ function NationsRouting(props: any) {
                             <tbody>
                                 {nationTypes.map((nationType: any) => {
                                     return (
-                                        <>
+                                        <Fragment key={nationType.plural + '-nationsPage-section'}>
                                             <TableRow>
                                                 <TableCell colSpan={2}>
                                                     <strong>{nationType.plural}</strong>
                                                 </TableCell>
                                             </TableRow>
 
-                                            <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}>
-                                                <TableCell colSpan={2}>
+                                            <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}                                        >
+                                                <TableCell colSpan={2} >
                                                     {Object.values(NATION_Core).filter((i: any) => (i.tags!.some((e: any) => nationType.type == e))).map(nation => {
                                                         return (
                                                             <Link
@@ -68,8 +66,7 @@ function NationsRouting(props: any) {
                                                     })}
                                                 </TableCell>
                                             </TableRow>
-                                            <br />
-                                        </>
+                                        </Fragment>
                                     )
                                 })}
                             </tbody>

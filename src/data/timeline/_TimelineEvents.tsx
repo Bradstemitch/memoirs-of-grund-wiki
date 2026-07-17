@@ -19,7 +19,7 @@ export const TimelineEvents =
             <p>Siege tower starts to approach the walls, arrows from the top pinning down troops on the wall</p>
             <p>With the archers pinned, the formorian giants move up, clearing the wall of stragglers</p>
             <p>Commando retreats to the keep, preparing for the final assault</p>
-            <p>{internalLink('Lyra', CHARACTER_Core.LyraVitae)} and her Zealots arrive, forcing the fomorian assault from the walls</p>
+            <p>{internalLink('Lyra', CHARACTER_Core.LYRA_VITAE)} and her Zealots arrive, forcing the fomorian assault from the walls</p>
         </div>
 
     }

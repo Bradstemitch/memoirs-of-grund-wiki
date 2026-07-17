@@ -1,31 +1,82 @@
-import { coreLocationBuilder } from "../../utils/builders";
-import { NATION_Core, RELIGION_Core } from "../__DATA_Core";
+import { coreLocationBuilder } from "../utils/builders";
+import { NATION_Core, RELIGION_Core } from "./__DATA_Core";
 
 function cityInfoBasic(variations: any, type: any, ruler: any, country: any, region: any, location: any, institutions: any, placesOfNote: any, status: any) {
     return ({
         'basic': {
-            "variations": variations,
-            "type": type,
-            "ruler": ruler,
-            "country": country,
-            "region": region,
-            "location": location,
-            'institutions': institutions,
-            'placesOfNote': placesOfNote,
-            'status': status
+            'title': 'Basic',
+            'values': {
+                "variations": {
+                    'title': 'Variations',
+                    'value': variations,
+                },
+                "type": {
+                    'title': 'Type',
+                    'value': type,
+                },
+                "ruler": {
+                    'title': 'Ruler',
+                    'value': ruler,
+                },
+                "country": {
+                    'title': 'Country',
+                    'value': country,
+                },
+                "region": {
+                    'title': 'Region',
+                    'value': region,
+                },
+                "location": {
+                    'title': 'Location',
+                    'value': location,
+                },
+                'institutions': {
+                    'title': 'Institutions',
+                    'value': institutions,
+                },
+                'placesOfNote': {
+                    'title': 'Places of Note',
+                    'value': placesOfNote,
+                },
+                'status': {
+                    'title': 'Status',
+                    'value': status,
+                },
+            }
         }
     })
 }
 
 function cityInfoSocial(population: any, garrison: any, religion: any, founded: any, age: any, founder: any) {
     return ({
-        'basic': {
-            "population": population,
-            "garrison": garrison,
-            "religion": religion,
-            "founded": founded,
-            "age": age,
-            "founder": founder,
+        'social': {
+            'title': 'Social',
+            'values': {
+                "population": {
+                    'title': 'Population',
+                    'value': population,
+                },
+                "garrison": {
+                    'title': 'Garrison',
+                    'value': garrison,
+                },
+                "religion": {
+                    'title': 'Religion',
+                    'value': religion,
+                },
+                "founded": {
+                    'title': 'Founded',
+                    'value': founded,
+                },
+                "age": {
+                    'title': 'Age',
+                    'value': age,
+                },
+                "founder": {
+                    'title': 'Founder',
+                    'value': founder,
+                },
+            }
         }
     })
 }

@@ -1,5 +1,5 @@
-import { NolaThesotiData } from "../../../characters/nolaThesoti";
-import { OberonValerianData } from "../../../characters/oberonValerian";
+import { NOLA_THESOTIData } from "../../../characters/NOLA_THESOTI";
+import { OBERON_VALERIANData } from "../../../characters/OBERON_VALERIAN";
 import { MessarMessactData } from "../../../locations/cities/messarMessact";
 import { DraconicPantheonData } from "../../../religions/draconicPantheon";
 import { MessanHeptarchyAtreaData } from "./MessarAtrea";
@@ -102,11 +102,11 @@ export const MessanHeptarchyNotables = {
             "type": "High Kings / Queens",
             "list": [
                 {
-                    "person": OberonValerianData,
+                    "person": OBERON_VALERIANData,
                     "date": "982 CE - 983 CE"
                 },
                 {
-                    "person": NolaThesotiData,
+                    "person": NOLA_THESOTIData,
                     "date": "983 CE - Present"
                 },
             ]

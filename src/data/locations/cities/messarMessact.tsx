@@ -9,7 +9,7 @@ export const MessarMessactData =
         "Damocles",
         "Knight Commando"
     ],
-    "image": "arlyssKnight.png",
+    "image": "ARLYSS_KNIGHT.png",
     "pronunciation": "Bree - th",
     "info": {
         "basic": {
