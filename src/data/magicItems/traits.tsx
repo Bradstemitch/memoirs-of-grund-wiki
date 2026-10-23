@@ -521,31 +521,15 @@ const umbra = {
         While you are attuned to at least 1 piece of this set, you can attune to the other pieces without using an attunement slot.
         <table>
           <thead>
-            <tr>
-              <th>Items Attuned</th><th>Benefits</th>
-            </tr>
+            <tr><th>Items Attuned</th><th>Benefits</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td><td>Melee Weapon attacks deal an additional die of their damage</td>
-            </tr>
-            <tr>
-              <td>2</td><td>-</td>
-            </tr>
-            <tr>
-              <td>3</td><td>Magic Weapon becomes +3 bonus</td></tr>
-            <tr>
-              <td>4</td><td>-</td>
-            </tr>
-            <tr>
-              <td>5</td><td>Melee Weapon attacks deal two additional die of their damage</td>
-            </tr>
-            <tr>
-              <td>6</td><td>-</td>
-            </tr>
-            <tr>
-              <td>7</td><td>Melee Weapon attacks deal three additional die of their damage</td>
-            </tr>
+            <tr><td>1</td><td>Melee Weapon attacks deal an additional die of their damage</td></tr>
+            <tr><td>2</td><td>-</td></tr>
+            <tr><td>3</td><td>Magic Weapon becomes +3 bonus</td></tr><tr><td>4</td><td>-</td></tr>
+            <tr><td>5</td><td>Melee Weapon attacks deal two additional die of their damage</td></tr>
+            <tr><td>6</td><td>-</td></tr>
+            <tr><td>7</td><td>Melee Weapon attacks deal three additional die of their damage</td></tr>
           </tbody>
         </table>
       </div>),
