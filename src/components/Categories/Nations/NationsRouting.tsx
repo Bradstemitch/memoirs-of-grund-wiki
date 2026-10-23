@@ -8,75 +8,90 @@ import { NATION_Core } from '../../../data/__DATA_Core';
 import { Table, TableRow, TableCell } from '@mui/material';
 
 function createNationPages() {
-    return (
-        <>
-            {NationList.map(nation => (
-                <Route
-                    key={nation.fileName + '-nationsPage-Route'}
-                    path={nation.fileName}
-                    element={
-                        <NationBox
-                            width={'100%'} height={'auto'}
-                            nation={nation}
-                        />}
-                />
-            ))}
-        </>
-    )
+  return (
+    <>
+      {NationList.map((nation) => (
+        <Route
+          key={nation.fileName + `-nationsPage-Route`}
+          path={nation.fileName}
+          element={<NationBox width={`100%`} height={`auto`} nation={nation} />}
+        />
+      ))}
+    </>
+  );
 }
 
 function NationsRouting(props: any) {
-    return (
-        <Routes>
-            <Route path='/' element={
-                <div>
-                    <Outlet />
-                </div>
-            }>
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <div>
+            <Outlet />
+          </div>
+        }
+      >
+        <Route
+          index
+          element={
+            <div>
+              <h2>Nations</h2>
+              <Table
+                size="small"
+                aria-label="purchases"
+                key={`-creaturesRouting-creatureType-table`}
+              >
+                <tbody>
+                  {nationTypes.map((nationType: any) => {
+                    return (
+                      <Fragment
+                        key={nationType.plural + `-nationsPage-section`}
+                      >
+                        <TableRow>
+                          <TableCell colSpan={2}>
+                            <strong>{nationType.plural}</strong>
+                          </TableCell>
+                        </TableRow>
 
-                <Route index element={
-                    <div>
-                        <h2>Nations</h2>
-                        <Table size="small" aria-label="purchases" key={'-creaturesRouting-creatureType-table'}>
-                            <tbody>
-                                {nationTypes.map((nationType: any) => {
-                                    return (
-                                        <Fragment key={nationType.plural + '-nationsPage-section'}>
-                                            <TableRow>
-                                                <TableCell colSpan={2}>
-                                                    <strong>{nationType.plural}</strong>
-                                                </TableCell>
-                                            </TableRow>
-
-                                            <TableRow sx={{ '& > .MuiTableCell-root': { borderBottom: 'unset' } }}                                        >
-                                                <TableCell colSpan={2} >
-                                                    {Object.values(NATION_Core).filter((i: any) => (i.tags!.some((e: any) => nationType.type == e))).map(nation => {
-                                                        return (
-                                                            <Link
-                                                                key={nation.fileName + '-nationsPage-Link'}
-                                                                to={`/nations/${nation.fileName}`}
-                                                                style={{
-                                                                    'paddingLeft': '10px',
-                                                                    'paddingRight': '10px',
-                                                                }}
-                                                            >
-                                                                {NationButton(nation, 100)}
-                                                            </Link>
-                                                        )
-                                                    })}
-                                                </TableCell>
-                                            </TableRow>
-                                        </Fragment>
-                                    )
-                                })}
-                            </tbody>
-                        </Table>
-                    </div>
-                } />
-                {createNationPages()}
-            </Route>
-        </Routes>
-    );
+                        <TableRow
+                          sx={{
+                            '& > .MuiTableCell-root': { borderBottom: `unset` },
+                          }}
+                        >
+                          <TableCell colSpan={2}>
+                            {Object.values(NATION_Core)
+                              .filter((i: any) =>
+                                i.tags!.some((e: any) => nationType.type == e)
+                              )
+                              .map((nation) => {
+                                return (
+                                  <Link
+                                    key={nation.fileName + `-nationsPage-Link`}
+                                    to={`/nations/${nation.fileName}`}
+                                    style={{
+                                      paddingLeft: `10px`,
+                                      paddingRight: `10px`,
+                                    }}
+                                  >
+                                    {NationButton(nation, 100)}
+                                  </Link>
+                                );
+                              })}
+                          </TableCell>
+                        </TableRow>
+                      </Fragment>
+                    );
+                  })}
+                </tbody>
+              </Table>
+            </div>
+          }
+        />
+        {createNationPages()}
+      </Route>
+    </Routes>
+  );
 }
 
 export default NationsRouting;

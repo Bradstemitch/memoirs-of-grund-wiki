@@ -194,11 +194,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -474,10 +470,7 @@
           }
         },
         "traits": {
-          "value": [
-            "range-increment-120",
-            "reload-2"
-          ],
+          "value": ["range-increment-120", "reload-2"],
           "otherTags": []
         },
         "rules": [],

@@ -1,75 +1,39 @@
-import Emblem from "../../../../images/arcadiaAssere.png"
+import Emblem from '../../../../images/arcadiaAssere.png';
 
 export const ArcadiaAssereList = [
   {
-    'name': 'Assere',
-    'fileName': 'arcadiaAssere',
-    'tags': [
-      'Arcadia'
-    ],
-    "emblem": Emblem,
-    "pronunciation": "ASS - erra",
-    "info": {
-      "basic": {
-        "area": [
-
-        ],
-        "population": [
-
-        ],
-        "founded": [
-          "Unknown"
-        ],
-        "government": [
-          "House Republic"
-        ],
-        "ruler": [
-
-        ],
-        "status": [
-          "City State"
-        ],
-        "variations": [
-
-        ]
+    name: `Assere`,
+    fileName: `arcadiaAssere`,
+    tags: [`Arcadia`],
+    emblem: Emblem,
+    pronunciation: `ASS - erra`,
+    info: {
+      basic: {
+        area: [],
+        population: [],
+        founded: [`Unknown`],
+        government: [`House Republic`],
+        ruler: [],
+        status: [`City State`],
+        variations: [],
       },
-      "government": {
-        "commander": [
-
-        ],
-        "headOfGovernment": [
-
-        ],
-        "intelligence": [
-
-        ],
-        "military": [
-
-        ],
-        "headOfState": [
-
-        ]
+      government: {
+        commander: [],
+        headOfGovernment: [],
+        intelligence: [],
+        military: [],
+        headOfState: [],
       },
-      "social": {
-        "capital": [
-          "Assere"
-        ],
-        "currency": [
-
-        ],
-        "demonym": [
-
-        ],
-        "language": [
-
-        ],
-        "religion": [
-
-        ]
-      }
+      social: {
+        capital: [`Assere`],
+        currency: [],
+        demonym: [],
+        language: [],
+        religion: [],
+      },
     },
-  }
-]
+  },
+];
 
 //Accerra
 //led by a Sorcerer's Senate
@@ -80,4 +44,4 @@ export const ArcadiaAssereList = [
 //Some families will summon demons to grow their power but this is frowned upon and will often result in the families enslavement or destruction if discovered
 //Court intrigue is present but discouraged as most Asserans view it as their duty to spread the gift of magic to all humanity
 //Military service is seen as a great way to improve your lot in life, as a noble sergeant is well paid and well treated
-//Bandits are rare as any reported cases are quickly dealt with 
+//Bandits are rare as any reported cases are quickly dealt with

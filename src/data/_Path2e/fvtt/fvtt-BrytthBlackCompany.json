@@ -212,11 +212,7 @@
     },
     "skills": {},
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -253,9 +249,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "versatile-p"
-          ],
+          "value": ["versatile-p"],
           "rarity": "common"
         },
         "publication": {
@@ -597,9 +591,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "fatal-d12"
-          ],
+          "value": ["fatal-d12"],
           "rarity": "common"
         },
         "publication": {
@@ -773,9 +765,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "fatal-d12"
-          ],
+          "value": ["fatal-d12"],
           "otherTags": []
         },
         "damageRolls": {
@@ -946,9 +936,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "versatile-p"
-          ],
+          "value": ["versatile-p"],
           "otherTags": []
         },
         "damageRolls": {
@@ -1014,12 +1002,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "agile",
-            "finesse",
-            "thrown-10",
-            "versatile-s"
-          ],
+          "value": ["agile", "finesse", "thrown-10", "versatile-s"],
           "rarity": "common"
         },
         "publication": {
@@ -1193,11 +1176,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "versatile-s"
-          ],
+          "value": ["agile", "finesse", "versatile-s"],
           "otherTags": []
         },
         "damageRolls": {
@@ -1260,11 +1239,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "thrown-10",
-            "versatile-s"
-          ],
+          "value": ["agile", "thrown-10", "versatile-s"],
           "otherTags": []
         },
         "damageRolls": {
@@ -1332,10 +1307,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "flexible",
-            "noisy"
-          ],
+          "value": ["flexible", "noisy"],
           "rarity": "common"
         },
         "publication": {

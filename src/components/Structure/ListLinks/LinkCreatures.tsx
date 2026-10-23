@@ -7,30 +7,33 @@ import ListItemText from '@mui/material/ListItemText';
 import PetsIcon from '@mui/icons-material/Pets';
 
 function LinkCreatures(props: any) {
-    return (
-        <ListItem key='Creatures' disablePadding sx={{ display: 'block' }}>
-            <Link to={'/creatures'}>
-                <ListItemButton
-                    sx={{
-                        minHeight: 48,
-                        justifyContent: props.open ? 'initial' : 'center',
-                        px: 2.5,
-                    }}
-                >
-                    <ListItemIcon
-                        sx={{
-                            minWidth: 0,
-                            mr: props.open ? 3 : 'auto',
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <PetsIcon />
-                    </ListItemIcon>
-                    <ListItemText primary='Creatures' sx={{ opacity: props.open ? 1 : 0 }} />
-                </ListItemButton>
-            </Link>
-        </ListItem>
-    );
+  return (
+    <ListItem key="Creatures" disablePadding sx={{ display: `block` }}>
+      <Link to={`/creatures`}>
+        <ListItemButton
+          sx={{
+            minHeight: 48,
+            justifyContent: props.open ? `initial` : `center`,
+            px: 2.5,
+          }}
+        >
+          <ListItemIcon
+            sx={{
+              minWidth: 0,
+              mr: props.open ? 3 : `auto`,
+              justifyContent: `center`,
+            }}
+          >
+            <PetsIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Creatures"
+            sx={{ opacity: props.open ? 1 : 0 }}
+          />
+        </ListItemButton>
+      </Link>
+    </ListItem>
+  );
 }
 
 export default LinkCreatures;

@@ -1,12 +1,12 @@
-import { ArcadiaAssereList } from "./ArcadiaAssere";
-import { ArcadiaCeresseList } from "./ArcadiaCeresse";
-import { ArcadiaCominoList } from "./ArcadiaComino";
+import { ArcadiaAssereList } from './ArcadiaAssere';
+import { ArcadiaCeresseList } from './ArcadiaCeresse';
+import { ArcadiaCominoList } from './ArcadiaComino';
 
 const ArcadiaCityStates = [
-    ...ArcadiaAssereList,
-    ...ArcadiaCeresseList,
-    ...ArcadiaCominoList,
-]
+  ...ArcadiaAssereList,
+  ...ArcadiaCeresseList,
+  ...ArcadiaCominoList,
+];
 
 export const ArcadiaList = [
   // {
@@ -16,4 +16,4 @@ export const ArcadiaList = [
   //   'tags': ['Arcadia']
   // },
   ...ArcadiaCityStates,
-]
+];

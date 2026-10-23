@@ -127,9 +127,7 @@
     },
     "details": {
       "languages": {
-        "value": [
-          "jotun"
-        ],
+        "value": ["jotun"],
         "details": ""
       },
       "level": {
@@ -204,12 +202,7 @@
       }
     },
     "traits": {
-      "value": [
-        "chaotic",
-        "evil",
-        "giant",
-        "humanoid"
-      ],
+      "value": ["chaotic", "evil", "giant", "humanoid"],
       "rarity": "uncommon",
       "size": {
         "value": "lg"
@@ -307,9 +300,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "move"
-          ]
+          "value": ["move"]
         },
         "publication": {
           "title": "",
@@ -372,9 +363,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "olfactory"
-          ]
+          "value": ["olfactory"]
         },
         "publication": {
           "title": "",
@@ -497,10 +486,7 @@
             "key": "Aura",
             "radius": 10,
             "slug": "stench",
-            "traits": [
-              "aura",
-              "olfactory"
-            ]
+            "traits": ["aura", "olfactory"]
           }
         ],
         "slug": "ghast-stench",
@@ -514,10 +500,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "aura",
-            "olfactory"
-          ]
+          "value": ["aura", "olfactory"]
         },
         "publication": {
           "title": "",

@@ -7,30 +7,33 @@ import ListItemText from '@mui/material/ListItemText';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 
 function LinkArmoury(props: any) {
-    return (
-        <ListItem key='Armoury' disablePadding sx={{ display: 'block' }}>
-            <Link to={'/armoury'}>
-                <ListItemButton
-                    sx={{
-                        minHeight: 48,
-                        justifyContent: props.open ? 'initial' : 'center',
-                        px: 2.5,
-                    }}
-                >
-                    <ListItemIcon
-                        sx={{
-                            minWidth: 0,
-                            mr: props.open ? 3 : 'auto',
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <HomeRepairServiceIcon />
-                    </ListItemIcon>
-                    <ListItemText primary='Armoury' sx={{ opacity: props.open ? 1 : 0 }} />
-                </ListItemButton>
-            </Link>
-        </ListItem>
-    );
+  return (
+    <ListItem key="Armoury" disablePadding sx={{ display: `block` }}>
+      <Link to={`/armoury`}>
+        <ListItemButton
+          sx={{
+            minHeight: 48,
+            justifyContent: props.open ? `initial` : `center`,
+            px: 2.5,
+          }}
+        >
+          <ListItemIcon
+            sx={{
+              minWidth: 0,
+              mr: props.open ? 3 : `auto`,
+              justifyContent: `center`,
+            }}
+          >
+            <HomeRepairServiceIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Armoury"
+            sx={{ opacity: props.open ? 1 : 0 }}
+          />
+        </ListItemButton>
+      </Link>
+    </ListItem>
+  );
 }
 
 export default LinkArmoury;

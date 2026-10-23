@@ -1,19 +1,19 @@
 export const Weapons = [
   {
-    'name': 'Longsword',
-    'fileName': 'longsword',
-    'type': {
-      'DnD5e': 'Weapons',
-      'Path2e': 'Weapons',
-      'WFRP4e': 'Weapons'
+    name: `Longsword`,
+    fileName: `longsword`,
+    type: {
+      DnD5e: `Weapons`,
+      Path2e: `Weapons`,
+      WFRP4e: `Weapons`,
     },
-    'baseItem': [],
-    'variants': [
+    baseItem: [],
+    variants: [
       {
-        'name': '',
-        'fileName': ''
-      }
+        name: ``,
+        fileName: ``,
+      },
     ],
-    'tags': []
-  }
-]
+    tags: [],
+  },
+];

@@ -101,9 +101,7 @@
       "sort": 100000,
       "system": {
         "attackEffects": {
-          "value": [
-            "grab"
-          ]
+          "value": ["grab"]
         },
         "bonus": {
           "value": 15
@@ -128,10 +126,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "deadly-d12",
-            "reach-10"
-          ],
+          "value": ["deadly-d12", "reach-10"],
           "otherTags": []
         },
         "_migration": {
@@ -189,10 +184,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "unarmed"
-          ],
+          "value": ["agile", "unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -348,9 +340,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "incapacitation"
-          ],
+          "value": ["incapacitation"],
           "otherTags": []
         },
         "_migration": {
@@ -542,17 +532,13 @@
           {
             "base": 25,
             "label": "to Swim",
-            "predicate": [
-              "action:swim"
-            ]
+            "predicate": ["action:swim"]
           }
         ]
       }
     },
     "traits": {
-      "value": [
-        "beast"
-      ],
+      "value": ["beast"],
       "rarity": "common",
       "size": {
         "value": "lg"

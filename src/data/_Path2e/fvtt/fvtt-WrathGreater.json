@@ -254,15 +254,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "force",
-            "manipulate"
-          ],
+          "value": ["concentrate", "force", "manipulate"],
           "rarity": "common",
-          "traditions": [
-            "divine"
-          ]
+          "traditions": ["divine"]
         },
         "publication": {
           "title": "Pathfinder Core Rulebook",
@@ -292,9 +286,7 @@
           "0": {
             "category": null,
             "formula": "7d8",
-            "kinds": [
-              "damage"
-            ],
+            "kinds": ["damage"],
             "materials": [],
             "type": "force"
           }
@@ -362,18 +354,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "manipulate",
-            "revelation"
-          ],
+          "value": ["concentrate", "manipulate", "revelation"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "divine",
-            "occult",
-            "primal"
-          ]
+          "traditions": ["arcane", "divine", "occult", "primal"]
         },
         "publication": {
           "title": "Pathfinder Core Rulebook",
@@ -447,16 +430,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "manipulate",
-            "teleportation"
-          ],
+          "value": ["concentrate", "manipulate", "teleportation"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "occult"
-          ]
+          "traditions": ["arcane", "occult"]
         },
         "publication": {
           "title": "Pathfinder Core Rulebook",
@@ -540,16 +516,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "manipulate",
-            "teleportation"
-          ],
+          "value": ["concentrate", "manipulate", "teleportation"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "occult"
-          ]
+          "traditions": ["arcane", "occult"]
         },
         "publication": {
           "title": "Pathfinder Core Rulebook",
@@ -633,16 +602,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "manipulate"
-          ],
+          "value": ["concentrate", "manipulate"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "occult",
-            "primal"
-          ]
+          "traditions": ["arcane", "occult", "primal"]
         },
         "publication": {
           "title": "Pathfinder Core Rulebook",
@@ -716,15 +678,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "manipulate"
-          ],
+          "value": ["concentrate", "manipulate"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "primal"
-          ]
+          "traditions": ["arcane", "primal"]
         },
         "publication": {
           "title": "Pathfinder Core Rulebook",
@@ -891,9 +847,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "versatile-p"
-          ],
+          "value": ["versatile-p"],
           "rarity": "common"
         },
         "publication": {
@@ -1031,12 +985,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "magical",
-            "reach-10",
-            "unholy",
-            "versatile-p"
-          ],
+          "value": ["magical", "reach-10", "unholy", "versatile-p"],
           "otherTags": []
         },
         "_migration": {
@@ -1068,9 +1017,7 @@
       "sort": 1100000,
       "system": {
         "attackEffects": {
-          "value": [
-            "grab"
-          ]
+          "value": ["grab"]
         },
         "bonus": {
           "value": 33
@@ -1095,12 +1042,7 @@
         "rules": [],
         "slug": "tail",
         "traits": {
-          "value": [
-            "magical",
-            "reach-10",
-            "unarmed",
-            "unholy"
-          ],
+          "value": ["magical", "reach-10", "unarmed", "unholy"],
           "otherTags": []
         },
         "_migration": {
@@ -1162,10 +1104,7 @@
         "rules": [],
         "slug": "telepathy",
         "traits": {
-          "value": [
-            "aura",
-            "magical"
-          ],
+          "value": ["aura", "magical"],
           "otherTags": []
         },
         "_migration": {
@@ -1269,9 +1208,7 @@
         "rules": [
           {
             "key": "FlatModifier",
-            "predicate": [
-              "item:magical"
-            ],
+            "predicate": ["item:magical"],
             "selector": "saving-throw",
             "type": "status",
             "value": 1
@@ -1375,17 +1312,12 @@
             "effects": [
               {
                 "affects": "allies",
-                "events": [
-                  "enter"
-                ],
+                "events": ["enter"],
                 "includesSelf": false,
                 "predicate": [
                   "target:trait:evil",
                   {
-                    "lt": [
-                      "target:level",
-                      "self:level"
-                    ]
+                    "lt": ["target:level", "self:level"]
                   }
                 ],
                 "uuid": "Compendium.pf2e.bestiary-effects.Item.5NSWRxAsJuvwyl0E"
@@ -1394,17 +1326,12 @@
             "key": "Aura",
             "radius": 100,
             "slug": "commanders-aura",
-            "traits": [
-              "divine"
-            ]
+            "traits": ["divine"]
           }
         ],
         "slug": null,
         "traits": {
-          "value": [
-            "aura",
-            "divine"
-          ],
+          "value": ["aura", "divine"],
           "otherTags": []
         },
         "_migration": {
@@ -1752,9 +1679,7 @@
         ],
         "slug": null,
         "traits": {
-          "value": [
-            "divine"
-          ],
+          "value": ["divine"],
           "otherTags": []
         },
         "_migration": {
@@ -1926,11 +1851,7 @@
     },
     "details": {
       "languages": {
-        "value": [
-          "chthonian",
-          "draconic",
-          "empyrean"
-        ],
+        "value": ["chthonian", "draconic", "empyrean"],
         "details": "telepathy 100 feet"
       },
       "level": {
@@ -2021,13 +1942,7 @@
       }
     },
     "traits": {
-      "value": [
-        "chaotic",
-        "demon",
-        "evil",
-        "fiend",
-        "unholy"
-      ],
+      "value": ["chaotic", "demon", "evil", "fiend", "unholy"],
       "rarity": "common",
       "size": {
         "value": "lg"

@@ -202,11 +202,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -236,10 +232,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "flexible",
-            "noisy"
-          ],
+          "value": ["flexible", "noisy"],
           "rarity": "common"
         },
         "publication": {
@@ -353,9 +346,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",
@@ -591,9 +582,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "versatile-p"
-          ],
+          "value": ["versatile-p"],
           "rarity": "common"
         },
         "publication": {
@@ -729,9 +718,7 @@
           }
         },
         "traits": {
-          "value": [
-            "versatile-p"
-          ],
+          "value": ["versatile-p"],
           "otherTags": []
         },
         "rules": [],
@@ -802,9 +789,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "sweep"
-          ],
+          "value": ["sweep"],
           "rarity": "common"
         },
         "publication": {
@@ -935,9 +920,7 @@
           }
         },
         "traits": {
-          "value": [
-            "sweep"
-          ],
+          "value": ["sweep"],
           "otherTags": []
         },
         "rules": [],

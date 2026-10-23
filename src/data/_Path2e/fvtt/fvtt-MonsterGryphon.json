@@ -126,9 +126,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "unarmed"
-          ],
+          "value": ["unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -186,9 +184,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile"
-          ],
+          "value": ["agile"],
           "otherTags": []
         },
         "_migration": {
@@ -221,9 +217,7 @@
       "sort": 300000,
       "system": {
         "attackEffects": {
-          "value": [
-            "improved-grab"
-          ]
+          "value": ["improved-grab"]
         },
         "bonus": {
           "value": 24
@@ -248,9 +242,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "unarmed"
-          ],
+          "value": ["unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -308,9 +300,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "range-60"
-          ],
+          "value": ["range-60"],
           "otherTags": []
         },
         "_migration": {
@@ -528,9 +518,7 @@
             "diceNumber": 2,
             "dieSize": "d6",
             "key": "DamageDice",
-            "predicate": [
-              "razor-edged-flight"
-            ],
+            "predicate": ["razor-edged-flight"],
             "selector": "wing-damage"
           }
         ],
@@ -588,12 +576,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "auditory",
-            "emotion",
-            "fear",
-            "mental"
-          ],
+          "value": ["auditory", "emotion", "fear", "mental"],
           "otherTags": []
         },
         "_migration": {
@@ -792,9 +775,7 @@
       }
     },
     "traits": {
-      "value": [
-        "animal"
-      ],
+      "value": ["animal"],
       "rarity": "rare",
       "size": {
         "value": "huge"

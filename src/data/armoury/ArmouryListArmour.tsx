@@ -1,19 +1,19 @@
 export const Armour = [
   {
-    'name': 'Half Plate',
-    'fileName': 'halfPlate',
-    'type': {
-      'DnD5e': 'Armour',
-      'Path2e': 'Armour',
-      'WFRP4e': 'Armour'
+    name: `Half Plate`,
+    fileName: `halfPlate`,
+    type: {
+      DnD5e: `Armour`,
+      Path2e: `Armour`,
+      WFRP4e: `Armour`,
     },
-    'baseItem': [],
-    'variants': [
+    baseItem: [],
+    variants: [
       {
-        'name': '',
-        'fileName': ''
-      }
+        name: ``,
+        fileName: ``,
+      },
     ],
-    'tags': []
-  }
-]
+    tags: [],
+  },
+];

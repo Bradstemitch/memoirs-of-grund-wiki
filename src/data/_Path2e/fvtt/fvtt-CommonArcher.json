@@ -190,11 +190,7 @@
     },
     "skills": {},
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -335,9 +331,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "deadly-d10"
-          ],
+          "value": ["deadly-d10"],
           "rarity": "common"
         },
         "publication": {
@@ -468,11 +462,7 @@
           }
         },
         "traits": {
-          "value": [
-            "deadly-d10",
-            "range-increment-60",
-            "reload-0"
-          ],
+          "value": ["deadly-d10", "range-increment-60", "reload-0"],
           "otherTags": []
         },
         "rules": [],

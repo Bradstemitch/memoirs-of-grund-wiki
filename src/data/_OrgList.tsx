@@ -1,4 +1,4 @@
-import { ORGANISATION_Core } from "./__DATA_Core";
+import { ORGANISATION_Core } from './__DATA_Core';
 
 export const OrgList = [
   // KnightCommando,
@@ -6,15 +6,16 @@ export const OrgList = [
   // ShardsOfDamocles,
   // DamocleseRemnant,
   // HarlequinsRevelry,
-]
-
+];
 
 function organisationBuilder(name: string) {
-  return ({
+  return {
     ...ORGANISATION_Core[name],
-  })
+  };
 }
 
-export const OrganisationList = Object.keys(ORGANISATION_Core).map(organisation => {
-  return organisationBuilder(organisation)
-})
+export const OrganisationList = Object.keys(ORGANISATION_Core).map(
+  (organisation) => {
+    return organisationBuilder(organisation);
+  }
+);

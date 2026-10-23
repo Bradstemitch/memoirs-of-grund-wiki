@@ -202,11 +202,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -236,10 +232,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "flexible",
-            "noisy"
-          ],
+          "value": ["flexible", "noisy"],
           "rarity": "common"
         },
         "publication": {
@@ -354,10 +347,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "monk",
-            "thrown-20"
-          ],
+          "value": ["monk", "thrown-20"],
           "rarity": "common"
         },
         "publication": {
@@ -590,9 +580,7 @@
           }
         },
         "traits": {
-          "value": [
-            "monk"
-          ],
+          "value": ["monk"],
           "otherTags": []
         },
         "rules": [],
@@ -834,9 +822,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",

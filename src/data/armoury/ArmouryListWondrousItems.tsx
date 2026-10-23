@@ -1,65 +1,65 @@
 export const WondrousItems = [
   {
-    'name': "Morrigan's Band",
-    'fileName': 'morrigansBand',
-    'type': {
-      'DnD5e': 'Wondrous Items',
-      'Path2e': 'Worn Items',
-      'WFRP4e': 'Weapons'
+    name: `Morrigan's Band`,
+    fileName: `morrigansBand`,
+    type: {
+      DnD5e: `Wondrous Items`,
+      Path2e: `Worn Items`,
+      WFRP4e: `Weapons`,
     },
-    'baseItem': [],
-    'variants': [
+    baseItem: [],
+    variants: [
       {
-        'name': '1 Feather',
-        'fileName': '1feather'
+        name: `1 Feather`,
+        fileName: `1feather`,
       },
       {
-        'name': '2 Feather',
-        'fileName': '2feather'
+        name: `2 Feather`,
+        fileName: `2feather`,
       },
       {
-        'name': '3 Feather',
-        'fileName': '3feather'
-      }
+        name: `3 Feather`,
+        fileName: `3feather`,
+      },
     ],
-    'tags': ['Magic']
+    tags: [`Magic`],
   },
   {
-    'name': "Infused gloves",
-    'fileName': 'infusedGloves',
-    'type': {
-      'DnD5e': 'Wondrous Items',
-      'Path2e': 'Worn Items',
-      'WFRP4e': 'Weapons'
+    name: `Infused gloves`,
+    fileName: `infusedGloves`,
+    type: {
+      DnD5e: `Wondrous Items`,
+      Path2e: `Worn Items`,
+      WFRP4e: `Weapons`,
     },
-    'baseItem': [],
-    'variants': [
+    baseItem: [],
+    variants: [
       {
-        'name': 'of the Ogre',
-        'fileName': '1Ogre'
+        name: `of the Ogre`,
+        fileName: `1Ogre`,
       },
       {
-        'name': 'of the Giant',
-        'fileName': '2Giant'
-      }
+        name: `of the Giant`,
+        fileName: `2Giant`,
+      },
     ],
-    'tags': ['Magic']
+    tags: [`Magic`],
   },
   {
-    'name': "Belt of Giant Strength",
-    'fileName': 'beltOfGiantStrength',
-    'type': {
-      'DnD5e': 'Wondrous Items',
-      'Path2e': 'Worn Items',
-      'WFRP4e': 'Weapons'
+    name: `Belt of Giant Strength`,
+    fileName: `beltOfGiantStrength`,
+    type: {
+      DnD5e: `Wondrous Items`,
+      Path2e: `Worn Items`,
+      WFRP4e: `Weapons`,
     },
-    'baseItem': [],
-    'variants': [
+    baseItem: [],
+    variants: [
       {
-        'name': 'of the Ogre',
-        'fileName': '1Ogre'
-      }
+        name: `of the Ogre`,
+        fileName: `1Ogre`,
+      },
     ],
-    'tags': ['Magic']
-  }
-]
+    tags: [`Magic`],
+  },
+];

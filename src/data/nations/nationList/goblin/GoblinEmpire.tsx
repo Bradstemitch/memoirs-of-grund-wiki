@@ -1,4 +1,4 @@
-import Emblem from "../../../../images/goblinEmpire.png"
+import Emblem from '../../../../images/goblinEmpire.png';
 
 const GoblinEmpirePettyKingdoms: any = [
   // {
@@ -31,82 +31,45 @@ const GoblinEmpirePettyKingdoms: any = [
   //   'type': 'Petty Kingdom',
   //   'tags': ['Goblin Empire']
   // },
-]
+];
 export const GoblinEmpireList = [
   {
-    'name': 'Divine Goblin Empire',
-    "fileName": "goblinEmpire",
-    "tags": [
-      "Goblin"
-    ],
-    "emblem": Emblem,
-    "pronunciation": "ASS - erra",
-    "info": {
-      "basic": {
-        "area": [
-          "~440,000 sq mi"
-        ],
-        "population": [
-          "~17,000,000 (~40/sq. mi)"
-        ],
-        "founded": [
-          "-97CE"
-        ],
-        "government": [
-          "Hereditary Monarchy"
-        ],
-        "ruler": [
-          "Imperator Allairus"
-        ],
-        "status": [
-          "Empire"
-        ],
-        "variations": [
-          "Acre"
-        ]
+    name: `Divine Goblin Empire`,
+    fileName: `goblinEmpire`,
+    tags: [`Goblin`],
+    emblem: Emblem,
+    pronunciation: `ASS - erra`,
+    info: {
+      basic: {
+        area: [`~440,000 sq mi`],
+        population: [`~17,000,000 (~40/sq. mi)`],
+        founded: [`-97CE`],
+        government: [`Hereditary Monarchy`],
+        ruler: [`Imperator Allairus`],
+        status: [`Empire`],
+        variations: [`Acre`],
       },
-      "government": {
-        "commander": [
-          "High-Thegn of Messar"
-        ],
-        "headOfGovernment": [
-          "Heptarchy"
-        ],
-        "intelligence": [
-          "The Daughters"
-        ],
-        "military": [
-          "Fyrd"
-        ],
-        "headOfState": [
-          "Imperator Allairus",
-          "King’s Thegn (regent)"
-        ]
+      government: {
+        commander: [`High-Thegn of Messar`],
+        headOfGovernment: [`Heptarchy`],
+        intelligence: [`The Daughters`],
+        military: [`Fyrd`],
+        headOfState: [`Imperator Allairus`, `King’s Thegn (regent)`],
       },
-      "social": {
-        "capital": [
-          "Allaire", "Ackon"
-        ],
-        "currency": [
-
-        ],
-        "demonym": [
-          "Allairan"
-        ],
-        "language": [
-          "Allairan"
-        ],
-        "religion": [
-          "Draconic Pantheon"
-        ]
-      }
+      social: {
+        capital: [`Allaire`, `Ackon`],
+        currency: [],
+        demonym: [`Allairan`],
+        language: [`Allairan`],
+        religion: [`Draconic Pantheon`],
+      },
     },
-    "provinces": [
+    provinces: [
       {
-        "type": "Zrol",
-        "list": GoblinEmpirePettyKingdoms
-      }
+        type: `Zrol`,
+        list: GoblinEmpirePettyKingdoms,
+      },
     ],
   },
-  ...GoblinEmpirePettyKingdoms
-]
+  ...GoblinEmpirePettyKingdoms,
+];

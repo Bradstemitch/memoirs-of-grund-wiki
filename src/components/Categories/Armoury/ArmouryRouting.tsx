@@ -4,12 +4,12 @@ import ArmouryItem from './ArmouryItem';
 import { ArmouryList } from '../../../data/_ArmouryList';
 import { itemTypes } from '../../../data/CategoryList';
 
-const Rarity = ['Rare']
+const Rarity = [`Rare`];
 
 function ArmouryRouting(props: any) {
-    return (
-        <Routes>
-            {/* <Route path='/' element={
+  return (
+    <Routes>
+      {/* <Route path='/' element={
                 <div>
                     <Outlet />
                 </div>
@@ -37,23 +37,26 @@ function ArmouryRouting(props: any) {
                     )
                 })}
             </Route> */}
-        </Routes>
-    );
+    </Routes>
+  );
 }
 
 function ArmouryLink(itemType: string, roleplaySystem: string) {
-    return (
-        <>
-            <div>{itemType}</div>
-            {ArmouryList.filter((i: any) => i.type[roleplaySystem] === itemType).map(item =>
-                <Link key={item.fileName + '-armouryPage-Link'} to={`/armoury/${item.fileName}`} >
-                    <button>
-                        {item.name}
-                    </button>
-                </Link>
-            )}
-        </>
-    )
+  return (
+    <>
+      {/* <div>{itemType}</div>
+      {ArmouryList.filter((i: any) => i.type[roleplaySystem] === itemType).map(
+        (item) => (
+          <Link
+            key={item.fileName + `-armouryPage-Link`}
+            to={`/armoury/${item.fileName}`}
+          >
+            <button>{item.name}</button>
+          </Link>
+        )
+      )} */}
+    </>
+  );
 }
 
 export default ArmouryRouting;

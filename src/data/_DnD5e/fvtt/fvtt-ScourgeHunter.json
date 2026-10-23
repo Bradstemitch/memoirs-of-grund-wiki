@@ -208,9 +208,7 @@
       }
     },
     "traits": {
-      "value": [
-        "aberration"
-      ],
+      "value": ["aberration"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -250,11 +248,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "unarmed"
-          ],
+          "value": ["agile", "finesse", "unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -288,9 +282,7 @@
       "sort": 100000,
       "system": {
         "attackEffects": {
-          "value": [
-            "grab"
-          ]
+          "value": ["grab"]
         },
         "bonus": {
           "value": 10
@@ -315,10 +307,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "finesse",
-            "unarmed"
-          ],
+          "value": ["finesse", "unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -534,9 +523,7 @@
             "diceNumber": 1,
             "dieSize": "d4",
             "key": "DamageDice",
-            "predicate": [
-              "target:condition:off-guard"
-            ],
+            "predicate": ["target:condition:off-guard"],
             "selector": "strike-damage"
           },
           {

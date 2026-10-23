@@ -1,11 +1,13 @@
-import { RELIGION_Core } from "./__DATA_Core"
+import { RELIGION_Core } from './__DATA_Core';
 
 function religionBuilder(name: string) {
-  return ({
+  return {
     ...RELIGION_Core[name],
-  })
+  };
 }
 
-export const ReligionList = Object.keys(RELIGION_Core).map(religion => {
-  return religionBuilder(religion)
-})
+  
+
+export const ReligionList = Object.keys(RELIGION_Core).map((religion) => {
+  return religionBuilder(religion);
+});

@@ -203,11 +203,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "uncommon",
       "size": {
         "value": "med"
@@ -237,12 +233,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "agile",
-            "finesse",
-            "thrown-10",
-            "versatile-s"
-          ],
+          "value": ["agile", "finesse", "thrown-10", "versatile-s"],
           "rarity": "common"
         },
         "publication": {
@@ -369,11 +360,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "versatile-s"
-          ],
+          "value": ["agile", "finesse", "versatile-s"],
           "otherTags": []
         },
         "damageRolls": {
@@ -440,11 +427,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "thrown-10",
-            "versatile-s"
-          ],
+          "value": ["agile", "thrown-10", "versatile-s"],
           "otherTags": []
         },
         "damageRolls": {
@@ -515,9 +498,7 @@
             "diceNumber": 2,
             "dieSize": "d6",
             "key": "DamageDice",
-            "predicate": [
-              "woodsong-arrow"
-            ],
+            "predicate": ["woodsong-arrow"],
             "selector": "strike-damage"
           },
           {
@@ -670,10 +651,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concussive",
-            "fatal-d10"
-          ],
+          "value": ["concussive", "fatal-d10"],
           "rarity": "uncommon"
         },
         "publication": {

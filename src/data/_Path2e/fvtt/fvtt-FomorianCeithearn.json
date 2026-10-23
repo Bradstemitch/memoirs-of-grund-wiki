@@ -122,9 +122,7 @@
     },
     "details": {
       "languages": {
-        "value": [
-          "jotun"
-        ],
+        "value": ["jotun"],
         "details": ""
       },
       "level": {
@@ -196,11 +194,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -230,9 +224,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "thrown-20"
-          ],
+          "value": ["thrown-20"],
           "rarity": "common"
         },
         "publication": {
@@ -552,9 +544,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",

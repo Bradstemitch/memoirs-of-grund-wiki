@@ -8,30 +8,30 @@ import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 
 function LinkHome(props: any) {
-    return (
-        <ListItem key={"Home"} disablePadding sx={{ display: 'block' }}>
-            <Link to={'/'}>
-                <ListItemButton
-                    sx={{
-                        minHeight: 48,
-                        justifyContent: props.open ? 'initial' : 'center',
-                        px: 2.5,
-                    }}
-                >
-                    <ListItemIcon
-                        sx={{
-                            minWidth: 0,
-                            mr: props.open ? 3 : 'auto',
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <HomeIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={"Home"} sx={{ opacity: props.open ? 1 : 0 }} />
-                </ListItemButton>
-            </Link>
-        </ListItem>
-    );
+  return (
+    <ListItem key={`Home`} disablePadding sx={{ display: `block` }}>
+      <Link to={`/`}>
+        <ListItemButton
+          sx={{
+            minHeight: 48,
+            justifyContent: props.open ? `initial` : `center`,
+            px: 2.5,
+          }}
+        >
+          <ListItemIcon
+            sx={{
+              minWidth: 0,
+              mr: props.open ? 3 : `auto`,
+              justifyContent: `center`,
+            }}
+          >
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText primary={`Home`} sx={{ opacity: props.open ? 1 : 0 }} />
+        </ListItemButton>
+      </Link>
+    </ListItem>
+  );
 }
 
 export default LinkHome;

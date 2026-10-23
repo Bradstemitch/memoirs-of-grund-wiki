@@ -103,9 +103,7 @@
       "value": "trinket",
       "baseItem": ""
     },
-    "properties": [
-      "mgc"
-    ],
+    "properties": ["mgc"],
     "speed": {
       "value": null,
       "conditions": ""

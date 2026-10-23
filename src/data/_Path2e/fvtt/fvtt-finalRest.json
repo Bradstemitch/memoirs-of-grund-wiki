@@ -15,10 +15,7 @@
     },
     "traits": {
       "otherTags": [],
-      "value": [
-        "magical",
-        "versatile-p"
-      ],
+      "value": ["magical", "versatile-p"],
       "rarity": "common"
     },
     "publication": {
@@ -96,9 +93,7 @@
     "runes": {
       "potency": 3,
       "striking": 2,
-      "property": [
-        "greaterDisrupting"
-      ]
+      "property": ["greaterDisrupting"]
     },
     "specific": {
       "material": {
@@ -107,9 +102,7 @@
       },
       "runes": {
         "potency": 3,
-        "property": [
-          "greaterDisrupting"
-        ],
+        "property": ["greaterDisrupting"],
         "striking": 2
       }
     },

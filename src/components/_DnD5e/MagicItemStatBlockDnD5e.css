@@ -1,0 +1,79 @@
+.dndMagicItemStatBlock h2,
+.dndCreatureInfo,
+.dndMagicItemStatBlock h3 {
+  color: #5b160c;
+}
+
+
+.dndMagicItemStatBlock {
+  background: #ecedee;
+  max-width: 800px;
+  min-width: 650px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.dndMagicItemStatBlockModern {
+  background: #ecedee;
+  column-count: 2;
+  /* padding: 10px; */
+}
+
+.dndMagicItemStatBlock h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 26px;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.dndMagicItemStatBlock table {
+  font-size: 14px;
+  text-align: center;
+}
+
+.dndMagicItemStatBlock p {
+  margin-top: 0px;
+  /* display: inline-block; */
+  /* break-inside: avoid */
+}
+
+.dndCreatureAttributesOld {
+  width: 95%;
+  padding: 5px 0px 5px 0px;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.dndCreatureAttributesModern {
+  width: 95%;
+  min-width: 250px;
+  max-width: 500px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.dndCreatureTypeOld {
+  color: grey;
+}
+
+.dndCreatureTypeModern {
+  padding: 10px 0px 10px 0px;
+  padding-bottom: 10px;
+}
+
+.dndMagicItemStatBlockModern h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  font-variant: small-caps;
+}
+
+.splitWeaponProfile table {
+  text-align: left; 
+}

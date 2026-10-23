@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(() => {
   return {
     build: {
-      outDir: 'build',
+      outDir: `build`,
     },
     plugins: [react()],
-    base: 'https://bradstemitch.github.io/memoirs-of-grund-wiki/'
+    base: `https://bradstemitch.github.io/memoirs-of-grund-wiki/`,
   };
 });

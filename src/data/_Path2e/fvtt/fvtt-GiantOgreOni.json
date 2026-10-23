@@ -132,9 +132,7 @@
     },
     "details": {
       "languages": {
-        "value": [
-          "jotun"
-        ],
+        "value": ["jotun"],
         "details": ""
       },
       "level": {
@@ -221,12 +219,7 @@
       }
     },
     "traits": {
-      "value": [
-        "evil",
-        "giant",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["evil", "giant", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "lg"
@@ -373,13 +366,7 @@
             "key": "FlatModifier",
             "predicate": [
               {
-                "or": [
-                  "magical",
-                  "arcane",
-                  "primal",
-                  "occult",
-                  "divine"
-                ]
+                "or": ["magical", "arcane", "primal", "occult", "divine"]
               }
             ],
             "selector": "saving-throw",
@@ -526,11 +513,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "polymorph",
-            "primal"
-          ]
+          "value": ["concentrate", "polymorph", "primal"]
         },
         "publication": {
           "title": "",
@@ -648,12 +631,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "forceful",
-            "magical",
-            "reach-10",
-            "sweep"
-          ],
+          "value": ["forceful", "magical", "reach-10", "sweep"],
           "otherTags": []
         },
         "damageRolls": {
@@ -715,11 +693,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "magical",
-            "reach-10"
-          ],
+          "value": ["agile", "magical", "reach-10"],
           "otherTags": []
         },
         "damageRolls": {
@@ -794,11 +768,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "deadly-d10",
-            "range-increment-100",
-            "reload-0"
-          ],
+          "value": ["deadly-d10", "range-increment-100", "reload-0"],
           "otherTags": []
         },
         "damageRolls": {
@@ -1013,18 +983,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "darkness",
-            "manipulate"
-          ],
+          "value": ["concentrate", "darkness", "manipulate"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "divine",
-            "occult",
-            "primal"
-          ]
+          "traditions": ["arcane", "divine", "occult", "primal"]
         },
         "publication": {
           "title": "",
@@ -1110,15 +1071,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "illusion",
-            "manipulate"
-          ],
+          "value": ["illusion", "manipulate"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "occult"
-          ]
+          "traditions": ["arcane", "occult"]
         },
         "publication": {
           "title": "",
@@ -1201,20 +1156,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "emotion",
-            "fear",
-            "manipulate",
-            "mental"
-          ],
+          "value": ["concentrate", "emotion", "fear", "manipulate", "mental"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "divine",
-            "occult",
-            "primal"
-          ]
+          "traditions": ["arcane", "divine", "occult", "primal"]
         },
         "publication": {
           "title": "",
@@ -1303,16 +1247,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "cold",
-            "concentrate",
-            "manipulate"
-          ],
+          "value": ["cold", "concentrate", "manipulate"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "primal"
-          ]
+          "traditions": ["arcane", "primal"]
         },
         "publication": {
           "title": "",
@@ -1347,9 +1284,7 @@
             "type": "cold",
             "category": null,
             "materials": [],
-            "kinds": [
-              "damage"
-            ]
+            "kinds": ["damage"]
           }
         },
         "defense": {
@@ -1429,10 +1364,7 @@
             "sleep"
           ],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "occult"
-          ]
+          "traditions": ["arcane", "occult"]
         },
         "publication": {
           "title": "",
@@ -1524,17 +1456,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "concentrate",
-            "manipulate",
-            "polymorph"
-          ],
+          "value": ["concentrate", "manipulate", "polymorph"],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "occult",
-            "primal"
-          ]
+          "traditions": ["arcane", "occult", "primal"]
         },
         "publication": {
           "title": "",
@@ -1625,11 +1549,7 @@
             "mental"
           ],
           "rarity": "common",
-          "traditions": [
-            "arcane",
-            "occult",
-            "primal"
-          ]
+          "traditions": ["arcane", "occult", "primal"]
         },
         "publication": {
           "title": "",
@@ -1712,11 +1632,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "deadly-d8",
-            "forceful",
-            "reach"
-          ],
+          "value": ["deadly-d8", "forceful", "reach"],
           "rarity": "common"
         },
         "publication": {
@@ -1855,10 +1771,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "deadly-d10",
-            "propulsive"
-          ],
+          "value": ["deadly-d10", "propulsive"],
           "rarity": "common"
         },
         "publication": {

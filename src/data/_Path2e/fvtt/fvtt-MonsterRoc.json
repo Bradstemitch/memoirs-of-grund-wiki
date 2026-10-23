@@ -126,10 +126,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "reach-15",
-            "unarmed"
-          ],
+          "value": ["reach-15", "unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -162,9 +159,7 @@
       "sort": 200000,
       "system": {
         "attackEffects": {
-          "value": [
-            "improved-grab"
-          ]
+          "value": ["improved-grab"]
         },
         "bonus": {
           "value": 21
@@ -189,11 +184,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "reach-15",
-            "unarmed"
-          ],
+          "value": ["agile", "reach-15", "unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -226,9 +217,7 @@
       "sort": 300000,
       "system": {
         "attackEffects": {
-          "value": [
-            "improved-push"
-          ]
+          "value": ["improved-push"]
         },
         "bonus": {
           "value": 21
@@ -253,10 +242,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "reach-30"
-          ],
+          "value": ["agile", "reach-30"],
           "otherTags": []
         },
         "_migration": {
@@ -470,9 +456,7 @@
           },
           {
             "key": "FlatModifier",
-            "predicate": [
-              "snack"
-            ],
+            "predicate": ["snack"],
             "selector": "beak-attack",
             "type": "circumstance",
             "value": 2
@@ -717,9 +701,7 @@
       }
     },
     "traits": {
-      "value": [
-        "animal"
-      ],
+      "value": ["animal"],
       "rarity": "common",
       "size": {
         "value": "grg"

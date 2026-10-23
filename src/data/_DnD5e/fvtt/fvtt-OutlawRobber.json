@@ -961,12 +961,7 @@
           "damage": ""
         },
         "damage": {
-          "parts": [
-            [
-              "1d6 + @mod",
-              "piercing"
-            ]
-          ],
+          "parts": [["1d6 + @mod", "piercing"]],
           "versatile": "1d8 + @mod"
         },
         "formula": "",
@@ -984,10 +979,7 @@
           "dt": null,
           "conditions": ""
         },
-        "properties": [
-          "thr",
-          "ver"
-        ],
+        "properties": ["thr", "ver"],
         "type": {
           "value": "simpleM",
           "baseItem": "spear"

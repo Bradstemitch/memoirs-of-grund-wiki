@@ -1,0 +1,74 @@
+.dndStatBlock h2,
+.dndCreatureInfo,
+.dndStatBlock h3 {
+  color: #5b160c;
+}
+
+.dndStatBlock {
+  background: #ecedee;
+  max-width: 800px;
+  min-width: 650px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.dndStatBlockModern {
+  background: #ecedee;
+  column-count: 2;
+  /* padding: 10px; */
+}
+
+.dndStatBlock h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 26px;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.dndStatBlock table {
+  font-size: 14px;
+  text-align: center;
+}
+
+.dndStatBlock p {
+  margin-top: 0px;
+  display: inline-block;
+  /* break-inside: avoid */
+}
+
+.dndCreatureAttributesOld {
+  width: 95%;
+  padding: 5px 0px 5px 0px;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.dndCreatureAttributesModern {
+  width: 95%;
+  min-width: 250px;
+  max-width: 500px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.dndCreatureTypeOld {
+  color: grey;
+}
+
+.dndCreatureTypeModern {
+  padding: 10px 0px 10px 0px;
+  padding-bottom: 10px;
+}
+
+.dndStatBlockModern h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  font-variant: small-caps;
+}

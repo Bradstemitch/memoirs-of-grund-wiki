@@ -126,9 +126,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "unarmed"
-          ],
+          "value": ["unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -186,10 +184,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "agile",
-            "unarmed"
-          ],
+          "value": ["agile", "unarmed"],
           "otherTags": []
         },
         "_migration": {
@@ -247,9 +242,7 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": [
-            "range-increment-40"
-          ],
+          "value": ["range-increment-40"],
           "otherTags": []
         },
         "_migration": {
@@ -360,9 +353,7 @@
     },
     "details": {
       "languages": {
-        "value": [
-          "common"
-        ],
+        "value": ["common"],
         "details": ""
       },
       "level": {
@@ -447,11 +438,7 @@
       }
     },
     "traits": {
-      "value": [
-        "beast",
-        "evil",
-        "lawful"
-      ],
+      "value": ["beast", "evil", "lawful"],
       "rarity": "common",
       "size": {
         "value": "lg"

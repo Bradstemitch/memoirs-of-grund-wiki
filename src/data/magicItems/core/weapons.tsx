@@ -1,0 +1,71 @@
+import { coreItemMagicBuilder } from '../../../utils/builders';
+
+const human = [`Humanoid`, `humanoid`, `Human`];
+const tags = [`Magical`, `Weapon`];
+
+const factions = {
+  Akitsudo: [...human, `Akitsudan Empire`],
+  Allaire: [...human, `Allairan Empire`],
+  ArcadiaE: [...human, `Arcadian Empire`],
+  ArcadiaR: [...human, `Republic of Arcadia`],
+  Brytth: [...human, `Brytthonic Kingdoms`],
+  Carne: [...human, `S.P.Q.C`],
+  Fomoire: [...human, `Fomorian Clans`],
+  Krasaheim: [...human, `Isle of Krasaheim`],
+  Messar: [...human, `Messan Heptarchy`],
+  Mycenae: [...human, `Mycenaean League`],
+  VindictisC: [...human, `Vindictis Confederation`],
+  PrometheusI: [...human, `Prometheus Initiative`],
+  Outlaw: [...human, `Outlaws`],
+};
+
+const CREATURE_Core_AKITSUDO = {
+};
+
+export const MAGIC_ITEMS_Core_Weapons = {
+  ...CREATURE_Core_AKITSUDO,
+  ACHILLES_SPEAR: coreItemMagicBuilder(`Achilles' Spear`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  ALDER_BLADE: coreItemMagicBuilder(`Alder Blade`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  BODHMALLS_DARTS: coreItemMagicBuilder(`Bodhmall's Darts`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  DRAGONBONE_WEAPON: coreItemMagicBuilder(`Dragonbone Weapon`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  DRAGONHORN_STAFF: coreItemMagicBuilder(`Dragonhorn Staff`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  ASCALON: coreItemMagicBuilder(`Ascalon`, ``, [`Sword`, `Lance`], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  BALMUNG: coreItemMagicBuilder(`Balmung`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  BEAGALLTACH: coreItemMagicBuilder(`Beagalltach`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  CALADBOLG: coreItemMagicBuilder(`Caladbolg`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  CLARENT: coreItemMagicBuilder(`Clarent`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  COSGARACH_MHOR: coreItemMagicBuilder(`Cosgarach Mhor`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  CRUADH_CHOSGARACH: coreItemMagicBuilder(`Cruadh-Chosgarach`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  DRAGON_STONE: coreItemMagicBuilder(`Dragon Stone`, ``, [`Juvenille`, `Young`, `Adult`, `Ancient`], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  DURENDAL: coreItemMagicBuilder(`Durendal`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  DRYNWYN: coreItemMagicBuilder(`Drynwyn`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  ELVEN_BLADE: coreItemMagicBuilder(`Elven Blade`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  ELVEN_BOW: coreItemMagicBuilder(`Elven Bow`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  EXCALIBUR: coreItemMagicBuilder(`Excalibur`, `the Sword of Promised Victory`, [], `https://i.pinimg.com/originals/33/10/dd/3310ddc6a803e5d1328f7b6515a0eb3f.jpg`, [...tags]),
+  FAILNAUGHT: coreItemMagicBuilder(`Failnaught`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  FANGS_CERBERUS: coreItemMagicBuilder(`Fangs of Cerberus`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  FIACLA: coreItemMagicBuilder(`Fiacla`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  FIRBOW: coreItemMagicBuilder(`Firebow`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  FRAGARACH: coreItemMagicBuilder(`Fragarach`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  GAE_ASSAIL: coreItemMagicBuilder(`Gáe Assail`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  GAE_BUIDHE: coreItemMagicBuilder(`Gáe Buidhe`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  GAE_BULG: coreItemMagicBuilder(`Gáe Bulg`, `the Mortal Spear`, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  GAE_DEARG: coreItemMagicBuilder(`Gáe Dearg`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  GRAM: coreItemMagicBuilder(`Gram`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  JADE: coreItemMagicBuilder(`Jade`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  LUIN: coreItemMagicBuilder(`Lúin`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  MAC_AN_LUIN: coreItemMagicBuilder(`Mac an Luin`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  MERVEILLEUSE: coreItemMagicBuilder(`Merveilleuse`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  MORALLTACH: coreItemMagicBuilder(`Móralltach`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  MYRMIDON_SPEAR: coreItemMagicBuilder(`Myrmidon Spear`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  ODYSSEUS_BOW: coreItemMagicBuilder(`Odysseus' Bow`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  SECACE: coreItemMagicBuilder(`Secace`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  SHARD: coreItemMagicBuilder(`Shard`, `the Black-fire Blade`, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  SOMMERSWERD: coreItemMagicBuilder(`Sommerswerd`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  SYLVAN_BOW: coreItemMagicBuilder(`Sylvan Bow`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  TALON: coreItemMagicBuilder(`Talon`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  TRACE: coreItemMagicBuilder(`Trace`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  TONBOKIRI: coreItemMagicBuilder(`Tonbokiri`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  UMBRA: coreItemMagicBuilder(`Umbra`, ``, [`Umbral Envy`, `Umbral Greed`, `Umbral Gluttony`, `Umbral Lust`, `Umbral Pride`, `Umbral Sloth`, `Umbral Wrath`,], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+  XIPHOS_PELEUS: coreItemMagicBuilder(`Xiphos Peleus`, ``, [], `http://www.digital-eel.com/scans/images/swords_fishy_big.gif`, [...tags]),
+};

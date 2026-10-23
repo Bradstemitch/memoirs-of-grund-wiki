@@ -1,7 +1,10 @@
 table {
-    border-collapse: collapse;
-  }
-  table td, table th {
-    border: 0px solid black;
-    min-width: 60px;
-  }
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  vertical-align: top;
+  border: 0px solid black;
+  min-width: 60px;
+}

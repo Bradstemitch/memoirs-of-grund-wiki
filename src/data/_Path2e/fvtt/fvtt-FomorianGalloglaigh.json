@@ -202,11 +202,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -236,9 +232,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "thrown-20"
-          ],
+          "value": ["thrown-20"],
           "rarity": "common"
         },
         "publication": {
@@ -381,9 +375,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",
@@ -619,10 +611,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "flexible",
-            "noisy"
-          ],
+          "value": ["flexible", "noisy"],
           "rarity": "common"
         },
         "publication": {
@@ -827,9 +816,7 @@
           }
         },
         "traits": {
-          "value": [
-            "magical"
-          ],
+          "value": ["magical"],
           "otherTags": []
         },
         "rules": [],

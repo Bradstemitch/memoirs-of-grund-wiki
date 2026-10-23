@@ -119,9 +119,7 @@
         {
           "type": "physical",
           "value": 2,
-          "exceptions": [
-            "bludgeoning"
-          ],
+          "exceptions": ["bludgeoning"],
           "doubleVs": []
         }
       ]
@@ -204,11 +202,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -238,9 +232,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "versatile-p"
-          ],
+          "value": ["versatile-p"],
           "rarity": "common"
         },
         "publication": {
@@ -760,9 +752,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",
@@ -822,10 +812,7 @@
           }
         },
         "traits": {
-          "value": [
-            "magical",
-            "versatile-p"
-          ],
+          "value": ["magical", "versatile-p"],
           "otherTags": []
         },
         "rules": [],

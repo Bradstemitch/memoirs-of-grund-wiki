@@ -119,9 +119,7 @@
         {
           "type": "physical",
           "value": 2,
-          "exceptions": [
-            "bludgeoning"
-          ],
+          "exceptions": ["bludgeoning"],
           "doubleVs": []
         }
       ]
@@ -212,11 +210,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -467,9 +461,7 @@
               "success": "one-degree-better"
             },
             "key": "AdjustDegreeOfSuccess",
-            "predicate": [
-              "fear"
-            ],
+            "predicate": ["fear"],
             "selector": "will",
             "type": "save"
           }
@@ -554,9 +546,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "versatile-p"
-          ],
+          "value": ["versatile-p"],
           "rarity": "common"
         },
         "publication": {
@@ -739,10 +729,7 @@
           }
         },
         "traits": {
-          "value": [
-            "magical",
-            "versatile-p"
-          ],
+          "value": ["magical", "versatile-p"],
           "otherTags": []
         },
         "rules": [],
@@ -807,17 +794,12 @@
             "effects": [
               {
                 "affects": "allies",
-                "events": [
-                  "enter"
-                ],
+                "events": ["enter"],
                 "includesSelf": false,
                 "predicate": [
                   "target:effect:under-command",
                   {
-                    "lt": [
-                      "target:level",
-                      "self:level"
-                    ]
+                    "lt": ["target:level", "self:level"]
                   }
                 ],
                 "uuid": "Compendium.pf2e.bestiary-effects.Item.OxOMYmlPtjsEkRtY"
@@ -826,10 +808,7 @@
             "key": "Aura",
             "radius": 30,
             "slug": "aura-of-command",
-            "traits": [
-              "emotion",
-              "mental"
-            ]
+            "traits": ["emotion", "mental"]
           }
         ],
         "slug": null,
@@ -843,11 +822,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "aura",
-            "emotion",
-            "mental"
-          ]
+          "value": ["aura", "emotion", "mental"]
         },
         "publication": {
           "title": "",
@@ -908,9 +883,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",

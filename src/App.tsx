@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
 import './App.css';
-import { Routes, Route, Outlet, Link, HashRouter, BrowserRouter } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Outlet,
+  Link,
+  HashRouter,
+  BrowserRouter,
+} from 'react-router-dom';
 import RoleplayRoutes from './components/Structure/RoleplayRoutes';
 
 function App() {
   return (
-    <HashRouter basename='/'>
-
+    <HashRouter basename="/">
       {/* <BrowserRouter basename='/memoirs-of-grund-wiki'> */}
       <Routes>
-        <Route path={'/*'} element={
-          <>
-            <RoleplayRoutes />
-            {/* <Outlet /> */}
-          </>
-        }>
+        <Route
+          path={`/*`}
+          element={
+            <>
+              <RoleplayRoutes />
+              {/* <Outlet /> */}
+            </>
+          }
+        >
           {/* <Route path='rpg/*' element={
           } /> */}
         </Route>
@@ -25,4 +33,3 @@ function App() {
 }
 
 export default App;
-

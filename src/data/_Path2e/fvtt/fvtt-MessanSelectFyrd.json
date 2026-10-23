@@ -190,11 +190,7 @@
     },
     "skills": {},
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -224,9 +220,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "thrown-20"
-          ],
+          "value": ["thrown-20"],
           "rarity": "common"
         },
         "publication": {
@@ -583,9 +577,7 @@
         "rules": [
           {
             "key": "FlatModifier",
-            "predicate": [
-              "formation"
-            ],
+            "predicate": ["formation"],
             "selector": "saving-throw",
             "type": "circumstance",
             "value": 1
@@ -600,19 +592,14 @@
           {
             "key": "FlatModifier",
             "label": "PF2E.NPCAbility.HobgoblinFormationArea",
-            "predicate": [
-              "formation",
-              "area-effect"
-            ],
+            "predicate": ["formation", "area-effect"],
             "selector": "reflex",
             "type": "circumstance",
             "value": 2
           },
           {
             "key": "FlatModifier",
-            "predicate": [
-              "formation"
-            ],
+            "predicate": ["formation"],
             "selector": "ac",
             "type": "circumstance",
             "value": 1
@@ -691,9 +678,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",

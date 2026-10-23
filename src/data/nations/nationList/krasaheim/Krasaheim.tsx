@@ -1,4 +1,4 @@
-import Emblem from "../../../../images/krasaheim.png"
+import Emblem from '../../../../images/krasaheim.png';
 
 const KrassenPettyKingdoms: any = [
   // {
@@ -43,77 +43,40 @@ const KrassenPettyKingdoms: any = [
   //   'type': 'Petty Kingdom',
   //   'tags': ['Krasaheim']
   // }
-]
+];
 
 export const KrasaheimList = [
   {
-    'name': 'Isle of Krasaheim',
-    "fileName": "krasaheim",
-    "tags": [
-      "Krasaheim"
-    ],
-    "emblem": Emblem,
-    "pronunciation": "ASS - erra",
-    "info": {
-      "basic": {
-        "area": [
-          "~440,000 sq mi"
-        ],
-        "population": [
-          "~17,000,000 (~40/sq. mi)"
-        ],
-        "founded": [
-          "-97CE"
-        ],
-        "government": [
-          "Hereditary Monarchy"
-        ],
-        "ruler": [
-          "Imperator Allairus"
-        ],
-        "status": [
-          "Kingdom"
-        ],
-        "variations": [
-          "Acre"
-        ]
+    name: `Isle of Krasaheim`,
+    fileName: `krasaheim`,
+    tags: [`Krasaheim`],
+    emblem: Emblem,
+    pronunciation: `ASS - erra`,
+    info: {
+      basic: {
+        area: [`~440,000 sq mi`],
+        population: [`~17,000,000 (~40/sq. mi)`],
+        founded: [`-97CE`],
+        government: [`Hereditary Monarchy`],
+        ruler: [`Imperator Allairus`],
+        status: [`Kingdom`],
+        variations: [`Acre`],
       },
-      "government": {
-        "commander": [
-          "High-Thegn of Messar"
-        ],
-        "headOfGovernment": [
-          "Heptarchy"
-        ],
-        "intelligence": [
-          "The Daughters"
-        ],
-        "military": [
-          "Fyrd"
-        ],
-        "headOfState": [
-          "Imperator Allairus",
-          "King’s Thegn (regent)"
-        ]
+      government: {
+        commander: [`High-Thegn of Messar`],
+        headOfGovernment: [`Heptarchy`],
+        intelligence: [`The Daughters`],
+        military: [`Fyrd`],
+        headOfState: [`Imperator Allairus`, `King’s Thegn (regent)`],
       },
-      "social": {
-        "capital": [
-          "Allaire", "Ackon"
-        ],
-        "currency": [
-
-        ],
-        "demonym": [
-          "Allairan"
-        ],
-        "language": [
-          "Allairan"
-        ],
-        "religion": [
-          "Draconic Pantheon"
-        ]
-      }
+      social: {
+        capital: [`Allaire`, `Ackon`],
+        currency: [],
+        demonym: [`Allairan`],
+        language: [`Allairan`],
+        religion: [`Draconic Pantheon`],
+      },
     },
   },
-  ...KrassenPettyKingdoms
-]
+  ...KrassenPettyKingdoms,
+];

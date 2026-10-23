@@ -194,11 +194,7 @@
       }
     },
     "traits": {
-      "value": [
-        "human",
-        "humanoid",
-        "lawful"
-      ],
+      "value": ["human", "humanoid", "lawful"],
       "rarity": "common",
       "size": {
         "value": "med"
@@ -450,9 +446,7 @@
           }
         },
         "traits": {
-          "value": [
-            "sweep"
-          ],
+          "value": ["sweep"],
           "otherTags": []
         },
         "rules": [],
@@ -523,9 +517,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "general"
-          ]
+          "value": ["general"]
         },
         "publication": {
           "title": "",
@@ -703,9 +695,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "sweep"
-          ],
+          "value": ["sweep"],
           "rarity": "common"
         },
         "publication": {
