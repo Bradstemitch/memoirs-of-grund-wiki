@@ -14,71 +14,27 @@ import { CREATURE_Core_Monsters } from './creatures/core/monsters';
 import { CREATURE_Core_Undead } from './creatures/core/undead';
 import { CREATURE_Core_Fiends } from './creatures/core/fiends';
 import { CREATURE_Core_Humanoids } from './creatures/core/humanoids';
-import { MAGIC_ITEMS_Core_WondrousItems } from './magicItems/core/wondrousItems';
-import { MAGIC_ITEMS_Core_Weapons } from './magicItems/core/weapons';
-import { MAGIC_ITEMS_Core_Armour } from './magicItems/core/armour';
+import { MAGIC_ITEMS_Core_WondrousItems } from './armouryMagic/core/wondrousItems';
+import { MAGIC_ITEMS_Core_Weapons } from './armouryMagic/core/weapons';
+import { MAGIC_ITEMS_Core_Armour } from './armouryMagic/core/armour';
+import { NATION_Core_ElvenRealms, NATION_Core_GoblinRealms, NATION_Core_HumanRealms } from './nations/nationList/humanNations';
+import { ORGANISATION_Core_organisations } from './organisations/organisations';
+import { CITY_Core_Human } from './locations/humanCities';
+import { LOCATION_Core_Mystical_Sites } from './locations/mysticalSites';
 
 export const NATION_Core = {
-  ACRE: coreNationBuilder(`Bishopric of Acre`, EMBLEM[`./emblems/ArcadiaAcre.webp`], ``, [`Acre`, `Kingdom`]),
-  AKITSUDO: coreNationBuilder(`Akitsudan Empire`, EMBLEM[`./emblems/Akitsudo.webp`], ``, [`Akitsudo`, `Empire`]),
-  ALLAIRE: coreNationBuilder(`Allairan Empire`, EMBLEM[`./emblems/Allaire.webp`], ``, [`Allaire`, `Empire`]),
-  ARCADIA_ASSERE: coreNationBuilder(`Assere`, EMBLEM[`./emblems/ArcadiaAssere.webp`], ``, [``, `City State`]),
-  ARCADIA_CERESSE: coreNationBuilder(`Ceresse`, EMBLEM[`./emblems/ArcadiaCeresse.webp`], ``, [``, `City State`]),
-  ARCADIA_COMINO: coreNationBuilder(`Comino`, EMBLEM[`./emblems/ArcadiaComino.webp`], ``, [``, `City State`]),
-  ARCADIA: coreNationBuilder(`Republic of Arcadia`, EMBLEM[`./emblems/Arcadia.webp`], ``, [``, `Empire`]),
-  BRYTTH_ALBION: coreNationBuilder(`Albion`, EMBLEM[`./emblems/Brytth.webp`], ``, [``, `Petty Kingdom`]),
-  BRYTTH_CAMBRIA: coreNationBuilder(`Cambria`, EMBLEM[`./emblems/Brytth.webp`], ``, [``, `Petty Kingdom`]),
-  BRYTTH: coreNationBuilder(`Kingdom of Brytth`, EMBLEM[`./emblems/Brytth.webp`], ``, [`Brytth`, `Kingdom`]),
-  CALETH: coreNationBuilder(`Calethean Empire`, EMBLEM[`./emblems/Caleth.webp`], ``, [`Caleth`, `Empire`]),
-  CARNA: coreNationBuilder(`Senātus Populusque Cārnānus`, EMBLEM[`./emblems/Carna.webp`], ``, [`Carna`, `Empire`]),
-  DROW: coreNationBuilder(`Drow Empire`, EMBLEM[`./emblems/Drow.webp`], ``, [`Drow`, `Empire`,
-  ]),
-  FOMOIRE_ANUNDING: coreNationBuilder(`Clan Anunding`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE_CIONAOITH: coreNationBuilder(`Clan Cionaoith`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE_HADHOGUNG: coreNationBuilder(`Clan Hadhogung`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE_HERMUNDING: coreNationBuilder(`Clan Hermunding`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE_MORTUNG: coreNationBuilder(`Clan Mortung`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE_MUIREANN: coreNationBuilder(`Clan Muireann`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE_OTRYGGUND: coreNationBuilder(`Clan Otryggund`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE_YRIING: coreNationBuilder(`Clan Yriing`, EMBLEM[`./emblems/Fomoire.webp`], ``, [``, `Tribal`]),
-  FOMOIRE: coreNationBuilder(`Fomorian Clans`, EMBLEM[`./emblems/Fomoire.webp`], ``, [`Fomoire`, `Kingdom`]),
-  GOBLIN_EMPIRE_ERD: coreNationBuilder(`Zrol Erd`, EMBLEM[`./emblems/GoblinErd.webp`], ``, [``, `Tribal`]),
-  GOBLIN_EMPIRE_JAAX: coreNationBuilder(`Ferd Jaax`, EMBLEM[`./emblems/GoblinJaax.webp`], ``, [``, `Tribal`]),
-  GOBLIN_EMPIRE_KAAK: coreNationBuilder(`Zrol Kaak`, EMBLEM[`./emblems/GoblinKaak.webp`], ``, [``, `Tribal`]),
-  GOBLIN_EMPIRE_KLIR: coreNationBuilder(`Ferd Klir`, EMBLEM[`./emblems/GoblinKlir.webp`], ``, [``, `Tribal`]),
-  GOBLIN_EMPIRE_SRALB: coreNationBuilder(`Zrol Sralb`, EMBLEM[`./emblems/GoblinSralb.webp`], ``, [``, `Tribal`]),
-  GOBLIN_EMPIRE: coreNationBuilder(`Goblin Empire`, EMBLEM[`./emblems/GoblinKaak.webp`], ``, [``, `Empire`]),
-  GOL: coreNationBuilder(`Gol Clans`, EMBLEM[`./emblems/Gol.webp`], ``, [``, `Kingdom`,]),
-  KEBECH: coreNationBuilder(`Kebech`, EMBLEM[`./emblems/Kebech.webp`], ``, [`Kebech`, `Empire`,]),
-  KRASAHEIM: coreNationBuilder(`Isle of Krasaheim`, EMBLEM[`./emblems/Krasaheim.webp`], ``, [``, `Kingdom`]),
-  MESSAR_ATREA: coreNationBuilder(`Atrea`, EMBLEM[`./emblems/Messar.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_BABACA: coreNationBuilder(`Babaca`, EMBLEM[`./emblems/Messar.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_BRECCA: coreNationBuilder(`Brecca`, EMBLEM[`./emblems/MessarBrecca.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_ETHYE: coreNationBuilder(`Ethye`, EMBLEM[`./emblems/MessarEthye.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_MAARRA: coreNationBuilder(`Maarra`, EMBLEM[`./emblems/Messar.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_NEAXE: coreNationBuilder(`Neaxe`, EMBLEM[`./emblems/MessarNeaxe.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_SEAXE: coreNationBuilder(`Seaxe`, EMBLEM[`./emblems/MessarSeaxe.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_SUDAR: coreNationBuilder(`Sudar`, EMBLEM[`./emblems/Messar.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_TRIFE: coreNationBuilder(`Trife`, EMBLEM[`./emblems/MessarTrife.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR_WEAXE: coreNationBuilder(`Weaxe`, EMBLEM[`./emblems/MessarWeaxe.webp`], ``, [``, `Petty Kingdom`]),
-  MESSAR: coreNationBuilder(`Messan Heptarchy`, EMBLEM[`./emblems/Messar.webp`], `May - sar`, [`Messar`, `Kingdom`]),
-  MYCENAEAN_LEAGUE_AEGINA: coreNationBuilder(`Aegina Polis`, EMBLEM[`./emblems/MycenaeanLeagueAegina.webp`], ``, [`Mycenae`, `City State`]),
-  MYCENAEAN_LEAGUE_ELAE: coreNationBuilder(`Elae Polis`, EMBLEM[`./emblems/MycenaeanLeagueElae.webp`], ``, [`Mycenae`, `City State`]),
-  MYCENAEAN_LEAGUE_KNOSSOS: coreNationBuilder(`Knossos Polis`, EMBLEM[`./emblems/MycenaeanLeagueKnossos.webp`], ``, [`Mycenae`, `City State`]),
-  MYCENAEAN_LEAGUE_LACONIA: coreNationBuilder(`Laconia Polis`, EMBLEM[`./emblems/MycenaeanLeagueLaconia.webp`], ``, [`Mycenae`, `City State`]),
-  MYCENAEAN_LEAGUE_LERNA: coreNationBuilder(`Lerna Polis`, EMBLEM[`./emblems/MycenaeanLeagueLerna.webp`], ``, [`Mycenae`, `City State`]),
-  MYCENAEAN_LEAGUE_MYCENAE: coreNationBuilder(`Mycenae Polis`, EMBLEM[`./emblems/MycenaeanLeagueMycenae.webp`], ``, [`Mycenae`, `City State`]),
-  MYCENAEAN_LEAGUE: coreNationBuilder(`Mycenaean League`, EMBLEM[`./emblems/MycenaeanLeague.webp`], ``, [`Mycenae`, `Kingdom`]),
-  NAGRA: coreNationBuilder(`Nagra`, EMBLEM[`./emblems/Nagra.webp`], ``, [`Nagra`, `Empire`,
-  ]),
-  SYLVAN_ORCHID: coreNationBuilder(`Orchid Hall`, EMBLEM[`./emblems/Sylvan.webp`], ``, [`Sylvan`, `City State`]),
-  SYLVAN: coreNationBuilder(`Sylvan Realms`, EMBLEM[`./emblems/Sylvan.webp`], ``, [`Sylvan`, `Kingdom`]),
-  TUATHA_DE_DANANN: coreNationBuilder(`Tuatha de Danann`, EMBLEM[`./emblems/TuathaDeDanann.webp`], ``, [`Tuatha`, `Kingdom`]),
+  ...NATION_Core_HumanRealms,
+  ...NATION_Core_ElvenRealms,
+  ...NATION_Core_GoblinRealms,
 };
 
 export const CITY_Core = {
-  MESSAR_MESSACT: coreLocationBuilder(`Messact`, `May-sack-t`, [``]),
+  ...CITY_Core_Human,
 };
+
+export const LOCATION_Core ={
+  ...LOCATION_Core_Mystical_Sites,
+}
 
 export const CREATURE_Core = {
   ...CREATURE_Core_Fiends,
@@ -123,16 +79,7 @@ export const ARMOURY_Core = {
 };
 
 export const ORGANISATION_Core = {
-  SWORDS_OF_DAMOCLES: coreOrganisationBuilder(`Swords of Damocles`, [``]),
-  SHARDS_OF_DAMOCLES: coreOrganisationBuilder(`Shards of Damocles`, [``]),
-  HARLEQUINS_REVELRY: coreOrganisationBuilder(`Harlequin's Revelry`, [``]),
-  KNIGHT_COMMANDO: coreOrganisationBuilder(`Knight Commando`, [``]),
-  VINDICTIS: coreOrganisationBuilder(`Vindictis`, [``]),
-  PROMETHEUS_INITIATIVE: coreOrganisationBuilder(`Prometheus Initiative`, [``]),
-  REMNANT: coreOrganisationBuilder(`The Remnant`, [``]),
-  LEGION: coreOrganisationBuilder(`The Legion`, [``]),
-  MESSAN_REBELLION: coreOrganisationBuilder(`Messan Rebellion`, [``]),
-  ZEALOTS: coreOrganisationBuilder(`Zealots`, [``]),
+  ...ORGANISATION_Core_organisations,
 };
 
 export const RELIGION_Core = {

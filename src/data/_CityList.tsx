@@ -99,21 +99,6 @@ function cityInfoSocial(
 }
 
 export const CITY_Core = {
-  MESSAR_ASTBOR: coreLocationBuilder(`Astbor`, `May-sack-t`, [``]), // Astborough(fort town near brytth),
-  MESSAR_BLEINST: coreLocationBuilder(`Bleinst`, `May-sack-t`, [``]),
-  MESSAR_CREICH: coreLocationBuilder(`Vergris`, `May-sack-t`, [``]), // Creich(Mountain Springs),
-  MESSAR_DALE: coreLocationBuilder(`Dale`, `May-sack-t`, [``]), // Dale(valley city),
-  MESSAR_DOLTEN: coreLocationBuilder(`Dolten`, `May-sack-t`, [``]), // Dolton(farming community on canal),
-  MESSAR_MESSACT: coreLocationBuilder(`Messact`, `May-sack-t`, [``]),
-  MESSAR_NORCEST: coreLocationBuilder(`Norcest`, `May-sack-t`, [``]), // Norcester(northern barricade)
-  MESSAR_POLTEN: coreLocationBuilder(`Polten`, `May-sack-t`, [``]), // Polton(built next to the lake),
-  MESSAR_STARNPOR: coreLocationBuilder(`Starnpor`, `May-sack-t`, [``]), // Stanport(costal town),
-  MESSAR_STARNSHAW: coreLocationBuilder(`Starnshaw`, `May-sack-t`, [``]), // Stanshaw(in moutain surrounded by dense forest),
-  MESSAR_SUTPOR: coreLocationBuilder(`Sutpor`, `May-sack-t`, [``]), // Sutport(large port town),
-  MESSAR_SYLVASTEAD: coreLocationBuilder(`Sylvastead`, `May-sack-t`, [``]), // Sylvastead(woodcutters and main canal user),
-  MESSAR_VERGRIS: coreLocationBuilder(`Vergris`, `May-sack-t`, [``]), // Vergris(former mining town),
-  MESSAR_VILLEN: coreLocationBuilder(`Villen`, `May-sack-t`, [``]),
-  MESSAR_WESFER: coreLocationBuilder(`Wesfer`, `May-sack-t`, [``]), // wesford(bridge city across the frontier)
 };
 
 export const CITY_Info = {

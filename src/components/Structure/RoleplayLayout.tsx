@@ -33,6 +33,20 @@ import LinkCharacters from './ListLinks/LinkCharacters';
 import LinkTimeline from './ListLinks/LinkTimeline';
 import LinkRumours from './ListLinks/LinkRumours';
 import LinkOrganisations from './ListLinks/LinkOrganisations';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ChurchIcon from '@mui/icons-material/Church';
+import TimelineIcon from '@mui/icons-material/Timeline';
+import ForumIcon from '@mui/icons-material/Forum';
+import PersonIcon from '@mui/icons-material/Person';
+import GroupsIcon from '@mui/icons-material/Groups';
+import FlagIcon from '@mui/icons-material/Flag';
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import HomeIcon from '@mui/icons-material/Home';
+import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
+import PetsIcon from '@mui/icons-material/Pets';
 
 interface LayoutProps {
   setRoleplaySystem: Function;
@@ -124,6 +138,7 @@ const darkTheme = createTheme({
   },
 });
 
+
 function RoleplayLayout(props: LayoutProps) {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -140,6 +155,44 @@ function RoleplayLayout(props: LayoutProps) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+
+  function listLink(name: string, icon: any, url?: string) {
+    function homeCheck() {
+      if (name === 'Home') {
+        return '/'
+      } else {
+        return `/${name.toLowerCase()}`
+      }
+    }
+    return (
+      <ListItem key={url || name.toLowerCase()} disablePadding sx={{ display: `block` }}>
+        <Link to={`${url || homeCheck()}`}>
+          <ListItemButton
+            sx={{
+              minHeight: 48,
+              justifyContent: open ? `initial` : `center`,
+              px: 2.5,
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                minWidth: 0,
+                mr: open ? 3 : `auto`,
+                justifyContent: `center`,
+              }}
+            >
+              {icon}
+            </ListItemIcon>
+            <ListItemText
+              primary={name}
+              sx={{ opacity: open ? 1 : 0 }}
+            />
+          </ListItemButton>
+        </Link>
+      </ListItem>
+    )
+  }
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -194,19 +247,19 @@ function RoleplayLayout(props: LayoutProps) {
           </DrawerHeader>
           <Divider />
           <List>
-            <HomeListLink open={open} />
+            {listLink('Home', <HomeIcon />)}
           </List>
           <Divider />
           <List>
-            <LinkCreatures open={open} />
-            <LinkArmoury open={open} />
-            <LinkMagicItems open={open} />
-            <LinkReligions open={open} />
-            <LinkNations open={open} />
-            <LinkOrganisations open={open} />
-            <LinkCharacters open={open} />
-            <LinkRumours open={open} />
-            <LinkTimeline open={open} />
+            {listLink('Creatures', <PetsIcon />)}
+            {listLink('Armoury', <HomeRepairServiceIcon />)}
+            {listLink('Magic Items', <AutoFixHighIcon />, 'magicItems')}
+            {listLink('Religions', <ChurchIcon />)}
+            {listLink('Nations', <FlagIcon />)}
+            {listLink('Organisations', <GroupsIcon />)}
+            {listLink('Characters', <PersonIcon />)}
+            {listLink('Rumours', <ForumIcon />)}
+            {listLink('Timeline', <TimelineIcon />)}
           </List>
           <Divider />
           <List>

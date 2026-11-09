@@ -1,5 +1,5 @@
 import React from 'react';
-import { magicItemTraits } from '../../data/magicItems/traits';
+import { magicItemTraitsDnD5e } from '../../data/armouryMagic/stats/DnD5e/_stats';
 import './MagicItemStatBlockDnD5e.css';
 
 function MagicItemBlockDnD5e(props: any) {
@@ -12,7 +12,7 @@ function MagicItemBlockDnD5e(props: any) {
             return (
               <>
                 <h2>{variant[1]}</h2>
-                {magicItemTraits[variant[0]].DnD5e.description}
+                {magicItemTraitsDnD5e[variant[0]].DnD5e.description}
               </>
             )
           })
@@ -29,7 +29,7 @@ function MagicItemBlockDnD5e(props: any) {
               <div className="splitWeaponProfile">
                 <h3>{items[1]}</h3>
                 <hr />
-                {magicItemTraits[items[0]].DnD5e.description}
+                {magicItemTraitsDnD5e[items[0]].DnD5e.description}
               </div>
             )
           })
@@ -39,10 +39,6 @@ function MagicItemBlockDnD5e(props: any) {
   }
   return (
     <div>
-      <div>
-        <h2>TEST</h2>
-      </div>
-      <br />
       {magicItem.description}
     </div>
   );

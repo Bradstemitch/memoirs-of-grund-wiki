@@ -87,13 +87,19 @@ function nationInfoGov(
   };
 }
 
-function nationInfoSocial(
-  capital: any,
-  currency: any,
-  demonym: string,
-  language: any,
-  religion: any
-) {
+function nationInfoSocial({
+  capital,
+  currency,
+  demonym,
+  language,
+  religion
+}: {
+  capital?: any
+  currency?: any,
+  demonym?: string,
+  language?: any,
+  religion?: any
+}) {
   return {
     social: {
       title: `Social`,
@@ -181,12 +187,12 @@ export const NATION_Info = {
       `Fyrd`,
       `The Daughters`
     ),
-    ...nationInfoSocial(
-      CITY_Core.MESSAR_MESSACT,
-      ``,
-      `Messan`,
-      `Aeaxon`,
-      RELIGION_Core.DRACONIC_PANTHEON
+    ...nationInfoSocial({
+      capital: CITY_Core.MESSAR_MESSACT,
+      demonym: `Messan`,
+      language: `Aeaxon`,
+      religion: RELIGION_Core.DRACONIC_PANTHEON
+    }
     ),
   },
 };

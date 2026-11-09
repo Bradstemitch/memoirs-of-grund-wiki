@@ -1,5 +1,5 @@
 import React from 'react';
-import { MagicItemList, magicWeapon } from '../../../data/magicItems/MagicItem';
+import { MagicItemList, magicWeapon } from '../../../data/armouryMagic/MagicItem';
 import { Link } from 'react-router-dom';
 import { ArmouryList, ArmouryListMagic } from '../../../data/_ArmouryList';
 import DnD5eMagicItemVariantsBlock from '../../_DnD5e/DnD5eMagicItemVariantsBlock';

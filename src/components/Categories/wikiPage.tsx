@@ -64,15 +64,27 @@ function WikiPageBuilder(props: CreatureBoxProps) {
         </TabList>
 
         <TabPanel value={`Stats`}>
-          {context.fileLoc === `creatures` && 
+          {context.fileLoc === `creatures` &&
             context.statlines.map((statline) => {
               switch (props.roleplaySystem) {
                 case `DnD5e`:
-                  return <CreatureStatBlockDnD5e creature={statline.DnD5e} />
+                  return (
+                    <div>
+                      <CreatureStatBlockDnD5e creature={statline.DnD5e} />
+                    </div>
+                  )
                 case `Path2e`:
-                  return <CreatureStatBlockPath2e creature={statline} />
+                  return (
+                    <div>
+                      <CreatureStatBlockPath2e creature={statline} />
+                    </div>
+                  )
                 case `WFRP4e`:
-                  return <WHF4eCreatureBlock creature={statline} />
+                  return (
+                    <div>
+                      <WHF4eCreatureBlock creature={statline} />
+                    </div>
+                  )
               }
             })
           }
@@ -92,9 +104,9 @@ function WikiPageBuilder(props: CreatureBoxProps) {
               <br />
             </>
           )}
-          {context.fileLoc === `magicItems` && (
+          {(context.fileLoc === `magicItems`&& context.statlines) && (
             <>
-            <MagicItemBlockDnD5e magicItem={context.statlines.DnD5e} />
+              <MagicItemBlockDnD5e magicItem={context.statlines.DnD5e} />
               {/* <>{context.statlines[props.roleplaySystem.toString()].description}</> */}
               <br />
             </>

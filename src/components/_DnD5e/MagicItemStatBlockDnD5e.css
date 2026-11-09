@@ -4,10 +4,9 @@
   color: #5b160c;
 }
 
-
 .dndMagicItemStatBlock {
   background: #ecedee;
-  max-width: 800px;
+  max-width: 65%;
   min-width: 650px;
   padding: 10px;
   font-size: 15px;
@@ -30,7 +29,7 @@
 
 .dndMagicItemStatBlock table {
   font-size: 14px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .dndMagicItemStatBlock p {

@@ -7,6 +7,37 @@
 // import { MonsterDnD5eCategories } from "./creatures/Monsters"
 // import { UndeadDnD5eCategories } from "./creatures/Undead"
 
+export const cultureTypes: any = [
+  {
+    type: `Human Realm`,
+    plural: `Human Realms`,
+  },
+  {
+    type: `Dwarven Realm`,
+    plural: `Dwarven Realms`,
+  },
+  {
+    type: `Elven Realm`,
+    plural: `Elven Realms`,
+  },
+  {
+    type: `Goblin Realm`,
+    plural: `Goblin Zrol`,
+  },
+  {
+    type: `Nuth Realm`,
+    plural: `Nuth Realms`,
+  },
+  {
+    type: `Orc Realm`,
+    plural: `Orc Realms`,
+  },
+  {
+    type: `Minor Realm`,
+    plural: `Other Realms`,
+  },
+];
+
 export const nationTypes: any = [
   {
     type: `Empire`,

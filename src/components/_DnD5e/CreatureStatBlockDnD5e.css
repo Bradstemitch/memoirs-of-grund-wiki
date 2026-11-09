@@ -35,7 +35,7 @@
 .dndStatBlock p {
   margin-top: 0px;
   display: inline-block;
-  /* break-inside: avoid */
+  break-inside: avoid
 }
 
 .dndCreatureAttributesOld {

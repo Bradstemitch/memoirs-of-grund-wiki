@@ -5,6 +5,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import TimelineIcon from '@mui/icons-material/Timeline';
+<TimelineIcon />
 
 function LinkTimeline(props: any) {
   return (
@@ -24,7 +25,6 @@ function LinkTimeline(props: any) {
               justifyContent: `center`,
             }}
           >
-            <TimelineIcon />
           </ListItemIcon>
           <ListItemText
             primary="Timeline"
